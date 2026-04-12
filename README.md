@@ -21,9 +21,13 @@ View your app in AI Studio: https://ai.studio/apps/a8913edf-fc44-41fa-b7c9-0062b
 
 ## Deploy to GitHub Pages
 
-1. Deploy the built app:
-   `npm run deploy`
-2. Open the project site URL:
+1. Build static files to `docs/`:
+   `npm run build:pages`
+2. On GitHub, go to Settings -> Pages:
+   Source = Deploy from a branch
+   Branch = `main`
+   Folder = `/docs`
+3. Open the project site URL:
    `https://nguyenluukienn.github.io/TADR2026/`
 
 If you open `https://nguyenluukienn.github.io/` directly, GitHub Pages will not load this repository's app because this is a project site repository.
