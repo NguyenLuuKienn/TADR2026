@@ -18,3 +18,12 @@ View your app in AI Studio: https://ai.studio/apps/a8913edf-fc44-41fa-b7c9-0062b
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+1. Deploy the built app:
+   `npm run deploy`
+2. Open the project site URL:
+   `https://nguyenluukienn.github.io/TADR2026/`
+
+If you open `https://nguyenluukienn.github.io/` directly, GitHub Pages will not load this repository's app because this is a project site repository.
