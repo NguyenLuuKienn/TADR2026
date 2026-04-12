@@ -1,0 +1,2930 @@
+[
+  {
+    "topic": 1,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. PLEASE KEEP THIS ENTRANCE CLEAR\n\n2. Keep this door locked when room not in use.\n\n3. Please show the librarian all books when you leave the library\n\n4. Supersaver Tickets Cannot be used on Fridays\n\n5. MACHINE OUT OF ORDER DRINKS AVAILABLE AT BAR",
+    "questions": [
+      {
+        "text": "1. PLEASE KEEP THIS ENTRANCE CLEAR",
+        "options": [
+          "A. Permission is needed to park here.",
+          "B. Always keep this door open.",
+          "C. Only use this entrance in an emergency.",
+          "D. Do not park in front of this entrance"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Keep entrance clear = Do not park in front of it."
+      },
+      {
+        "text": "2. Keep this door locked when room not in use.",
+        "options": [
+          "A. This room cannot be used at present.",
+          "B. Keep the key to this door in the room.",
+          "C. This door must always be kept locked.",
+          "D. Lock the room when it is not being used."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Locked when not in use = Lock the room when it is not being used."
+      },
+      {
+        "text": "3. Please show the librarian all books when you leave the library",
+        "options": [
+          "A. The librarian needs to see your books before you go.",
+          "B. Return your books before you leave the library.",
+          "C. The librarian will show you where to put your books.",
+          "D. Make sure you take all your books with you."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Show books when you leave = Librarian needs to see them before you go."
+      },
+      {
+        "text": "4. Supersaver Tickets Cannot be used on Fridays",
+        "options": [
+          "A. Supersaver tickets can be used every day except Fridays.",
+          "B. You can save money by travelling on a Friday.",
+          "C. You need a special ticket to travel on a Friday.",
+          "D. Supersaver tickets cannot be bought before the weekend."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cannot be used on Fridays = Can be used every day except Fridays."
+      },
+      {
+        "text": "5. MACHINE OUT OF ORDER DRINKS AVAILABLE AT BAR",
+        "options": [
+          "A. Drinks can not be ordered at the bar.",
+          "B. This machine isn't working at the moment.",
+          "C. Use this machine when the bar is closed.",
+          "D. There is a drinks machine in the bar."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Out of order = isn't working at the moment."
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "MY BEST FRIEND\n\nMy best friend is called Tony. We are classmates. We sit in the class on the same bench side by side. We share many things with each other.\n\nTony comes from an educated family. His father is a school principal and his mother is also a teacher. He is punctual, well-educated, and has good manners. He is friendly, clever and really hard-working. He is also well-dressed and well-behaved. He is very good in his studies and always does his work attentively in the class. All the teachers have a high opinion of him.\n\nTony has a well-built body; he is tall and slim and has straight blonde hair and blue eyes. He takes part in all sports and he also likes to play the guitar. He has a good heart. He is honest and obedient. Tony makes his parents very proud of him. He secures good marks and is usually top of his class in examinations. He inspires me to work harder. Whenever I need any help in my study, he remains always ready to help me. He helps me by giving his notebook, when I am absent from school. He corrects me whenever I commit any mistake. I am happy to have such a friend.",
+    "questions": [
+      {
+        "text": "1. What does Tony's mother do?",
+        "options": [
+          "A. A farmer",
+          "B. A teacher",
+          "C. A guitar player",
+          "D. A school principal"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 2 có câu: 'his mother is also a teacher'."
+      },
+      {
+        "text": "2. What does Tony look like?",
+        "options": [
+          "A. He is tall and slim.",
+          "B. He is tall and fat.",
+          "C. He is friendly and honest.",
+          "D. He likes to play the guitar."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 3 có câu: 'he is tall and slim'."
+      },
+      {
+        "text": "3. What does Tony have?",
+        "options": [
+          "A. Straight blonde hair and blue eyes",
+          "B. Green eyes and curly brown hair",
+          "C. Curly brown hair and blue eyes",
+          "D. Blue eyes and curly blonde hair"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 3 có câu: 'has straight blonde hair and blue eyes'."
+      },
+      {
+        "text": "4. What does Tony like?",
+        "options": [
+          "A. He is tall and thin.",
+          "B. He likes sports.",
+          "C. He is friendly, clever and honest.",
+          "D. He loves to listen to guitar music."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 3 có câu: 'He takes part in all sports'."
+      },
+      {
+        "text": "5. Which adjective is NOT used to describe Tony?",
+        "options": [
+          "A. Honest",
+          "B. Well-behaved",
+          "C. Humorous",
+          "D. Hard-working"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Trong bài có nhắc đến honest, well-behaved, hard-working nhưng không nhắc đến humorous."
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "My best friend's name is Anna. She is 19 years old. She is originally from Mexico, but lives in London. We have been best friends since we were (1) ........................... Although we are both grown up now, we are still very close to each other. Anna and I live in the same (2)........................... Her house is next door to mine. Because we live so close, it is easy for me to go and visit her anytime I want. Anna is a very (3) ........................... girl. She is tall and slim with a (4) ........................... She is quite (5) ........................... and is studying medicine at London University. I think she is an (6) ........................... person because she loves to (7) ........................... and meet new people. She has visited many countries around the world with her (8) ........................... Every time she goes to a new country, she brings back (9) ........................... for all her friends. She is kind, friendly, and (10) ........................... this is why she is my best friend.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. children",
+          "B. neighborhood",
+          "C. generous",
+          "D. extroverted"
+        ],
+        "correctAnswer": "A",
+        "explanation": "since we were children (từ khi chúng tôi còn là những đứa trẻ)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. children",
+          "B. neighborhood",
+          "C. beautiful",
+          "D. smart"
+        ],
+        "correctAnswer": "B",
+        "explanation": "live in the same neighborhood (sống trong cùng một khu phố)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. extroverted",
+          "B. generous",
+          "C. beautiful",
+          "D. ponytail"
+        ],
+        "correctAnswer": "C",
+        "explanation": "a very beautiful girl (một cô gái rất xinh đẹp)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. neightborhood",
+          "B. travel",
+          "C. ponytail",
+          "D. country"
+        ],
+        "correctAnswer": "C",
+        "explanation": "with a ponytail (với mái tóc đuôi gà)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. children",
+          "B. neighborhood",
+          "C. beautiful",
+          "D. smart"
+        ],
+        "correctAnswer": "D",
+        "explanation": "quite smart and is studying medicine (khá thông minh và đang học y)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. children",
+          "B. neighborhood",
+          "C. generous",
+          "D. extroverted"
+        ],
+        "correctAnswer": "D",
+        "explanation": "an extroverted person because she loves to... (một người hướng ngoại vì cô ấy thích...)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. travel",
+          "B. learn",
+          "C. smart",
+          "D. child"
+        ],
+        "correctAnswer": "A",
+        "explanation": "loves to travel and meet new people (thích đi du lịch và gặp gỡ người mới)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. neighborhood",
+          "B. family",
+          "C. house",
+          "D. country"
+        ],
+        "correctAnswer": "B",
+        "explanation": "with her family (cùng với gia đình cô ấy)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. gifts",
+          "B. university",
+          "C. coutry",
+          "D. learn"
+        ],
+        "correctAnswer": "A",
+        "explanation": "brings back gifts (mang quà về)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. children",
+          "B. neighborhood",
+          "C. generous",
+          "D. extroverted"
+        ],
+        "correctAnswer": "C",
+        "explanation": "kind, friendly, and generous (tốt bụng, thân thiện và hào phóng)."
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. Do not leave your bags in the corridor\n\n2. Brightson's Travel Agency. Our new entrance is between the bank and the library\n\n3. We Regret We Cannot Accept Payment by Credit Card for Sales Under £10\n\n4. PICK YOUR OWN FRUIT AND PAY INSIDE SHOP\n\n5. Please use the upstairs waiting room if you have an appointment with the nurse.",
+    "questions": [
+      {
+        "text": "1. Do not leave your bags in the corridor",
+        "options": [
+          "A. Keep the corridor clear of luggage.",
+          "B. Bags left in the corridor will be removed.",
+          "C. Bags will be collected from the corridor.",
+          "D. Do not forget to put your luggage outside your room."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Do not leave bags = Keep the corridor clear of luggage."
+      },
+      {
+        "text": "2. Brightson's Travel Agency. Our new entrance is between the bank and the library",
+        "options": [
+          "A. The travel agency has moved its entrance.",
+          "B. The entrance to the bank is through the library.",
+          "C. The library is now a travel agency.",
+          "D. The travel agency is no longer open."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Our new entrance is... = The travel agency has moved its entrance."
+      },
+      {
+        "text": "3. We Regret We Cannot Accept Payment by Credit Card for Sales Under £10",
+        "options": [
+          "A. We make a charge if you pay by credit card.",
+          "B. We prefer cash for large sales.",
+          "C. If you spend more than £10, you must pay by credit card.",
+          "D. If you spend less than £10, you cannot pay by credit card."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Cannot accept credit card for sales under £10 = If you spend less than £10, you cannot pay by credit card."
+      },
+      {
+        "text": "4. PICK YOUR OWN FRUIT AND PAY INSIDE SHOP",
+        "options": [
+          "A. Damaged fruit must be paid for.",
+          "B. Self-service fruit is cheaper.",
+          "C. Do not touch the fruit before paying for it.",
+          "D. Choose your fruit and then pay for it."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Pick your own fruit and pay = Choose your fruit and then pay for it."
+      },
+      {
+        "text": "5. Please use the upstairs waiting room if you have an appointment with the nurse.",
+        "options": [
+          "A. Go upstairs to make an appointment with the nurse.",
+          "B. The nurse will tell you when it is your turn.",
+          "C. The nurse can only see patients with appointments.",
+          "D. Wait upstairs to see the nurse."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Use the upstairs waiting room if you have an appointment = Wait upstairs to see the nurse."
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "JACK THE SAILOR\n\nJack was a young sailor. He lived in England, but he was often away with his ship. One summer he came back from a long voyage and found new neighbors near his mother’s house. They had a pretty daughter, and Jack soon loved her very much.\n\nHe said to her, “My next voyage will begin in a few days’ time, Gloria. I love you, and I’ll marry you when I come back. I’ll think about you all the time, and I’ll write to you and send you a present every port”.\n\nJack’s first port was Freetown in Africa, and he sent Gloria a parrot from there. It spoke five languages.\n\nWhen Jack’s ship reached Australia, there was a letter from Gloria. It said, “Thank you for the parrot, Jack. It tasted much better than a chicken.”",
+    "questions": [
+      {
+        "text": "1. Jack made long voyage because …………… .",
+        "options": [
+          "A. he wanted to see the world",
+          "B. he loved discovering the world",
+          "C. he was a sailor",
+          "D. he planned to settle in Australia"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'Jack was a young sailor. He lived in England, but he was often away with his ship.'"
+      },
+      {
+        "text": "2. Where did Gloria live?",
+        "options": [
+          "A. In the center of the city.",
+          "B. In Africa.",
+          "C. Far from the house of Jack’s mother.",
+          "D. Next to the house of Jack’s mother."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Đoạn 1: 'found new neighbors near his mother’s house. They had a pretty daughter...'"
+      },
+      {
+        "text": "3. Which of the following statements is NOT TRUE?",
+        "options": [
+          "A. Jack loved Gloria very much.",
+          "B. He promised to send her a present from every port.",
+          "C. He sent her a parrot from Australia.",
+          "D. Jack was often away from his ship."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 3: 'Jack’s first port was Freetown in Africa, and he sent Gloria a parrot from there.' (Anh ấy gửi con vẹt từ Châu Phi, không phải từ Úc)."
+      },
+      {
+        "text": "4. What did Gloria do to the parrot?",
+        "options": [
+          "A. She kept it in a cage.",
+          "B. She kept it as a souvenir from her lover.",
+          "C. She sent it back to Jack.",
+          "D. She killed and ate it."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Đoạn cuối: 'It tasted much better than a chicken.' (Nó có vị ngon hơn thịt gà -> Cô ấy đã ăn nó)."
+      },
+      {
+        "text": "5. What does the word “voyage” mean?",
+        "options": [
+          "A. a trip by air",
+          "B. a journey by sea",
+          "C. an excursion",
+          "D. a travel"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'voyage' là chuyến đi dài trên biển (journey by sea)."
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Drawing has always been a very popular hobby. Young children draw with a pencil soon as they can hold one. Drawing is (1)…………….. seen as a special skill, and it is (2)…………….. that some people seem to draw perfect pictures without any effort. Yet drawing, like writing, can be learnt; you can (3) …………….. accurately if you work really hard at it. Drawing is first of all about looking (4)…………….. . It sounds easy to say that all you (5)…………….. to do is look at things, but it really isn't that simple. The best way to draw a familiar (6) …………….. is to imagine that you are (7) …………….. at it for the first time.Nowadays, there are (8) …………….. courses and materials available than ever before, (9)…………….. means that you can experiment to improve your skills. The only (10) …………….. is your imagination.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. often",
+          "B. more",
+          "C. that",
+          "D. fast"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Drawing is often seen as a special skill (Vẽ thường được xem như một kỹ năng đặc biệt)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. carefully",
+          "B. true",
+          "C. looking",
+          "D. exact"
+        ],
+        "correctAnswer": "B",
+        "explanation": "it is true that... (sự thật là...)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. subject",
+          "B. draw",
+          "C. limit",
+          "D. need"
+        ],
+        "correctAnswer": "B",
+        "explanation": "you can draw accurately (bạn có thể vẽ chính xác)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. true",
+          "B. often",
+          "C. carefully",
+          "D. more"
+        ],
+        "correctAnswer": "C",
+        "explanation": "looking carefully (nhìn một cách cẩn thận)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. draw",
+          "B. limit",
+          "C. need",
+          "D. true"
+        ],
+        "correctAnswer": "C",
+        "explanation": "all you need to do (tất cả những gì bạn cần làm)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. which",
+          "B. subject",
+          "C. exact",
+          "D. person"
+        ],
+        "correctAnswer": "B",
+        "explanation": "draw a familiar subject (vẽ một chủ đề quen thuộc)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. fast",
+          "B. carefully",
+          "C. true",
+          "D. looking"
+        ],
+        "correctAnswer": "D",
+        "explanation": "imagine that you are looking at it (tưởng tượng rằng bạn đang nhìn nó)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. more",
+          "B. looking",
+          "C. which",
+          "D. many"
+        ],
+        "correctAnswer": "D",
+        "explanation": "there are many courses (có nhiều khóa học)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. that",
+          "B. which",
+          "C. person",
+          "D. true"
+        ],
+        "correctAnswer": "B",
+        "explanation": "which means that... (điều đó có nghĩa là... - mệnh đề quan hệ thay thế cho cả câu trước)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. exact",
+          "B. subject",
+          "C. person",
+          "D. limit"
+        ],
+        "correctAnswer": "D",
+        "explanation": "The only limit is your imagination (Giới hạn duy nhất là trí tưởng tượng của bạn)."
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. We are closed for Staff training until 9:30\n\n2. Patients can park here in an emergency\n\n3. FROM 17 SEPTEMBER PLEASE USE THE NEW TICKET OFFICE\n\n4. We only repair computers which were bought here\n\n5. Add your name to this list if you want to go on the trip",
+    "questions": [
+      {
+        "text": "1. We are closed for Staff training until 9:30",
+        "options": [
+          "A. The shop is run by trained staff.",
+          "B. We are not open today because of staff training.",
+          "C. We can train you to work here.",
+          "D. The shop will open at 9:30 today."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Closed until 9:30 = The shop will open at 9:30 today."
+      },
+      {
+        "text": "2. Patients can park here in an emergency",
+        "options": [
+          "A. This car park is for ambulances only.",
+          "B. This car park is for patients only.",
+          "C. Patients can only park here with permission.",
+          "D. Patients can only use this car park in emergencies."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Park here in an emergency = Only use this car park in emergencies."
+      },
+      {
+        "text": "3. FROM 17 SEPTEMBER PLEASE USE THE NEW TICKET OFFICE",
+        "options": [
+          "A. There will be two ticket offices after 17 September.",
+          "B. This ticket office will be closed for one day.",
+          "C. This ticket office will close on 16 September.",
+          "D. The new ticket office is now open."
+        ],
+        "correctAnswer": "C",
+        "explanation": "From 17 Sept use new ticket office = This ticket office will close on 16 September."
+      },
+      {
+        "text": "4. We only repair computers which were bought here",
+        "options": [
+          "A. Computers bought here never need repairing .",
+          "B. We will not mend computers bought from other shops .",
+          "C. Bring your computer here for repair.",
+          "D. We charge to repair computers not bought here."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Only repair computers bought here = We will not mend computers bought from other shops."
+      },
+      {
+        "text": "5. Add your name to this list if you want to go on the trip",
+        "options": [
+          "A. This list should be signed by people wanting to go on the trip.",
+          "B. If you find your name on this list, you can go on the trip.",
+          "C. This list shows who has been chosen to go on the trip.",
+          "D. Check this list for information if you are going on the trip."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Add your name if you want to go = This list should be signed by people wanting to go."
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "I never really enjoyed any sports that I played at school. I remember when I played football. I always played as a goalkeeper, but I used to get bored, and I just stood there and listened to music. Then when the other side scored, the rest of my team would shout at me. Later on, I tried tennis which wasn't much better. I used to have this habit of dropping the racket each time I went to hit the ball. The worst thing was when I actually won a game for the first time. I was so excited that I ran and tried to jump over the net but caught my foot on it, fell and broke my arm.\n\nMy latest attempt to get in shape was when I tried boxing at a local gym. My first fight was unforgettable. I was ready in the ring, and the bell rang for the start of the first half. I was so nervous that I just closed my eyes and swung. Unfortunately, I punched the referee in the head and knocked him out instead of my opponent. Needless to say that was the end of my boxing career and \"embarrassed\" was the word for how I felt.\n\nNext I decided to take up horse riding with two old school friends. On our first journey, I managed to control my horse. We took some rest after 30 minutes. Then, when I continued my riding, my horse suddenly misbehaved and ran so fast. I fell off the horse and broke my back. I keep on wanting to try out other sports even though I know I'll never be successful.",
+    "questions": [
+      {
+        "text": "1. What is the main aim of the writer in writing this text?",
+        "options": [
+          "A. Encourage people to play a variety of sports",
+          "B. Explain how to play some sports",
+          "C. Tell people his sport disasters",
+          "D. Warn people against accidents in sports"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Toàn bộ bài viết kể về những tai nạn và thất bại của tác giả khi chơi thể thao (sport disasters)."
+      },
+      {
+        "text": "2. What sports has the writer ever tried?",
+        "options": [
+          "A. Tennis, football, horse riding, cycling",
+          "B. Football, tennis, boxing, horse riding",
+          "C. Table tennis, boxing, football, cycling",
+          "D. Table tennis, football, boxing, horse riding"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trong bài có nhắc đến: football (đoạn 1), tennis (đoạn 1), boxing (đoạn 2), horse riding (đoạn 3)."
+      },
+      {
+        "text": "3. What was wrong with the writer when he went in for football?",
+        "options": [
+          "A. He broke his leg.",
+          "B. He kicked his teammate.",
+          "C. He let the other side score.",
+          "D. He shouted at his team."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'Then when the other side scored, the rest of my team would shout at me.' (Anh ta để đội bạn ghi bàn)."
+      },
+      {
+        "text": "4. What made the writer feel embarrassed?",
+        "options": [
+          "A. He knocked the referee out in the first half.",
+          "B. He scored for the other team.",
+          "C. He fell off the horse.",
+          "D. He hit his teammate."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 2: 'Unfortunately, I punched the referee in the head and knocked him out... \"embarrassed\" was the word for how I felt.'"
+      },
+      {
+        "text": "5. Why did the writer break his back?",
+        "options": [
+          "A. He jumped and caught the ball.",
+          "B. He fell off the horse.",
+          "C. He was knocked out by his opponent.",
+          "D. He ran so fast and fell"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 3: 'I fell off the horse and broke my back.'"
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "CHOOSE YOUR SPORT\n\nEveryone knows that doing exercise is good for the body and the mind. We also know the importance of staying healthy. We all want to stay in shape and look good, but too many of us (1)……………….the wrong sport and quickly lose interest. Therefore, now fitness (2) ………………. are advising people to choose an activity (3) ……………….matches their character.\n\nFor example, those people who like to (4) ………………. with other people often enjoy playing for a football or hockey (5) ………………. However, if you're happier on your own, you may prefer to (6) ………………. cycling or horse riding.\n\nAre you a competitive person? Then try something like boxing, or a (7)……………….sport such as badminton. If, on the other hand, (8) ……………….isn't important to you, then activities like surfboarding or swimming can be an enjoyable (9) ………………. \n\nFinally, think about whether you find it easy to get workout motivation. If so, sports like weight training at home and doing aerobics are fine. If not, book a skiing holiday, Judo lessons, or tennis (10) ………………. You're much more likely to follow the course you've already paid for!",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. choose",
+          "B. go",
+          "C. how",
+          "D. experts"
+        ],
+        "correctAnswer": "A",
+        "explanation": "choose the wrong sport (chọn sai môn thể thao)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. socialize",
+          "B. experts",
+          "C. racket",
+          "D. challenge"
+        ],
+        "correctAnswer": "B",
+        "explanation": "fitness experts (các chuyên gia thể hình)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. choose",
+          "B. why",
+          "C. that",
+          "D. where"
+        ],
+        "correctAnswer": "C",
+        "explanation": "an activity that matches (một hoạt động phù hợp với... - mệnh đề quan hệ)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. go",
+          "B. socialize",
+          "C. choose",
+          "D. lose"
+        ],
+        "correctAnswer": "B",
+        "explanation": "socialize with other people (giao lưu với những người khác)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. stadium",
+          "B. score",
+          "C. team",
+          "D. that"
+        ],
+        "correctAnswer": "C",
+        "explanation": "playing for a football or hockey team (chơi cho một đội bóng đá hoặc khúc côn cầu)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. play",
+          "B. go",
+          "C. choose",
+          "D. draw"
+        ],
+        "correctAnswer": "B",
+        "explanation": "go cycling or horse riding (đi xe đạp hoặc cưỡi ngựa)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. football",
+          "B. stadium",
+          "C. court",
+          "D. racket"
+        ],
+        "correctAnswer": "D",
+        "explanation": "a racket sport such as badminton (môn thể thao dùng vợt như cầu lông)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. winning",
+          "B. score",
+          "C. swimming",
+          "D. playing"
+        ],
+        "correctAnswer": "A",
+        "explanation": "if winning isn't important to you (nếu việc chiến thắng không quan trọng với bạn)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. socialize",
+          "B. playing",
+          "C. experts",
+          "D. challenge"
+        ],
+        "correctAnswer": "D",
+        "explanation": "an enjoyable challenge (một thử thách thú vị)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. court",
+          "B. stadium",
+          "C. ball",
+          "D. athlete"
+        ],
+        "correctAnswer": "A",
+        "explanation": "tennis court (sân tennis) - Mặc dù đáp án gốc là A. court, nhưng trong ngữ cảnh này 'tennis lessons' hợp lý hơn. Tuy nhiên ta vẫn giữ đáp án A theo tài liệu."
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. All employees must carry their identity Cards with them all the time.\n\n2. To: All maths students\nFrom: The secretary\nThis week's lecture will be in the main hall and not in the library as usual. Next week the lecture will be in the library, as normal. Please don't be late.\n\n3. If the ticket machine is out of order, please pay staff on the train.\n\n4. Please show the librarian all books when you leave the library\n\n5. Manager's room\nWorkers please knock before entering.",
+    "questions": [
+      {
+        "text": "1. All employees must carry their identity Cards with them all the time.",
+        "options": [
+          "A. You can get your identity card from security.",
+          "B. You must show your identity card at all times.",
+          "C. The company insists you always have your identity card with you.",
+          "D. The company keeps your identity card for a long time."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Must carry identity cards all the time = The company insists you always have your identity card with you."
+      },
+      {
+        "text": "2. To: All maths students...",
+        "options": [
+          "A. The location of the lecture has changed.",
+          "B. The time of the lecture has changed.",
+          "C. The name of the lecturer has changed.",
+          "D. The subject of the lecture has changed."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Lecture will be in the main hall and not in the library = The location of the lecture has changed."
+      },
+      {
+        "text": "3. If the ticket machine is out of order, please pay staff on the train.",
+        "options": [
+          "A. You can only buy tickets from a member of staff.",
+          "B. There is a ticket machine in this place.",
+          "C. You must always buy a ticket on the train.",
+          "D. Call staff if the ticket machine is out of order."
+        ],
+        "correctAnswer": "B",
+        "explanation": "If the ticket machine is out of order = There is a ticket machine in this place."
+      },
+      {
+        "text": "4. Please show the librarian all books when you leave the library",
+        "options": [
+          "A. The librarian will show you where to put your books.",
+          "B. Return your books before you leave the library.",
+          "C. The librarian needs to see your books before you go.",
+          "D. Make sure you take all your books with you."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Show the librarian all books when you leave = The librarian needs to see your books before you go."
+      },
+      {
+        "text": "5. Manager's room. Workers please knock before entering.",
+        "options": [
+          "A. Workers can enter the room freely.",
+          "B. Workers must enter the room before knocking.",
+          "C. Workers are not allowed to enter the manager's room.",
+          "D. Workers can enter the manager's room after knocking."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Knock before entering = Workers can enter the manager's room after knocking."
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "I had been happily working in the same company as a graphics designer for over ten years, so it came as a huge surprise when one day, without warning I was made redundant. In fact, most of the people in my department lost their jobs that day. When the personnel manager gave me the bad news, she explained that the company had been taken over by a big multinational corporation that was demanding a lot of changes.\n\nSo, one day I was in a comfortable job with a generous salary and plenty of annual leave and the next day I was unemployed. While it was nice to have time on my hands, I knew I would have to find a job fairly quickly. I soon found out that it wasn't so easy. No one was taking on new staff. Every morning I searched the Classified Ads, but there was nothing suitable, not even part-time positions.\n\nFinally, a friend asked me if I was interested in helping out in her new cake shop. She needed somebody to deal with customers and to help her with the cake designs. At first, she could only pay me by the hour at rather a low hourly rate. To my surprise, I love the work.\n\nI've been a cake designer for three years now. I'm so glad I didn't turn down my friend's job offer. We have so much work and now I'm no longer an employee. My friend and I are now partners in the best cake shop in town.",
+    "questions": [
+      {
+        "text": "1. What is the writer's main aim in writing the text?",
+        "options": [
+          "A. To advise people how to change the job",
+          "B. To talk about his changes in career",
+          "C. To describe his new job",
+          "D. To talk about differences between two jobs"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Bài viết kể về quá trình thay đổi công việc của tác giả từ một người thiết kế đồ họa sang thiết kế bánh."
+      },
+      {
+        "text": "2. What does the writer say about his past job?",
+        "options": [
+          "A. It was a hard job but high salary.",
+          "B. It was a part-time job with low salary.",
+          "C. It was an interesting job at a big multinational corporation.",
+          "D. It was a comfortable job with high salary."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Đoạn 2: 'I was in a comfortable job with a generous salary...'"
+      },
+      {
+        "text": "3. What did the writer do after losing his job?",
+        "options": [
+          "A. He ran his own business.",
+          "B. He asked his friend for a part-time job.",
+          "C. He tried to find another job.",
+          "D. He worked part-time job for Classified Ads."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 2: 'I knew I would have to find a job fairly quickly... Every morning I searched the Classified Ads...'"
+      },
+      {
+        "text": "4. What did the writer think about his current job at first?",
+        "options": [
+          "A. He really loved it.",
+          "B. The salary was low.",
+          "C. He was so interested.",
+          "D. It was hard."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 3: 'At first, she could only pay me by the hour at rather a low hourly rate.'"
+      },
+      {
+        "text": "5. What is the current job of the writer?",
+        "options": [
+          "A. Graphics designer",
+          "B. Cake designer",
+          "C. Personnel manager",
+          "D. Employee at the cake shop"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 4: 'I've been a cake designer for three years now.'"
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "My grandpa had a long career. After graduating from university, he started a work as an assistant and worked his way to the top. He ran the company with over 300 (1) ……………... He was very (2) …………….. and he saved the company (3) …………….. disaster many times. When he was in charge, he was never (4) …………….. . He understood people and all the employees (5) …………….. him. My grandpa was an (6) …………….. , which is quite a difficult (7) …………….. , and for 40 years he worked on many projects. Finally, he reached 65, which was the official age of (8) …………….. in his company. He was very (9) …………….. to other engineers – you might even say he was famous! He was always very busy when he was working, but now he is (10) …………….. , he's got more time to spend with his grandchildren and to enjoy his hobby. He really likes fishing and collecting stamps.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. employees",
+          "B. engineer",
+          "C. retirement",
+          "D. employers"
+        ],
+        "correctAnswer": "A",
+        "explanation": "over 300 employees (hơn 300 nhân viên)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. retired",
+          "B. bossy",
+          "C. well-known",
+          "D. successful"
+        ],
+        "correctAnswer": "D",
+        "explanation": "He was very successful (Ông ấy rất thành công)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. to",
+          "B. into",
+          "C. from",
+          "D. for"
+        ],
+        "correctAnswer": "C",
+        "explanation": "saved the company from disaster (cứu công ty khỏi thảm họa)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. bossy",
+          "B. well-known",
+          "C. retired",
+          "D. successful"
+        ],
+        "correctAnswer": "A",
+        "explanation": "he was never bossy (ông ấy không bao giờ hống hách)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. retired",
+          "B. well-known",
+          "C. admired",
+          "D. successful"
+        ],
+        "correctAnswer": "C",
+        "explanation": "all the employees admired him (tất cả nhân viên đều ngưỡng mộ ông)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. occupation",
+          "B. employees",
+          "C. engineer",
+          "D. admired"
+        ],
+        "correctAnswer": "C",
+        "explanation": "My grandpa was an engineer (Ông tôi là một kỹ sư)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. occupation",
+          "B. employees",
+          "C. engineer",
+          "D. admired"
+        ],
+        "correctAnswer": "A",
+        "explanation": "which is quite a difficult occupation (đó là một nghề khá khó khăn)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. occupation",
+          "B. salary",
+          "C. retirement",
+          "D. contract"
+        ],
+        "correctAnswer": "C",
+        "explanation": "official age of retirement (độ tuổi nghỉ hưu chính thức)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. bossy",
+          "B. well-known",
+          "C. retired",
+          "D. successful"
+        ],
+        "correctAnswer": "B",
+        "explanation": "He was very well-known to other engineers (Ông rất nổi tiếng với các kỹ sư khác)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. bossy",
+          "B. well-known",
+          "C. retired",
+          "D. successful"
+        ],
+        "correctAnswer": "C",
+        "explanation": "now he is retired (bây giờ ông đã nghỉ hưu)."
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. No parking in front of these gates. 24 hours access required\n\n2. USE THESE DOORS ONLY IN AN EMERGENCY.\n\n3. Wait for lift door to close before pressing button.\n\n4. THIS BUILDING HAS 24-HOUR SECURITY CAMERAS IN OPERATION.\n\n5. To: Jim\nFrom: Tom\nDid I leave a watch in your house? The problem is it's not mine. I borrowed it and I must give it back.",
+    "questions": [
+      {
+        "text": "1. No parking in front of these gates. 24 hours access required",
+        "options": [
+          "A. Don't leave your car touching these gates.",
+          "B. Don't park your car here within 24 hours.",
+          "C. There is no overnight parking here.",
+          "D. Don't park your cars here because access is needed at all times"
+        ],
+        "correctAnswer": "D",
+        "explanation": "24 hours access required = access is needed at all times."
+      },
+      {
+        "text": "2. USE THESE DOORS ONLY IN AN EMERGENCY.",
+        "options": [
+          "A. You mustn't open these doors in any cases.",
+          "B. The door can be used if necessary.",
+          "C. Only some people can use these doors.",
+          "D. These doors are locked all times."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Only in an emergency = The door can be used if necessary (khi khẩn cấp)."
+      },
+      {
+        "text": "3. Wait for lift door to close before pressing button.",
+        "options": [
+          "A. Press the button to close the lift doors.",
+          "B. Press the button after the doors close.",
+          "C. Press the button and the lift will wait.",
+          "D. Press the button while waiting for the doors to close."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Wait for lift door to close before pressing = Press the button after the doors close."
+      },
+      {
+        "text": "4. THIS BUILDING HAS 24-HOUR SECURITY CAMERAS IN OPERATION.",
+        "options": [
+          "A. The cameras are not operating at the moment.",
+          "B. This building is only open during the day.",
+          "C. There is security in this building day and night.",
+          "D. This building is under operation."
+        ],
+        "correctAnswer": "C",
+        "explanation": "24-hour security cameras = There is security in this building day and night."
+      },
+      {
+        "text": "5. To: Jim From: Tom... What does Tom want Jim to do?",
+        "options": [
+          "A. Return the watch he borrowed",
+          "B. Lend him a watch",
+          "C. Look for the borrowed watch",
+          "D. Inform about the borrowed watch"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Did I leave a watch in your house? = Look for the borrowed watch."
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "Indonesia is a group of islands, located between Asia and Australia. It is close to the equator, so it never gets cold. Every day, the temperature is between 21°C and 32°C. Indonesia is covered with tropical rainforests. For many years, Indonesians have used wood to build their homes. Most of the old houses have wooden frames, walls and floors. Local people have cleared land for farming, and loggers have cut down miles of trees to sell the wood to other countries. Now there is a serious shortage of trees.\n\nNowadays, in Indonesia's rural areas, many of the houses are built on stilts. They raise the houses up, keep the living area off the wet soil, and also keep the houses from flooding during the rainy season. Some people still live in houses with only one room, and some of these houses do not have electricity or running water, but they cannot afford to improve their housing.\n\nIn Indonesian cities, more and more people live in crowded apartment buildings. However, it is hard for people to find good housing. The electricity often goes out throughout these whole buildings. Moreover, landlords do not want to rent their property to poor people, and banks do not want to lend them money to buy homes.\n\nBecause of its location, natural disasters such as floods, droughts, earthquakes and forest fires frequently occur, which destroys buildings and leaves people homeless. These disasters affect people both in the city and in the country.",
+    "questions": [
+      {
+        "text": "1. According to the passage, what causes the shortage of trees in Indonesia?",
+        "options": [
+          "A. Clearing land for farming",
+          "B. Building wooden houses",
+          "C. Smuggling wood",
+          "D. A, B, C are correct."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Đoạn 1 nhắc đến việc dùng gỗ xây nhà (B), dọn đất làm nông (A) và chặt cây bán (tương đương C/buôn lậu hoặc bán). Đáp án D là hợp lý nhất theo tài liệu."
+      },
+      {
+        "text": "2. What does the word “They” in paragraph 2 refer to?",
+        "options": [
+          "A. A kind of material",
+          "B. A part of house",
+          "C. A type of house",
+          "D. A name of place"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'They' thay thế cho 'stilts' (nhà sàn/cột nhà), là một phần của ngôi nhà (A part of house)."
+      },
+      {
+        "text": "3. What natural disaster is NOT mentioned in the passage?",
+        "options": [
+          "A. Floods",
+          "B. Droughts",
+          "C. Storms",
+          "D. Earthquakes"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn cuối nhắc đến: floods, droughts, earthquakes, forest fires. Không có storms."
+      },
+      {
+        "text": "4. What makes poor people difficult to find houses in cities of Indonesia?",
+        "options": [
+          "A. Lack of housing",
+          "B. Lack of financial support from banks",
+          "C. Lack of electricity or running water",
+          "D. Lack of trees"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 3: 'banks do not want to lend them money to buy homes' (Thiếu sự hỗ trợ tài chính từ ngân hàng)."
+      },
+      {
+        "text": "5. What can be the title for the passage?",
+        "options": [
+          "A. Indonesian houses",
+          "B. Indonesian culture",
+          "C. Indonesian housing problems",
+          "D. Indonesian lifestyle"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Bài viết tập trung vào các vấn đề về nhà ở tại Indonesia (thiếu gỗ xây nhà, nhà ngập nước, khó tìm nhà ở thành phố...)."
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Ford Duncan lives in a beautiful round cottage. His parents built it based on the design of a 100-year-old cottage in the same area. Inside, there are two levels. The (1)…………………. floor is the largest, containing 3 rooms. The living room has beautiful lake (2)…………………. The dining room opens to the terrace where the family can sit and (3)…………………. The kitchen is well-equipped with (4)…………………., oven and fridge. Upstairs, the second floor has two king size bedrooms, a (5)………………….home office and a comfortable bathroom. The house also has central heating and it's very cosy, but (6)………………….is a danger here because it is made of (7)………………….\n\nLiving in the round cottage brings a few changes to normal life. The family found the shape of their new home a little (8)………………….at first. All the rooms are round, so there are no (9)………………….and the ceilings seem quite small (10)………………….to the floors.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. ground",
+          "B. fire",
+          "C. wood",
+          "D. view"
+        ],
+        "correctAnswer": "A",
+        "explanation": "The ground floor (tầng trệt)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. sightseeing",
+          "B. view",
+          "C. fire",
+          "D. wood"
+        ],
+        "correctAnswer": "B",
+        "explanation": "beautiful lake view (cảnh hồ tuyệt đẹp)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. choose",
+          "B. stand",
+          "C. relax",
+          "D. go"
+        ],
+        "correctAnswer": "C",
+        "explanation": "sit and relax (ngồi và thư giãn)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. blanket",
+          "B. dishwasher",
+          "C. sofa",
+          "D. toilet"
+        ],
+        "correctAnswer": "B",
+        "explanation": "well-equipped with dishwasher... (được trang bị tốt với máy rửa bát...)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. noisy",
+          "B. strange",
+          "C. well-organized",
+          "D. compared"
+        ],
+        "correctAnswer": "C",
+        "explanation": "a well-organized home office (một phòng làm việc tại nhà được tổ chức tốt)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. ground",
+          "B. fire",
+          "C. stone",
+          "D. wood"
+        ],
+        "correctAnswer": "B",
+        "explanation": "fire is a danger here (hỏa hoạn là một mối nguy hiểm ở đây)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. blanket",
+          "B. wardrobe",
+          "C. fire",
+          "D. wood"
+        ],
+        "correctAnswer": "D",
+        "explanation": "made of wood (làm bằng gỗ)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. strange",
+          "B. well-organized",
+          "C. noisy",
+          "D. dishwasher"
+        ],
+        "correctAnswer": "A",
+        "explanation": "a little strange at first (hơi kỳ lạ lúc đầu)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. rooms",
+          "B. floors",
+          "C. terraces",
+          "D. corners"
+        ],
+        "correctAnswer": "D",
+        "explanation": "there are no corners (không có góc cạnh nào vì phòng hình tròn)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. compared",
+          "B. well-organized",
+          "C. noisy",
+          "D. well-equipped"
+        ],
+        "correctAnswer": "A",
+        "explanation": "compared to the floors (so với sàn nhà)."
+      }
+    ]
+  },
+  {
+    "topic": 6,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. NOTICE! Discount Day next Friday! Hundreds of our most popular products will be reduced for one day only! Don't miss it!\n\n2. There is no longer a delivery charge on orders of pizza.\n\n3. Please show your staff discount card before you pay for your goods.\n\n4. FOR SALE Laptop computer 1 year old. In good condition Suitable for computer games. Phone or email Nick: Ph: 4567967 Email: nick123@gmail.com\n\n5. Special offer! Buy two dresses and get the second one half price.",
+    "questions": [
+      {
+        "text": "1. NOTICE! Discount Day next Friday!...",
+        "options": [
+          "A. This shop will sell everything cheaper on Friday.",
+          "B. Many items will be discounted on Friday.",
+          "C. The shop's most popular products will cost less after Friday.",
+          "D. Many item will be bought on Friday."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Hundreds of products will be reduced = Many items will be discounted."
+      },
+      {
+        "text": "2. There is no longer a delivery charge on orders of pizza.",
+        "options": [
+          "A. A free pizza will be given with every order.",
+          "B. You don't have to pay for a pizza delivery.",
+          "C. This restaurant does not deliver some orders of pizza.",
+          "D. You can’t buy pizza at this restaurant."
+        ],
+        "correctAnswer": "B",
+        "explanation": "No longer a delivery charge = You don't have to pay for a pizza delivery."
+      },
+      {
+        "text": "3. Please show your staff discount card before you pay for your goods.",
+        "options": [
+          "A. This shop gives a discount to some people.",
+          "B. Discounts are not allowed for staff.",
+          "C. Staff will always ask you for your discount card.",
+          "D. You have to pay more."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Staff discount card = This shop gives a discount to some people (staff)."
+      },
+      {
+        "text": "4. FOR SALE Laptop computer 1 year old...",
+        "options": [
+          "A. The laptop computer is almost old.",
+          "B. The laptop computer is not very new but still works well.",
+          "C. The laptop computer is not good for computer games.",
+          "D. The laptop computer is over 2 years old."
+        ],
+        "correctAnswer": "B",
+        "explanation": "1 year old, in good condition = Not very new but still works well."
+      },
+      {
+        "text": "5. Special offer! Buy two dresses and get the second one half price.",
+        "options": [
+          "A. If you buy two dresses, you will have a 50% discount on both of them.",
+          "B. If you buy two dresses, we will give you 50% off your next dress.",
+          "C. If you buy two dresses, we will give you 50% off one of them.",
+          "D. If you buy two dresses, we will give you one."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Get the second one half price = Give you 50% off one of them."
+      }
+    ]
+  },
+  {
+    "topic": 6,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "Brussels is Belgium’s capital city and its administrative, financial, and cultural center. It has two official languages, French and Dutch, and a population of almost a million inhabitants. It is also the ‘capital of the EU’, as the European Parliament is there. The headquarters of NATO are in Brussels and many multinational companies have their European head offices in the city.\n\nManufacturing and service industries are important to its economy. The main manufacturing industries are metal, electrical, pharmaceutical, and chemical, and the main service industries banking, financial services, and tourism.\n\nBrussels has a modern and efficient metro, bus, and tram network. It has Eurostar train connections to Paris and London, and an international airport. The historic center is Grand Palace, one of the Europe’s most beautiful city squares. In December a traditional Christmas Market is held there. North of Grand Palace are elegant 19th-century shopping arcades and Butcher’s Street, a lively area called ‘the stomach of Brussels’ because it is full of restaurants. Brussels also have many attractive cafés and bars. It is one of the best places in Europe to eat and drink, and is known as ‘the beer capital of the world’.\n\nIt has an impressive cathedral and offers all cultural attractions of a European city – museums, theater, music, dance, opera, and international films. There are sports and leisure facilities in the city center, and golf courses, and woods outside where you can enjoy walking, cycling, and jogging, and boating or ice-skating on the lake, depending on the season.",
+    "questions": [
+      {
+        "text": "1. Why is Brussels called ‘the capital of the EU’?",
+        "options": [
+          "A. Because the headquarters of NATO are there.",
+          "B. Because the European Parliament is there.",
+          "C. Because many multinational companies are there.",
+          "D. Because it is a cultural center."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'It is also the ‘capital of the EU’, as the European Parliament is there.'"
+      },
+      {
+        "text": "2. What are the official languages in Brussels?",
+        "options": [
+          "A. French and German",
+          "B. English and French",
+          "C. French and Dutch",
+          "D. French and Spanish"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'It has two official languages, French and Dutch...'"
+      },
+      {
+        "text": "3. What is Grand Palace?",
+        "options": [
+          "A. a shop",
+          "B. a bar",
+          "C. a restaurant",
+          "D. a historic center"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Đoạn 3: 'The historic center is Grand Palace...'"
+      },
+      {
+        "text": "4. What can you find in Butcher’s Street?",
+        "options": [
+          "A. restaurants",
+          "B. cafés",
+          "C. bars",
+          "D. shops"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 3: 'Butcher’s Street, a lively area called ‘the stomach of Brussels’ because it is full of restaurants.'"
+      },
+      {
+        "text": "5. Which of the following is TRUE about manufacturing industries in Brussels?",
+        "options": [
+          "A. sports, banking, pharmaceutical, and chemical",
+          "B. metal, electrical, pharmaceutical, and chemical",
+          "C. metal, tourism, pharmaceutical, and chemical",
+          "D. metal, electrical, banking, and tourism"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 2: 'The main manufacturing industries are metal, electrical, pharmaceutical, and chemical...'"
+      }
+    ]
+  },
+  {
+    "topic": 6,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Black Friday refers to the day just after Thanksgiving in the US. Because so many companies have a four day weekend, many people begin their Christmas shopping on this day. Black Friday is often reported as one of the busiest (1) …………. days of the year. Many stores have (2) …………. to draw more customers. Shopping malls are packed with people, parking lots are (3) …………., and the stores and sidewalks are overflowing with (4) ………….. Traffic jams fill the roads into the downtown area every year.\n\nThe word \"black\" to describe the Friday likely began in Philadelphia in the mid-1960s. Although many people may see the day after Thanksgiving (5) …………., retailers have a very different (6) ………….. It's their best opportunity to (7) ………….earnings for the year. If sales were (8) …………. in other seasons then the store must attract many customers and make many sales (9) …………. Thanksgiving and Christmas. The first and most important day of this season last shopping (10) …………. is Black Friday.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. shopping",
+          "B. discounts",
+          "C. farming",
+          "D. selling"
+        ],
+        "correctAnswer": "A",
+        "explanation": "busiest shopping days (những ngày mua sắm bận rộn nhất)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. sales",
+          "B. discounts",
+          "C. goods",
+          "D. receipts"
+        ],
+        "correctAnswer": "B",
+        "explanation": "have discounts (có giảm giá)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. peaceful",
+          "B. quiet",
+          "C. slow",
+          "D. crowded"
+        ],
+        "correctAnswer": "D",
+        "explanation": "parking lots are crowded (bãi đỗ xe đông đúc)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. customers",
+          "B. workers",
+          "C. engineers",
+          "D. passengers"
+        ],
+        "correctAnswer": "A",
+        "explanation": "overflowing with customers (tràn ngập khách hàng)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. positively",
+          "B. negatively",
+          "C. slowly",
+          "D. quickly"
+        ],
+        "correctAnswer": "B",
+        "explanation": "see the day after Thanksgiving negatively (nhìn ngày này một cách tiêu cực - do tắc đường, đông đúc)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. idea",
+          "B. chance",
+          "C. opinion",
+          "D. discount"
+        ],
+        "correctAnswer": "C",
+        "explanation": "a very different opinion (một quan điểm rất khác)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. improve",
+          "B. develop",
+          "C. decrease",
+          "D. get down"
+        ],
+        "correctAnswer": "A",
+        "explanation": "improve earnings (cải thiện thu nhập)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. good",
+          "B. fast",
+          "C. slow",
+          "D. reasonable"
+        ],
+        "correctAnswer": "C",
+        "explanation": "If sales were slow (Nếu doanh số bán hàng chậm)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. between",
+          "B. from",
+          "C. for",
+          "D. to"
+        ],
+        "correctAnswer": "A",
+        "explanation": "between Thanksgiving and Christmas (giữa Lễ Tạ ơn và Giáng sinh)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. solution",
+          "B. activity",
+          "C. problem",
+          "D. chance"
+        ],
+        "correctAnswer": "D",
+        "explanation": "last shopping chance (cơ hội mua sắm cuối cùng)."
+      }
+    ]
+  },
+  {
+    "topic": 7,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. Sam, dinner's in the oven. Please put the leftovers in the fridge and your dirty dishes in the dishwasher. Love,\n\n2. Jeff, I have to work till 9p.m. today. Could you get dinner ready? It's in the fridge and just needs warming up. Jane\n\n3. Dave, there's no milk left. I'll get some on my way home. Buy some eggs and tell Mary to make herself a salad. Betty\n\n4. Special offer for two days only! Food items at very, very low prices!\n\n5. Dear customers, Because of building work, the supermarket will be closed until further notice. Sorry for the inconvenience!",
+    "questions": [
+      {
+        "text": "1. Sam, dinner's in the oven...",
+        "options": [
+          "A. Sam should heat up her food before she eats it.",
+          "B. Sam should clean up after she's eaten.",
+          "C. Sam should take the food out of the fridge and eat it.",
+          "D. Sam should take the food out of the oven and put it in the fridge."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Put the leftovers in the fridge and dirty dishes in the dishwasher = Sam should clean up after she's eaten."
+      },
+      {
+        "text": "2. Jeff, I have to work till 9p.m. today...",
+        "options": [
+          "A. Jane needs to think about food for dinner.",
+          "B. Jeff will buy something for dinner.",
+          "C. Jeff needs to prepare dinner.",
+          "D. Jane needs to cook food when she finishes work."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Could you get dinner ready? = Jeff needs to prepare dinner."
+      },
+      {
+        "text": "3. Dave, there's no milk left...",
+        "options": [
+          "A. Dave will go to buy some milk.",
+          "B. There's some milk in the fridge.",
+          "C. Betty will buy some eggs for Mary.",
+          "D. Mary knows how to make a salad."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Tell Mary to make herself a salad = Mary knows how to make a salad."
+      },
+      {
+        "text": "4. Special offer for two days only!...",
+        "options": [
+          "A. All food items are half price.",
+          "B. The supermarket doesn't offer low price every day.",
+          "C. Kitchen items are very cheap.",
+          "D. Food will be sold in two days only."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Special offer for two days only = The supermarket doesn't offer low price every day."
+      },
+      {
+        "text": "5. Dear customers, Because of building work...",
+        "options": [
+          "A. The supermarket will be opened next week.",
+          "B. Customers can go to the supermarket as usual.",
+          "C. The supermarket will not be opened again.",
+          "D. Customers don't know when the supermarket will be opened again."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Closed until further notice = Customers don't know when the supermarket will be opened again."
+      }
+    ]
+  },
+  {
+    "topic": 7,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "I was born in Newcastle, a city in the North East of England. Newcastle is on the bank of the River Tyne. It is quite big, with a population of about 2000,000 people. There is a cathedral and a university. There are five bridges over the Rive Tyne, which link Newcastle to the next town, Gates head, where there is one of the biggest shopping centers in the world. A few years ago, the main industries were shipbuilding and coalmining, but now the chemical and soap industries are important. I moved to London ten years ago but I often return to Newcastle. I miss the people, who are very friendly, and I miss the beautiful countryside near the city, where there are so many hills and streams.",
+    "questions": [
+      {
+        "text": "1. Newcastle is ______________.",
+        "options": [
+          "A. a city in the North of England",
+          "B. a city near the North East of England",
+          "C. a city in the North East of England",
+          "D. a small town in England"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'Newcastle, a city in the North East of England.'"
+      },
+      {
+        "text": "2. The population of Newcastle is ______________.",
+        "options": [
+          "A. 200,000 people",
+          "B. about 2000,000 people",
+          "C. much less than 200,000 people",
+          "D. much more than 200,00 people"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'with a population of about 2000,000 people.'"
+      },
+      {
+        "text": "3. Gates head has one of ______________.",
+        "options": [
+          "A. the biggest shopping centers",
+          "B. the most beautiful country sides",
+          "C. the largest rivers",
+          "D. the most important shipbuilding industries"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 1: 'Gates head, where there is one of the biggest shopping centers in the world.'"
+      },
+      {
+        "text": "4. According to the passage, the writer ______________.",
+        "options": [
+          "A. doesn’t live in Newcastle any more",
+          "B. has come back to live in Newcastle",
+          "C. is still living in Newcastle",
+          "D. has never returned to Newcastle"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 1: 'I moved to London ten years ago but I often return to Newcastle.' (Tác giả đã chuyển đến London nên không còn sống ở Newcastle nữa)."
+      },
+      {
+        "text": "5. Which of the following is not true about Newcastle?",
+        "options": [
+          "A. It is next to Gate head",
+          "B. Its main industry now is shipbuilding",
+          "C. It has a cathedral and a university",
+          "D. It has a lot of people"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'A few years ago, the main industries were shipbuilding... but now the chemical and soap industries are important.' (Công nghiệp đóng tàu là trong quá khứ, không phải hiện tại)."
+      }
+    ]
+  },
+  {
+    "topic": 7,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Fresh Bouquets is a small company, but in the last few years it has become a big (1)…….. story. Entrepreneurs Graham Hodson and Shaun Caulfield (2)…….. the company in 1991. Since then, they have developed a very good (3)……. for last-minute gifts of flowers. In the last four years, they have increased (4)…….. by over 100% per year, from $40,000 to $6,4 million.\n\nAt first, Fresh Bouquets grew its own supplies of flowers at its base in south-east England. Soon, the company needed to import (5)…….. from other countries, such as Turkey and Kenya.\n\nTheir first big (6)…….. was the short life of cut flowers, and this remained the biggest challenge up to the present time. Every day, flowers travel perhaps (7)…….. of kilometers and have to reach the company’s 4,500 customers – mainly petrol stations and supermarkets – in top condition. (8)……, several years ago, the company decided to spend $500,000 a year on information technology for its (9)……. system. It has continued to invest this amount each year since then.\n\nHowever, all the hard work and investment have produced great result. At the beginning of this year, Fresh Bouquets has appeared at number 27 (10)……. the list of Britain’s 100 fastest-growing companies.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. successful",
+          "B. succeed",
+          "C. success",
+          "D. successfully"
+        ],
+        "correctAnswer": "C",
+        "explanation": "a big success story (một câu chuyện thành công lớn)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. founded",
+          "B. found",
+          "C. founder",
+          "D. find"
+        ],
+        "correctAnswer": "A",
+        "explanation": "founded the company (thành lập công ty)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. shop",
+          "B. market",
+          "C. supermarket",
+          "D. store"
+        ],
+        "correctAnswer": "B",
+        "explanation": "developed a very good market (phát triển một thị trường rất tốt)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. selling",
+          "B. seller",
+          "C. sales",
+          "D. sell"
+        ],
+        "correctAnswer": "C",
+        "explanation": "increased sales (tăng doanh số bán hàng)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. vegetables",
+          "B. foods",
+          "C. fruits",
+          "D. flowers"
+        ],
+        "correctAnswer": "D",
+        "explanation": "import flowers (nhập khẩu hoa)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. work",
+          "B. problem",
+          "C. change",
+          "D. job"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Their first big problem (Vấn đề lớn đầu tiên của họ)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. thousands",
+          "B. one thousand",
+          "C. a thousand",
+          "D. thousand"
+        ],
+        "correctAnswer": "A",
+        "explanation": "thousands of kilometers (hàng ngàn km)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. But",
+          "B. However",
+          "C. So",
+          "D. Or else"
+        ],
+        "correctAnswer": "C",
+        "explanation": "So, several years ago... (Vì vậy, vài năm trước...)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. distribute",
+          "B. distribution",
+          "C. distributed",
+          "D. distributing"
+        ],
+        "correctAnswer": "B",
+        "explanation": "distribution system (hệ thống phân phối)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. on",
+          "B. at",
+          "C. in",
+          "D. off"
+        ],
+        "correctAnswer": "A",
+        "explanation": "on the list (trên danh sách)."
+      }
+    ]
+  },
+  {
+    "topic": 8,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. If it's too cold for you, so is it for your pet. Bring them inside.\n\n2. DO NOT DISTURB\n\n3. Jazz on summer evening\nNo Tickets Left for Sunday Performance\n\n4. STAY OFF THE ROADS\nNOT OUT IN THE WEATHER.\n\n5. FEMA CENTRE CLOSED DUE TO THE WEATHER.",
+    "questions": [
+      {
+        "text": "1. If it's too cold for you, so is it for your pet. Bring them inside.",
+        "options": [
+          "A. Stay at home in bad weather.",
+          "B. Go out with your pet when it's cold.",
+          "C. You and your pet shouldn't go out together.",
+          "D. Keep your pet at home."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Bring them inside = Keep your pet at home."
+      },
+      {
+        "text": "2. DO NOT DISTURB",
+        "options": [
+          "A. Don't go inside.",
+          "B. Don't close the door.",
+          "C. Go this way.",
+          "D. Come in, please."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Do not disturb = Don't go inside (không làm phiền/không vào trong)."
+      },
+      {
+        "text": "3. Jazz on summer evening. No Tickets Left for Sunday Performance",
+        "options": [
+          "A. You can buy tickets here for any evening.",
+          "B. A ticket is not necessary for Sunday evening.",
+          "C. All Sunday evening tickets have been sold out.",
+          "D. No tickets are sold for Sunday."
+        ],
+        "correctAnswer": "C",
+        "explanation": "No Tickets Left = All tickets have been sold out."
+      },
+      {
+        "text": "4. STAY OFF THE ROADS. NOT OUT IN THE WEATHER.",
+        "options": [
+          "A. You should stay on the roads because of bad weather.",
+          "B. Don't go out, stay inside.",
+          "C. The weather is good, let's go to the road.",
+          "D. Don't stay inside when the weather's nice."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Stay off the roads, not out in the weather = Don't go out, stay inside."
+      },
+      {
+        "text": "5. FEMA CENTRE CLOSED DUE TO THE WEATHER.",
+        "options": [
+          "A. When the weather is good, FEMA centre is opened.",
+          "B. The weather is not suitable to go to FEMA centre.",
+          "C. FEMA centre is closed because of bad weather.",
+          "D. The weather does not affect FEMA centre's activities."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Closed due to the weather = Closed because of bad weather."
+      }
+    ]
+  },
+  {
+    "topic": 8,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "In the UK there are four seasons, spring, summer, autumn and winter; and the weather is different in each of them. However, there is not a sudden change between the seasons. It takes several weeks for the weather to change enough for people to notice the difference.\n\nThe summer is the season with the best weather. In general, it is hot and sunny with only a little rain sometimes. However, it can sometimes be cold and wet for one or two weeks at a time. After the summer is the autumn. In this season the weather gets colder and there are stronger winds, also it will rain more. All the leaves will start to fall off the trees as it is cold. Frost might start to form on the ground towards the end of the autumn.\n\nWinter is the coldest season in the UK. The temperature will often be at zero degrees Celsius. This means that ice will often form on the ground overnight where there were puddles. This makes it difficult to walk sometimes. There might also be snow, but the UK does not get much snow, mainly just cold rain in the winter. Then when winter ends the spring starts. The temperature will start to get warmer and the winds will not be as strong. Plants start to grow again and new leaves form.\n\nMany people in the UK complain about the weather, but as the weather changes so much it is very interesting and gives the people something to talk about all year round.",
+    "questions": [
+      {
+        "text": "1. How can the weather in the UK be described?",
+        "options": [
+          "A. Mild",
+          "B. Humid",
+          "C. Changeable",
+          "D. Rainy"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn cuối: 'as the weather changes so much...' (thời tiết thay đổi rất nhiều -> Changeable)."
+      },
+      {
+        "text": "2. What is the weather like in summer in the UK?",
+        "options": [
+          "A. It's hot and sunny",
+          "B. It's rainy and wet",
+          "C. It's cold and dry",
+          "D. It's a little cold and windy"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 2: 'In general, it is hot and sunny with only a little rain sometimes.'"
+      },
+      {
+        "text": "3. When will frost first appear?",
+        "options": [
+          "A. In spring",
+          "B. In summer",
+          "C. In autumn",
+          "D. In winter"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 2: 'Frost might start to form on the ground towards the end of the autumn.'"
+      },
+      {
+        "text": "4. What does the word “puddles” mean?",
+        "options": [
+          "A. water",
+          "B. frost",
+          "C. stones",
+          "D. snow"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Puddles là vũng nước nhỏ (water)."
+      },
+      {
+        "text": "5. Why do people like the spring?",
+        "options": [
+          "A. It is not winter.",
+          "B. It is the shortest season.",
+          "C. It only happens every other year.",
+          "D. It has really nice weather."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Mùa xuân thời tiết ấm lên, gió yếu đi, cây cối mọc lại (thời tiết rất đẹp)."
+      }
+    ]
+  },
+  {
+    "topic": 8,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "The relationship between students and teachers is (1)__________formal in the USA than in many other countries, especially at the college level. American college students do not (2) __________ when their teacher enters the room. Students are generally (3)__________to ask questions in class, to stop in the professor's of lice for extra help, and to phone if they are (4) __________ and need information. (5) ____________teachers allow students to enter class late or leave early, if necessary. (6) __________the lack of formality, students are still expected to be (7) ___________to their teacher and fellow classmates. When students want to ask questions, they usually (8)__________a hand and wait to be (9) _________ on. When the teacher or a student is speaking to the class, it is rude to begin whispering to another classmate. When a test is being given, talking to' a classmate is not only rude but also risky. Most American teachers consider that students who are talking to each other during a test are (10)_________.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. much",
+          "B. most",
+          "C. a little",
+          "D. less"
+        ],
+        "correctAnswer": "D",
+        "explanation": "less formal (ít trang trọng hơn)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. sit up",
+          "B. stand up",
+          "C. go up",
+          "D. stay up"
+        ],
+        "correctAnswer": "B",
+        "explanation": "do not stand up (không đứng lên)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. encouraged",
+          "B. encouraging",
+          "C. to encourage",
+          "D. encourage"
+        ],
+        "correctAnswer": "A",
+        "explanation": "are generally encouraged (thường được khuyến khích)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. wanted",
+          "B. present",
+          "C. absent",
+          "D. healthy"
+        ],
+        "correctAnswer": "C",
+        "explanation": "if they are absent (nếu họ vắng mặt)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. Most",
+          "B. Most of",
+          "C. Many of",
+          "D. Much of"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Most teachers (Hầu hết các giáo viên)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. Though",
+          "B. Although",
+          "C. In spite to",
+          "D. Despite"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Despite the lack of formality (Mặc dù thiếu sự trang trọng)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. impolite",
+          "B. rude",
+          "C. polite",
+          "D. kind"
+        ],
+        "correctAnswer": "C",
+        "explanation": "expected to be polite (được mong đợi là sẽ lịch sự)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. raise",
+          "B. hold",
+          "C. hang",
+          "D. rise"
+        ],
+        "correctAnswer": "A",
+        "explanation": "raise a hand (giơ tay)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. gone",
+          "B. called",
+          "C. invited",
+          "D. left"
+        ],
+        "correctAnswer": "B",
+        "explanation": "wait to be called on (đợi được gọi tên)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. friendly",
+          "B. obidient",
+          "C. cheating",
+          "D. playing"
+        ],
+        "correctAnswer": "C",
+        "explanation": "are cheating (đang gian lận)."
+      }
+    ]
+  },
+  {
+    "topic": 9,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. Parking form\nComplete and give it to security\nCar registration……\nDate…………………\n\n2. Allow at least two hours for your visit to the museum.\n\n3. More parking spaces behind the hotel.\n\n4. City buses\nPlease have ready the exact fare for your journey\n\n5. Nothing of value is left in this car at night",
+    "questions": [
+      {
+        "text": "1. Parking form. Complete and give it to security...",
+        "options": [
+          "A. Register your car here by filling in this form.",
+          "B. Go to security to fill in this form.",
+          "C. Bring the completed form to security.",
+          "D. Ask security to give this form before parking car."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Complete and give it to security = Bring the completed form to security."
+      },
+      {
+        "text": "2. Allow at least two hours for your visit to the museum.",
+        "options": [
+          "A. Each tour of the museum lasts less than two hours.",
+          "B. Two hours is the minimum time recommended for a visit to the museum.",
+          "C. Visitors only have two hours to visit the museum.",
+          "D. Visitors are only allowed to spend two hours inside the museum."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Allow at least two hours = Two hours is the minimum time recommended."
+      },
+      {
+        "text": "3. More parking spaces behind the hotel.",
+        "options": [
+          "A. It is better to park behind the hotel.",
+          "B. Don't park in front of this hotel.",
+          "C. A new hotel car park is opening soon.",
+          "D. Parking car has been moved behind the hotel."
+        ],
+        "correctAnswer": "A",
+        "explanation": "More parking spaces behind = It is better to park behind the hotel."
+      },
+      {
+        "text": "4. City buses. Please have ready the exact fare for your journey",
+        "options": [
+          "A. You need the right ticket for your journey.",
+          "B. You need to keep your ticket ready for checking.",
+          "C. Ticket must be bought before boarding the bus.",
+          "D. You need to have the correct money when you board the bus."
+        ],
+        "correctAnswer": "D",
+        "explanation": "Have ready the exact fare = You need to have the correct money."
+      },
+      {
+        "text": "5. Nothing of value is left in this car at night",
+        "options": [
+          "A. This car is not available at night.",
+          "B. Valuable objects are removed at night.",
+          "C. This car is locked at night.",
+          "D. This car contains nothing of value."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Nothing of value is left = Valuable objects are removed at night."
+      }
+    ]
+  },
+  {
+    "topic": 9,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "People who traveled frequently on business or pleasure often suffer from health problems, yet over half of these problems can be easily prevented. The most common ailment, a headache, can be avoided by taking along an ample supply of aspirins or other pain relievers. Another common affliction is motion sickness caused by the constant movement of a vehicle. Ginger capsules, sold in most health-food stores, have been found effective as remedy. Other familiar problems include sunburn, which can be prevented by using an effective sunscreen, and insect bites, which can be controlled with a repellent spray or ointment. For everyday cuts and scratches, a first-aid kit containing bandages and antiseptic scream is recommended.",
+    "questions": [
+      {
+        "text": "1. What is the best title for the passage?",
+        "options": [
+          "A. Common Health Problems",
+          "B. Frequent Travelers",
+          "C. Avoiding Travel Ailments",
+          "D. Traveling for Business or Pleasure"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn văn liệt kê các vấn đề sức khỏe phổ biến khi đi du lịch (đau đầu, say tàu xe, cháy nắng...)."
+      },
+      {
+        "text": "2. According to the passage, travelers are most commonly bothered by__________.",
+        "options": [
+          "A. sunburn",
+          "B. insect bites",
+          "C. headaches",
+          "D. motion sickness"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Dựa theo đáp án của tài liệu (Mặc dù trong bài có nhắc tới 'The most common ailment, a headache', nhưng đáp án chuẩn của đề thi là D. motion sickness)."
+      },
+      {
+        "text": "3. The word affliction can best be replaced by __________.",
+        "options": [
+          "A. ailment",
+          "B. result",
+          "C. experience",
+          "D. supply"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'affliction' (nỗi đau đớn, bệnh tật) đồng nghĩa với 'ailment' (bệnh tật)."
+      },
+      {
+        "text": "4. According to the passage, what can be used to remedy to motion sickness?",
+        "options": [
+          "A. A moving vehicle",
+          "B. Pain-killers",
+          "C. Ginger capsules",
+          "D. A first-aid kit"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'Ginger capsules, sold in most health-food stores, have been found effective as remedy.'"
+      },
+      {
+        "text": "5. Which of the following is NOT mentioned in the passage as a solution to a health problem?",
+        "options": [
+          "A. sunscreen",
+          "B. repellent spray",
+          "C. cold cream",
+          "D. aspirin"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Trong bài có nhắc đến sunscreen, repellent spray, aspirin nhưng không nhắc đến cold cream."
+      }
+    ]
+  },
+  {
+    "topic": 9,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "HOLIDAYS\n\nIs it better to go on a package tour,or to (1)…….on your own? I suppose the answer depends on what kind of (2)…………… you are. A complicated tour organized by a travel (3) ………..has some advantages. You have an itinerary, which gives you definite (4)……….and arrival dates, and a list of all your (5)………… The accommodation may be cheaper, as it has been (6)………in advance, so you spend less time worrying about where are you going to (7)………..If you book your own hotel, you might have trouble finding a/an vacancy, unless you are going to stay for a (8)………., for example. On the other hand, organizing your own (9) ……….can be fun. Many students (10)……….or buy cheap train tickets, and spend the night in students hostels or guest-houses.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. travel",
+          "B. trip",
+          "C. voyage",
+          "D. tourist"
+        ],
+        "correctAnswer": "A",
+        "explanation": "travel on your own (tự đi du lịch)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. voyager",
+          "B. passenger",
+          "C. tourist",
+          "D. mover"
+        ],
+        "correctAnswer": "C",
+        "explanation": "what kind of tourist you are (bạn là loại du khách nào)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. office",
+          "B. agent",
+          "C. tour",
+          "D. operation"
+        ],
+        "correctAnswer": "B",
+        "explanation": "travel agent (đại lý du lịch)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. departure",
+          "B. parting",
+          "C. leave",
+          "D. quitting"
+        ],
+        "correctAnswer": "A",
+        "explanation": "departure and arrival dates (ngày khởi hành và ngày đến)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. cancellations",
+          "B. expeditions",
+          "C. organisations",
+          "D. destinations"
+        ],
+        "correctAnswer": "D",
+        "explanation": "a list of all your destinations (danh sách tất cả các điểm đến của bạn)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. preserved",
+          "B. booked",
+          "C. reservation",
+          "D. hotels"
+        ],
+        "correctAnswer": "B",
+        "explanation": "booked in advance (được đặt trước)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. stay",
+          "B. pass",
+          "C. live",
+          "D. cross"
+        ],
+        "correctAnswer": "A",
+        "explanation": "where are you going to stay (bạn sẽ ở đâu)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. fortnight",
+          "B. daytime",
+          "C. fifteen days",
+          "D. passage"
+        ],
+        "correctAnswer": "A",
+        "explanation": "stay for a fortnight (ở lại trong hai tuần)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. voyage",
+          "B. expedition",
+          "C. trip",
+          "D. package"
+        ],
+        "correctAnswer": "C",
+        "explanation": "organizing your own trip (tự tổ chức chuyến đi của mình)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. auto-stop",
+          "B. hitch-hike",
+          "C. lift",
+          "D. journey"
+        ],
+        "correctAnswer": "B",
+        "explanation": "hitch-hike (đi nhờ xe)."
+      }
+    ]
+  },
+  {
+    "topic": 10,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. Please keep off the grass.\n\n2. OUT OF ORDER\n\n3. No parking in front of the gates.\n\n4. Beware of the dog.\n\n5. STAFF ONLY",
+    "questions": [
+      {
+        "text": "1. Please keep off the grass.",
+        "options": [
+          "A. You can sit on the grass.",
+          "B. Do not walk on the grass.",
+          "C. The grass is being cut.",
+          "D. Keep the grass clean."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Keep off = Do not walk on."
+      },
+      {
+        "text": "2. OUT OF ORDER",
+        "options": [
+          "A. This machine is not working.",
+          "B. You must order outside.",
+          "C. The items are out of stock.",
+          "D. Please stand in order."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Out of order = Not working/broken."
+      },
+      {
+        "text": "3. No parking in front of the gates.",
+        "options": [
+          "A. You can park near the gates.",
+          "B. Do not leave your car here.",
+          "C. The gates are closed for parking.",
+          "D. Parking is allowed behind the gates."
+        ],
+        "correctAnswer": "B",
+        "explanation": "No parking = Do not leave your car here."
+      },
+      {
+        "text": "4. Beware of the dog.",
+        "options": [
+          "A. The dog is friendly.",
+          "B. Please feed the dog.",
+          "C. Be careful because of the dog.",
+          "D. Dogs are not allowed here."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Beware of = Be careful of."
+      },
+      {
+        "text": "5. STAFF ONLY",
+        "options": [
+          "A. Only people who work here can enter.",
+          "B. Customers can enter here.",
+          "C. Staff are not allowed here.",
+          "D. Everyone can enter."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Staff only = Only employees/workers can enter."
+      }
+    ]
+  },
+  {
+    "topic": 10,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "Recycling is very important as waste has a huge negative impact on the natural environment. Harmful chemicals and greenhouse gasses are released from rubbish in landfill sites. Recycling helps to reduce the pollution caused by waste. Habitat destruction and global warming are some the affects caused by deforestation. Recycling reduces the need for raw materials so that the rainforests can be preserved. Huge amounts of energy are used when making products from raw materials. Recycling requires much less energy and therefore helps to preserve natural resources.",
+    "questions": [
+      {
+        "text": "1. What is the main idea of the passage?",
+        "options": [
+          "A. The history of recycling",
+          "B. The benefits of recycling",
+          "C. How to recycle at home",
+          "D. The cost of recycling"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn văn nói về các lợi ích của việc tái chế (giảm ô nhiễm, bảo vệ rừng, tiết kiệm năng lượng)."
+      },
+      {
+        "text": "2. What is released from rubbish in landfill sites?",
+        "options": [
+          "A. Natural resources",
+          "B. Raw materials",
+          "C. Harmful chemicals and greenhouse gasses",
+          "D. Energy"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'Harmful chemicals and greenhouse gasses are released from rubbish in landfill sites.'"
+      },
+      {
+        "text": "3. How does recycling help the rainforests?",
+        "options": [
+          "A. It plants more trees.",
+          "B. It reduces the need for raw materials.",
+          "C. It stops global warming immediately.",
+          "D. It creates more land for forests."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'Recycling reduces the need for raw materials so that the rainforests can be preserved.'"
+      },
+      {
+        "text": "4. Making products from raw materials requires ____________.",
+        "options": [
+          "A. huge amounts of energy",
+          "B. less energy than recycling",
+          "C. no energy",
+          "D. only human labor"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đoạn 1: 'Huge amounts of energy are used when making products from raw materials.'"
+      },
+      {
+        "text": "5. The word 'preserved' in the passage is closest in meaning to ____________.",
+        "options": [
+          "A. destroyed",
+          "B. protected",
+          "C. discovered",
+          "D. replaced"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'preserved' (được bảo tồn, bảo vệ) gần nghĩa nhất với 'protected'."
+      }
+    ]
+  },
+  {
+    "topic": 10,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Learning a second language can be very (1)________. It can help you when you travel, and it can also (2)________ your brain. Many people choose to learn English because it is an international (3)________. When you learn a new language, you need to practice (4)________ day. You can read books, listen to music, or watch movies in the target language. It is also helpful to (5)________ with native speakers. Don't be afraid of making (6)________. Everyone makes them when they are learning. The most important thing is to keep (7)________ and not give up. Some people find grammar (8)________, but it is necessary for building correct sentences. Vocabulary is also crucial, so try to learn a few new (9)________ every week. With time and effort, you will become (10)________.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. useful",
+          "B. useless",
+          "C. use",
+          "D. used"
+        ],
+        "correctAnswer": "A",
+        "explanation": "very useful (rất hữu ích)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. damage",
+          "B. improve",
+          "C. hurt",
+          "D. break"
+        ],
+        "correctAnswer": "B",
+        "explanation": "improve your brain (cải thiện não bộ của bạn)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. country",
+          "B. nation",
+          "C. language",
+          "D. speech"
+        ],
+        "correctAnswer": "C",
+        "explanation": "international language (ngôn ngữ quốc tế)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. some",
+          "B. all",
+          "C. every",
+          "D. few"
+        ],
+        "correctAnswer": "C",
+        "explanation": "every day (mỗi ngày)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. talk",
+          "B. talking",
+          "C. talked",
+          "D. talks"
+        ],
+        "correctAnswer": "A",
+        "explanation": "helpful to talk (hữu ích khi nói chuyện)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. mistakes",
+          "B. choices",
+          "C. decisions",
+          "D. friends"
+        ],
+        "correctAnswer": "A",
+        "explanation": "making mistakes (phạm sai lầm)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. try",
+          "B. trying",
+          "C. tried",
+          "D. to try"
+        ],
+        "correctAnswer": "B",
+        "explanation": "keep trying (tiếp tục cố gắng)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. easy",
+          "B. difficult",
+          "C. fun",
+          "D. interesting"
+        ],
+        "correctAnswer": "B",
+        "explanation": "find grammar difficult (thấy ngữ pháp khó)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. words",
+          "B. letters",
+          "C. numbers",
+          "D. sounds"
+        ],
+        "correctAnswer": "A",
+        "explanation": "new words (từ mới)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. fluent",
+          "B. fluently",
+          "C. fluency",
+          "D. fluents"
+        ],
+        "correctAnswer": "A",
+        "explanation": "become fluent (trở nên trôi chảy)."
+      }
+    ]
+  },
+  {
+    "topic": 11,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. Please pay for your goods before leaving the store.\n\n2. SILENCE. EXAMS IN PROGRESS.\n\n3. Do not leave your luggage unattended.\n\n4. Please wait here until the light turns green.\n\n5. NO SMOKING IN THIS AREA.",
+    "questions": [
+      {
+        "text": "1. Please pay for your goods before leaving the store.",
+        "options": [
+          "A. You can pay later.",
+          "B. You must pay before you leave.",
+          "C. Goods are free today.",
+          "D. Leave the store without paying."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Pay before leaving = You must pay before you leave."
+      },
+      {
+        "text": "2. SILENCE. EXAMS IN PROGRESS.",
+        "options": [
+          "A. You must be quiet because people are taking exams.",
+          "B. You can talk loudly here.",
+          "C. Exams are finished.",
+          "D. Please ask questions about the exam."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Silence = You must be quiet."
+      },
+      {
+        "text": "3. Do not leave your luggage unattended.",
+        "options": [
+          "A. You can leave your bags here.",
+          "B. Someone will watch your bags.",
+          "C. You must stay with your bags at all times.",
+          "D. Luggage is not allowed."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Do not leave unattended = Stay with your bags."
+      },
+      {
+        "text": "4. Please wait here until the light turns green.",
+        "options": [
+          "A. Go when the light is red.",
+          "B. Stop when the light is green.",
+          "C. Do not move until you see the green light.",
+          "D. The light is always green."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Wait until green = Do not move until green."
+      },
+      {
+        "text": "5. NO SMOKING IN THIS AREA.",
+        "options": [
+          "A. You can smoke here.",
+          "B. Smoking is permitted.",
+          "C. You are not allowed to smoke here.",
+          "D. Buy cigarettes here."
+        ],
+        "correctAnswer": "C",
+        "explanation": "No smoking = Not allowed to smoke."
+      }
+    ]
+  },
+  {
+    "topic": 11,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "The Internet has changed the way we live, work, and communicate. It provides instant access to a vast amount of information. People can read news, research topics, and learn new skills online. Social media platforms allow us to connect with friends and family around the world. However, the Internet also has some disadvantages. Spending too much time online can lead to addiction and isolation. There are also concerns about privacy and security, as personal information can be stolen by hackers. It is important to use the Internet responsibly and be aware of the potential risks.",
+    "questions": [
+      {
+        "text": "1. What is the main topic of the passage?",
+        "options": [
+          "A. The history of the Internet",
+          "B. The advantages and disadvantages of the Internet",
+          "C. How to use social media",
+          "D. Internet security"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn văn nói về cả lợi ích (thông tin, kết nối) và tác hại (nghiện, bảo mật) của Internet."
+      },
+      {
+        "text": "2. According to the passage, what can people do online?",
+        "options": [
+          "A. Only read news",
+          "B. Only connect with friends",
+          "C. Read news, research, and learn skills",
+          "D. Only play games"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'People can read news, research topics, and learn new skills online.'"
+      },
+      {
+        "text": "3. What is a potential negative effect of spending too much time online?",
+        "options": [
+          "A. Becoming smarter",
+          "B. Addiction and isolation",
+          "C. Making more friends",
+          "D. Improving health"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'Spending too much time online can lead to addiction and isolation.'"
+      },
+      {
+        "text": "4. Why are there concerns about privacy on the Internet?",
+        "options": [
+          "A. Because information is always safe",
+          "B. Because hackers can steal personal information",
+          "C. Because social media is private",
+          "D. Because no one uses the Internet"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'personal information can be stolen by hackers.'"
+      },
+      {
+        "text": "5. The author suggests that we should ____________.",
+        "options": [
+          "A. stop using the Internet completely",
+          "B. only use the Internet for work",
+          "C. use the Internet responsibly",
+          "D. share all our personal information online"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn cuối: 'It is important to use the Internet responsibly...'"
+      }
+    ]
+  },
+  {
+    "topic": 11,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Eating a balanced diet is essential for good (1)________. Your body needs a variety of nutrients to function (2)________. These include carbohydrates, proteins, fats, vitamins, and minerals. Fruits and vegetables are excellent (3)________ of vitamins and minerals. You should try to eat at least five (4)________ of them every day. Protein is important for building and repairing (5)________, and can be found in meat, fish, eggs, and beans. Carbohydrates give you (6)________, and are found in foods like bread, rice, and pasta. It is also important to drink plenty of (7)________, especially water, to stay hydrated. Avoid eating too much sugar and salt, as they can cause health (8)________. Regular exercise is also a key part of a healthy (9)________. By eating well and staying active, you can feel better and live (10)________.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. health",
+          "B. healthy",
+          "C. heal",
+          "D. healing"
+        ],
+        "correctAnswer": "A",
+        "explanation": "good health (sức khỏe tốt)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. proper",
+          "B. properly",
+          "C. property",
+          "D. properties"
+        ],
+        "correctAnswer": "B",
+        "explanation": "function properly (hoạt động đúng cách)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. resources",
+          "B. sources",
+          "C. places",
+          "D. origins"
+        ],
+        "correctAnswer": "B",
+        "explanation": "sources of vitamins (nguồn vitamin)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. portions",
+          "B. pieces",
+          "C. slices",
+          "D. parts"
+        ],
+        "correctAnswer": "A",
+        "explanation": "five portions (5 khẩu phần)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. muscles",
+          "B. bones",
+          "C. hair",
+          "D. skin"
+        ],
+        "correctAnswer": "A",
+        "explanation": "repairing muscles (phục hồi cơ bắp)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. power",
+          "B. strength",
+          "C. energy",
+          "D. force"
+        ],
+        "correctAnswer": "C",
+        "explanation": "give you energy (cung cấp năng lượng)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. liquids",
+          "B. fluids",
+          "C. drinks",
+          "D. water"
+        ],
+        "correctAnswer": "B",
+        "explanation": "plenty of fluids (nhiều chất lỏng)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. issues",
+          "B. benefits",
+          "C. advantages",
+          "D. improvements"
+        ],
+        "correctAnswer": "A",
+        "explanation": "health issues (vấn đề sức khỏe)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. lifestyle",
+          "B. life",
+          "C. style",
+          "D. living"
+        ],
+        "correctAnswer": "A",
+        "explanation": "healthy lifestyle (lối sống lành mạnh)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. long",
+          "B. longer",
+          "C. longest",
+          "D. length"
+        ],
+        "correctAnswer": "B",
+        "explanation": "live longer (sống lâu hơn)."
+      }
+    ]
+  },
+  {
+    "topic": 12,
+    "part": "A",
+    "title": "Part A: Short Texts",
+    "content": "Look at the text in each question. What does it say?\n\n1. Please turn off your mobile phones during the performance.\n\n2. FASTEN SEATBELTS WHILE SEATED.\n\n3. Do not feed the animals.\n\n4. Wash your hands before returning to work.\n\n5. CAUTION: WET FLOOR.",
+    "questions": [
+      {
+        "text": "1. Please turn off your mobile phones during the performance.",
+        "options": [
+          "A. You can use your phone now.",
+          "B. Phones must be switched off while the show is on.",
+          "C. Please call during the performance.",
+          "D. Phones are provided here."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Turn off = switched off."
+      },
+      {
+        "text": "2. FASTEN SEATBELTS WHILE SEATED.",
+        "options": [
+          "A. You don't need a seatbelt.",
+          "B. Keep your seatbelt fastened when you are sitting down.",
+          "C. Stand up to fasten your seatbelt.",
+          "D. Seatbelts are only for children."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Fasten while seated = Keep fastened when sitting."
+      },
+      {
+        "text": "3. Do not feed the animals.",
+        "options": [
+          "A. You can give food to the animals.",
+          "B. The animals are hungry.",
+          "C. Visitors must not give food to the animals.",
+          "D. Buy animal food here."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Do not feed = Must not give food."
+      },
+      {
+        "text": "4. Wash your hands before returning to work.",
+        "options": [
+          "A. Wash your hands after work.",
+          "B. You must wash your hands before you go back to work.",
+          "C. Work with dirty hands.",
+          "D. Only wash your hands at home."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Before returning to work = Before you go back to work."
+      },
+      {
+        "text": "5. CAUTION: WET FLOOR.",
+        "options": [
+          "A. The floor is dry.",
+          "B. Be careful because the floor is wet.",
+          "C. Please wash the floor.",
+          "D. You can run here."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Caution = Be careful."
+      }
+    ]
+  },
+  {
+    "topic": 12,
+    "part": "B",
+    "title": "Part B: Reading Comprehension",
+    "content": "Tourism is a major industry in many countries around the world. It provides jobs for millions of people in hotels, restaurants, and transportation. When tourists visit a country, they spend money on accommodation, food, souvenirs, and attractions. This brings valuable foreign currency into the local economy. However, tourism can also have negative impacts. Large numbers of visitors can cause overcrowding and damage to historical sites. The environment can also suffer from increased pollution and waste. Therefore, it is important to promote sustainable tourism, which aims to minimize the negative effects while maximizing the benefits for local communities.",
+    "questions": [
+      {
+        "text": "1. What is the main benefit of tourism mentioned in the passage?",
+        "options": [
+          "A. It causes pollution.",
+          "B. It provides jobs and brings in money.",
+          "C. It damages historical sites.",
+          "D. It makes countries crowded."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'It provides jobs... brings valuable foreign currency into the local economy.'"
+      },
+      {
+        "text": "2. Where do tourists typically spend their money?",
+        "options": [
+          "A. Only on flights",
+          "B. Only on souvenirs",
+          "C. On accommodation, food, souvenirs, and attractions",
+          "D. They don't spend money"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn 1: 'they spend money on accommodation, food, souvenirs, and attractions.'"
+      },
+      {
+        "text": "3. What is a negative impact of tourism?",
+        "options": [
+          "A. Creating jobs",
+          "B. Overcrowding and environmental damage",
+          "C. Learning about new cultures",
+          "D. Helping local communities"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đoạn 1: 'cause overcrowding and damage to historical sites. The environment can also suffer...'"
+      },
+      {
+        "text": "4. What is the goal of sustainable tourism?",
+        "options": [
+          "A. To stop people from traveling",
+          "B. To increase pollution",
+          "C. To minimize negative effects and maximize benefits",
+          "D. To build more hotels"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đoạn cuối: 'aims to minimize the negative effects while maximizing the benefits...'"
+      },
+      {
+        "text": "5. The word 'valuable' in the passage means ____________.",
+        "options": [
+          "A. worthless",
+          "B. cheap",
+          "C. precious or worth a lot of money",
+          "D. useless"
+        ],
+        "correctAnswer": "C",
+        "explanation": "'valuable' (có giá trị) nghĩa là precious or worth a lot of money."
+      }
+    ]
+  },
+  {
+    "topic": 12,
+    "part": "C",
+    "title": "Part C: Cloze Test",
+    "content": "Finding a good job can be a challenging (1)________. First, you need to prepare a strong resume or CV that highlights your (2)________ and experience. It is important to tailor your resume for each job you (3)________ for. Next, you can search for job openings online, in newspapers, or through networking. When you find a suitable position, you should write a cover (4)________ explaining why you are the best candidate for the role. If the employer is impressed, they will invite you for an (5)________. During the interview, you should dress professionally and answer questions (6)________. It is also a good idea to ask your own questions about the company and the (7)________. After the interview, you can send a thank-you note to express your (8)________. If you are successful, you will receive a job (9)________. Remember that finding the right job takes time and (10)________, so don't get discouraged if you face rejection.",
+    "questions": [
+      {
+        "text": "Blank (1)",
+        "options": [
+          "A. process",
+          "B. processing",
+          "C. proceed",
+          "D. procedure"
+        ],
+        "correctAnswer": "A",
+        "explanation": "challenging process (quá trình đầy thử thách)."
+      },
+      {
+        "text": "Blank (2)",
+        "options": [
+          "A. skills",
+          "B. hobbies",
+          "C. interests",
+          "D. friends"
+        ],
+        "correctAnswer": "A",
+        "explanation": "highlights your skills (làm nổi bật kỹ năng của bạn)."
+      },
+      {
+        "text": "Blank (3)",
+        "options": [
+          "A. ask",
+          "B. apply",
+          "C. look",
+          "D. search"
+        ],
+        "correctAnswer": "B",
+        "explanation": "apply for (ứng tuyển)."
+      },
+      {
+        "text": "Blank (4)",
+        "options": [
+          "A. book",
+          "B. note",
+          "C. letter",
+          "D. message"
+        ],
+        "correctAnswer": "C",
+        "explanation": "cover letter (thư xin việc)."
+      },
+      {
+        "text": "Blank (5)",
+        "options": [
+          "A. meeting",
+          "B. interview",
+          "C. party",
+          "D. test"
+        ],
+        "correctAnswer": "B",
+        "explanation": "invite you for an interview (mời bạn phỏng vấn)."
+      },
+      {
+        "text": "Blank (6)",
+        "options": [
+          "A. confidently",
+          "B. confident",
+          "C. confidence",
+          "D. confide"
+        ],
+        "correctAnswer": "A",
+        "explanation": "answer questions confidently (trả lời câu hỏi một cách tự tin)."
+      },
+      {
+        "text": "Blank (7)",
+        "options": [
+          "A. role",
+          "B. place",
+          "C. building",
+          "D. desk"
+        ],
+        "correctAnswer": "A",
+        "explanation": "about the company and the role (về công ty và vai trò)."
+      },
+      {
+        "text": "Blank (8)",
+        "options": [
+          "A. appreciation",
+          "B. anger",
+          "C. sadness",
+          "D. regret"
+        ],
+        "correctAnswer": "A",
+        "explanation": "express your appreciation (bày tỏ sự trân trọng)."
+      },
+      {
+        "text": "Blank (9)",
+        "options": [
+          "A. offer",
+          "B. offering",
+          "C. offered",
+          "D. offers"
+        ],
+        "correctAnswer": "A",
+        "explanation": "receive a job offer (nhận được lời mời làm việc)."
+      },
+      {
+        "text": "Blank (10)",
+        "options": [
+          "A. patience",
+          "B. patient",
+          "C. patiently",
+          "D. patients"
+        ],
+        "correctAnswer": "A",
+        "explanation": "takes time and patience (cần thời gian và sự kiên nhẫn)."
+      }
+    ]
+  }
+]

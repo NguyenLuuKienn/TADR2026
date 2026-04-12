@@ -1,0 +1,142 @@
+[
+  {
+    "topic": 1,
+    "title": "Topic 1: People Description",
+    "prompts": [
+      "Talk about your best friend.",
+      "- What is his/her name?",
+      "- What is he/she like? (Appearance?)",
+      "- What are his/her personality, quality and ability?",
+      "- What does he/she like doing?",
+      "- And say what he/she would like to do in the future."
+    ],
+    "sampleAnswer": "My best friend's name is Nam. He is tall and well-built with short black hair and a bright smile. He is a very friendly, honest, and helpful person. He is also very smart and good at solving problems. In his free time, he likes playing football and reading books. In the future, he would like to become a successful software engineer because he loves technology."
+  },
+  {
+    "topic": 2,
+    "title": "Topic 2: Free time, leisure and hobby",
+    "prompts": [
+      "Talk about your daily routine.",
+      "- What do you often do on weekdays?",
+      "- What time do you get up?",
+      "- What time and how do you go to work/school?",
+      "- What time do you finish your work/study?",
+      "- And say what you often do at the weekend."
+    ],
+    "sampleAnswer": "On weekdays, I usually get up at 6:00 AM. After having breakfast, I go to school at 7:00 AM by motorbike. My classes start at 7:30 and I finish my study at 11:30 AM. In the afternoon, I do my homework and help my parents with housework. At the weekend, I have more free time, so I often hang out with my friends, go to the cinema, or just stay at home to relax and listen to music."
+  },
+  {
+    "topic": 3,
+    "title": "Topic 3: Sports",
+    "prompts": [
+      "Talk about benefits of playing sports.",
+      "- How can sport improve your physical health?",
+      "- How can sport improve your mental health?",
+      "- How can sport improve your social life?"
+    ],
+    "sampleAnswer": "Playing sports brings many great benefits. Firstly, it improves physical health by making our bodies stronger, keeping us fit, and preventing diseases like heart attacks. Secondly, it is good for mental health. Playing sports helps reduce stress and makes us feel happier and more relaxed after a hard-working day. Finally, it improves our social life because we can meet new people, make new friends, and learn how to work well in a team."
+  },
+  {
+    "topic": 4,
+    "title": "Topic 4: Work and jobs",
+    "prompts": [
+      "Talk about your future plans.",
+      "- What job do you plan to do in the future?",
+      "- Why do you choose that job?",
+      "- What do you do to get that job?",
+      "- And say what difficulties you meet about your plans."
+    ],
+    "sampleAnswer": "In the future, I plan to become a professional civil engineer. I choose this job because I love designing and building houses, and it also offers a good salary. To get this job, I am studying very hard at my university and trying to improve my English and computer skills. However, I face some difficulties. The biggest challenge is that the study program is very difficult, and I need to spend a lot of money on extra courses."
+  },
+  {
+    "topic": 5,
+    "title": "Topic 5: House and home",
+    "prompts": [
+      "Talk about your favourite room in your house.",
+      "- Which is your favourite room in your house? Why?",
+      "- What does it look like?",
+      "- What changes do you want to make in it?"
+    ],
+    "sampleAnswer": "My favourite room in my house is my bedroom because it is my private space where I can relax and do whatever I want. It is a cozy room with a comfortable bed, a wooden wardrobe, and a desk near the window. The walls are painted light blue. If I could make some changes, I would buy a bigger bookshelf to store all my comic books and put some indoor plants to make the room fresher."
+  },
+  {
+    "topic": 6,
+    "title": "Topic 6: Shopping",
+    "prompts": [
+      "Talk about the advantages of doing shopping in supermarkets or shopping malls.",
+      "- How are the prices?",
+      "- What about the quality of the goods?",
+      "- How is the atmosphere?"
+    ],
+    "sampleAnswer": "Doing shopping in supermarkets or shopping malls has many advantages. Firstly, the prices are very stable and clearly labeled, so you don't have to bargain like in traditional markets. Secondly, the quality of the goods is guaranteed. You can easily find fresh food and safe products with clear origins. Finally, the atmosphere is great. It is clean, spacious, and has air-conditioning, which makes shopping a very relaxing and comfortable experience."
+  },
+  {
+    "topic": 7,
+    "title": "Topic 7: Food and drink",
+    "prompts": [
+      "Talk about your favourite traditional food.",
+      "- What is your favourite traditional food?",
+      "- How to make it?",
+      "- Can you cook it well?",
+      "- How is it best served?"
+    ],
+    "sampleAnswer": "My favourite traditional food in Vietnam is Pho. It is a famous noodle soup. To make it, people need to cook beef or chicken bones for many hours to make a sweet and clear broth. Then, they put rice noodles, sliced meat, and fresh herbs into a bowl and pour the hot broth over it. I cannot cook it very well because making the broth is quite difficult and takes a lot of time. Pho is best served hot with some lemon juice, chili, and fresh vegetables."
+  },
+  {
+    "topic": 8,
+    "title": "Topic 8: Weather",
+    "prompts": [
+      "Talk about your favourite season in the year.",
+      "- How many seasons are there in your region?",
+      "- What is your favourite season and when does it come?",
+      "- Why do you like it?",
+      "- And say what you like doing in this season."
+    ],
+    "sampleAnswer": "In my region, there are four seasons: spring, summer, autumn, and winter. My favourite season is autumn, which comes from August to October. I love autumn because the weather is perfect. It is not too hot like summer and not too cold like winter; it is cool and breezy. In this season, I really like walking around the city to enjoy the beautiful yellow leaves and taking photos with my friends."
+  },
+  {
+    "topic": 9,
+    "title": "Topic 9: Travel and transport",
+    "prompts": [
+      "Talk about the advantages of public transport in big cities.",
+      "- What are social advantages of public transport?",
+      "- What are economic advantages of public transport?",
+      "- What are environmental advantages of public transport?"
+    ],
+    "sampleAnswer": "Public transport brings many advantages to big cities. Socially, it helps people travel safely and reduces traffic accidents. It also gives people a chance to read a book or relax while traveling. Economically, using public transport like buses or trains is much cheaper than driving a private car because you can save money on gas and parking fees. Environmentally, it helps reduce traffic jams and cuts down on air pollution, making the city greener and cleaner."
+  },
+  {
+    "topic": 10,
+    "title": "Topic 10: Health",
+    "prompts": [
+      "Talk about the benefits of a healthy diet.",
+      "- What is a healthy diet?",
+      "- What are the benefits of a healthy diet?",
+      "- How could parents encourage their children to have a healthy diet?"
+    ],
+    "sampleAnswer": "A healthy diet is a balanced diet that includes a lot of vegetables, fruits, and fish, and avoids too much fast food, sugar, and fat. The benefits of a healthy diet are huge. It helps us stay fit, gives us more energy to work and study, and prevents dangerous diseases like obesity or heart problems. To encourage children to have a healthy diet, parents should be good role models by eating healthy food themselves and cooking delicious, nutritious meals at home."
+  },
+  {
+    "topic": 11,
+    "title": "Topic 11: Environment",
+    "prompts": [
+      "Talk about environmental problems in your province/city.",
+      "- What are environmental problems?",
+      "- What are the causes?",
+      "- What are impacts of those environmental problems on community?",
+      "- What are solutions to those problems?"
+    ],
+    "sampleAnswer": "In my city, the two biggest environmental problems are air pollution and rubbish on the streets. The main causes are exhaust fumes from too many motorbikes and factories, and people's bad habit of throwing trash everywhere. These problems have negative impacts on our community. They make the city look ugly and cause many respiratory diseases for people. To solve these problems, the government should encourage people to use public transport, put more dustbins on the streets, and educate everyone to protect the environment."
+  },
+  {
+    "topic": 12,
+    "title": "Topic 12: Technology",
+    "prompts": [
+      "Talk about the advantages of using the Internet.",
+      "- What are advantages of Internet for children?",
+      "- What are advantages of Internet for adults?",
+      "- What does Internet bring you?"
+    ],
+    "sampleAnswer": "The Internet has many great advantages. For children, it is a huge library where they can find information for their studies and play educational games. For adults, the Internet is a powerful tool for working, reading news, and shopping online. It also helps them connect with friends and partners all over the world. Personally, the Internet brings me a lot of joy and convenience. I use it every day to learn English, listen to music, and chat with my friends."
+  }
+]

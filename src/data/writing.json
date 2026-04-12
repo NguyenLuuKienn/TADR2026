@@ -1,0 +1,144 @@
+[
+  {
+    "id": "1",
+    "topicId": "1",
+    "title": "A New Friend",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about a new friend that you met in your English class.",
+    "notes": [
+      "What does he/she look like?",
+      "What is his/her personality?",
+      "What things does he/she impress you with?"
+    ],
+    "sampleResponse": "Hello Jessica,\n\nHow are you going? I'm very glad to hear from you. You know, I met an interesting friend in my English class. He is Minh, a well-built guy. He is nearsighted, so he always wears glasses. He is very active and energetic. He can play many sports well such as football, basketball, table tennis, etc. He also takes part in many social activities. He made a big impression on me the first time we met. He is very friendly, kind and modest. He likes helping other people. I really want to introduce him to you. I'm sure he will also impress you.\n\nLove,"
+  },
+  {
+    "id": "2",
+    "topicId": "2",
+    "title": "Your Hobbies",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your hobbies.",
+    "notes": [
+      "What are they?",
+      "How do you spend time on them?",
+      "How do you feel about them?"
+    ],
+    "sampleResponse": "Hi David,\n\nIt's so great to know about your hobby. And now, I'll tell you about mine. That is listening to music.\n\nI am very fond of music. When I am free, I often listen to my favourite songs from a CD player. At weekends, I usually spend time shopping around some music shops near my house to buy some good CDs. Of the famous pop singers, I prefer Taylor Swift, Justin Bieber and Bruno Mars.\n\nI think that my hobby is very useful because it helps me relax my mind, and makes me feel better about myself.\n\nThe next time we meet, I will give you one of my best CDs and I hope that you'll like it!\n\nHope to see you soon!"
+  },
+  {
+    "id": "3",
+    "topicId": "3",
+    "title": "Your Favorite Sport",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your favorite sport.",
+    "notes": [
+      "What kind of sport do you like best?",
+      "Can you play it?",
+      "Who is your favorite athlete?"
+    ],
+    "sampleResponse": "Hi John,\n\nIt's great to hear from you. In your last letter you asked me about my favorite sport. Well, I'm a big fan of football.\n\nI usually play football with my friends at the weekend. We often rent a small pitch near our neighborhood. It's a great way to relax after a long week of studying and it helps me keep fit. I play as a striker because I love scoring goals.\n\nMy favorite athlete is Lionel Messi. He is incredibly talented and his skills on the pitch are amazing. I always watch his matches on TV.\n\nWhat about you? What sport do you like?\n\nHope to hear from you soon."
+  },
+  {
+    "id": "4",
+    "topicId": "4",
+    "title": "Your Current Job",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your current job.",
+    "notes": [
+      "What do you do?",
+      "What are your duties?",
+      "Do you like it? Why?",
+      "Would you like to change anything in your job?"
+    ],
+    "sampleResponse": "Hello Henry,\n\nHow are you? I'm writing to tell you about my job. I work as a full-time accountant for a small company in Hanoi. In my department I work with 3 other colleagues 5 days per week and from 8 a.m to 5 p.m. I'm responsible for recording company income and expense daily as well as paying for the suppliers. At the end of month, I make salary reports for all staffs. My job is rather stressful, especially in tax season; I have to work overtime, probably 10 p.m. However, I love it because it gives me the opportunity to work with some talented colleagues and valuable experience. There is nothing I want to change in my current job. I'll work for this company until my retirement.\n\nLove,"
+  },
+  {
+    "id": "5",
+    "topicId": "5",
+    "title": "Your House",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your house you are living in.",
+    "notes": [
+      "What kind of your house?",
+      "What does it look like?",
+      "Does it have any special features?"
+    ],
+    "sampleResponse": "Hello Sam,\n\nI'm living in a house in a suburb of Hanoi, a new two-storey brick and concrete one. There are three bedrooms with two bathrooms, a living room, a dining room and a kitchen.\n\nThe living room is the most beautiful one with a big sofa, colourful cushions and a modern TV. The kitchen has 2 gas cookers, a specially designed cupboard and a big fridge. The dining room is just a small room next to the kitchen. It has a round wooden table with six leather chairs. All the bedrooms are in the same design with light pink walls, double beds and wardrobes. I think the outstanding feature of my house is the beautiful garden with a lot of flowers and many fruit trees.\n\nI hope that someday you can visit my house.\n\nLove,"
+  },
+  {
+    "id": "6",
+    "topicId": "6",
+    "title": "Favourite Shopping Centre",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your favourite shopping centre in your city.",
+    "notes": [
+      "Where do you often go shopping?",
+      "How and when do you often get there?",
+      "What does this place have?"
+    ],
+    "sampleResponse": "Dear Jill,\n\nHow are you? In your last letter you asked me about my favourite shopping centre in my city. Now I'll tell you about it, VinCom Mega Mall Times City on Minh Khai street. I usually go there with my family at the weekend. It's quite near our house, so we can get there by motorbike or taxi. This is a really big place having a lot of facilities like a cinema, an aquarium, restaurants, shops, etc. I love it because it is very nice, clean and convenient. We can buy whatever we like here even though it could be quite expensive. It's great for families to spend time together. Besides shopping we can join games or eat many good foods. When you go to Hanoi, I will take you there.\n\nHope to see you soon!\n\nLove,"
+  },
+  {
+    "id": "7",
+    "topicId": "7",
+    "title": "Favourite Food",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your favourite food.",
+    "notes": [
+      "What's your favourite food?",
+      "Why do you like it?",
+      "How is it made?"
+    ],
+    "sampleResponse": "Hi Alan,\n\nThanks for your letter – it was great to hear from you. Well, you know I like vegetables and fruits, so my favourite food is salad.\n\nI love it not only because of its delicious flavour but also because of its health benefits. Moreover, it is really easy to prepare. There are a lot of ways and ingredients to make this food. It often includes vegetables; for example: cucumbers, carrots, onions, tomatoes. All of them are sliced and mixed together with salt, sugar, vinegar or some kinds of sauce. All make a very tasteful salad.\n\nSo that's my favourite food. How about you? Write soon and let me know.\n\nAll the best,"
+  },
+  {
+    "id": "8",
+    "topicId": "8",
+    "title": "Inviting to Stay",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about inviting her to stay at your house.",
+    "notes": [],
+    "sampleResponse": "Dear Mary,\n\nI'm very glad to receive your letter this morning and much happier to know that you're going to Hanoi next week. You said you are going to have a week here, so would you like to come and stay with my family?\n\nWe can share my comfortable room. All members in my family are very hospitable, so just make yourself at home. You're welcome to stay as long as you like. I would be your free tour guide around the city. This is summer time, so there is no problem about time, homework or anything. There are a lot of interesting places to go and full of exciting activities to do, especially swimming. Moreover, the city is so attractive in this season. I'm sure you will like it.\n\nPlease write and tell me if you would like to stay with my family. My best wishes to your parents."
+  },
+  {
+    "id": "9",
+    "topicId": "9",
+    "title": "Last Holiday",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about your last holiday.",
+    "notes": [
+      "Where did you go?",
+      "What did you do?",
+      "Who did you spend your holiday with?",
+      "Did you enjoy it? Why/ Why not?"
+    ],
+    "sampleResponse": "Hello John,\n\nLast summer, my family and I decided to spend our holiday in Da Nang and Quang Nam. We went there by plane. First, we spent 3 days in Da Nang. The beaches in Da Nang were very beautiful and clean, so we went swimming twice a day. We also visited many beauty spots like Ba Na Hill, Linh Ung pagoda, Marble Mountain and enjoyed many delicious foods. Then we moved to Hoi An, Quang Nam by coach. We spent one day there to enjoy the beautiful scenery of lanterns and ancient houses along the river.\n\nThis wonderful trip helped us to get rid of worries and gave us health and enthusiasm to be back to work, so I really enjoyed it.\n\nLove,"
+  },
+  {
+    "id": "10",
+    "topicId": "10",
+    "title": "Keep Fit and Healthy",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives how to keep fit and healthy.",
+    "notes": [
+      "Should he reduce the food each meal?",
+      "What activities should he take?",
+      "Does he need to change any habits?"
+    ],
+    "sampleResponse": "Hello Tim,\n\nThe first and the most important thing is not to reduce the food you eat daily. You can change the menu and the way you eat. You should eat more vegetables and fruits instead of fast food. Moreover, eating on time helps you prevent strong feeling of hunger.\n\nSecondly, it will be better if you keep on doing exercise every day. Exercise can help you stay healthy and keep fit. I like swimming and doing yoga but if you don't have much time, you can go walking or running around the park near your house.\n\nFinally, some small changes in your life will also help you to keep fit. For example, you should avoid bad habits like smoking, drinking or even staying up late which make your health worse.\n\nI hope you always have good health."
+  },
+  {
+    "id": "11",
+    "topicId": "11",
+    "title": "Environmental Problem",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about one environmental problem that your city is facing and what are people doing to solve it?",
+    "notes": [
+      "What environmental problem is your city facing?",
+      "What is the cause of the problem?",
+      "What are local people doing to solve the problem?"
+    ],
+    "sampleResponse": "Dear John,\n\nIn my city, the environmental problem that needs worrying the most is littering. The streets are always full of rubbish, which makes the city look ugly.\n\nI think the main reason is the people's poor awareness. They get used to throwing their waste anywhere just because it's convenient for them.\n\nWe're trying a lot to solve this problem. First of all, the city authority usually holds events to raise people's awareness about environment protection like Waste Collecting Day. In addition, more litter bins are placed on the pavements. These bins are beautifully decorated with really meaningful slogans. They will probably encourage people to put rubbish into the bins.\n\nI hope my city will be cleaner in the future.\n\nLove,"
+  },
+  {
+    "id": "12",
+    "topicId": "12",
+    "title": "Important Invention",
+    "prompt": "Write a letter (about 120 words) to your friend/colleague/parents/relatives about an important invention that you think has positively influenced your life.",
+    "notes": [
+      "What is the invention?",
+      "What are its advantages?",
+      "Why is it important to you?"
+    ],
+    "sampleResponse": "Hello Suzy,\n\nI can answer you immediately that computer is the invention positively influencing my life. It is used in almost all fields of my life for many purposes such as entertainment, education, and work. It contains all things that I need: helpful information, connection to friends or relatives and the technology for modern life. At work, the computer helps minimize the work that I have to do. It helps me in maths calculation, word processing as well as document saving. At home, with computer I can play lots of video games, watch movies, listen to music or chat on the Internet.\n\nI can't imagine if one day I don't have the computer. It has become a part of my life because it saves my money, time and materials. Thanks to the computer with the Internet, I can make friends with you!\n\nYours,"
+  }
+]

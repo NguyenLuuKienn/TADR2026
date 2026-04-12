@@ -1,0 +1,1838 @@
+[
+  {
+    "topic": 1,
+    "title": "Topic 1: People Description",
+    "questions": [
+      {
+        "id": "t1_q1",
+        "question": "1. Where will the friends meet?",
+        "transcript": "Girl: Hi, it's Maria. Got your message. Yeah, I'd like to go to the movies. There's a film called Lightworld Two, or a comedy - I don't mind which... Shall we meet outside the cinema?\nBoy: Or, I know, at the coffee bar on the corner, we could have a snack before we go in. We could meet at the bus stop.\nGirl: Mum's driving me into town this afternoon, to buy some trainers, so I won't have to get the bus. But something to eat first is a good idea. Shall we say six o'clock?\nBoy: OK.",
+        "options": [
+          {
+            "text": "A coffee bar",
+            "imageSeed": "coffee-shop"
+          },
+          {
+            "text": "Outside the cinema",
+            "imageSeed": "cinema-building"
+          },
+          {
+            "text": "At a bus stop",
+            "imageSeed": "bus-stop"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "The boy suggests the coffee bar for a snack, and the girl agrees saying 'something to eat first is a good idea'."
+      },
+      {
+        "id": "t1_q2",
+        "question": "2. What has the girl forgotten to bring?",
+        "transcript": "Boy: Drink up your coffee - we'll be late for class. What are you looking for now? Don't tell me you've left your essay at home. You said you were working on it till midnight.\nGirl: Don't worry, it was the first thing I put in my bag - look, here it is. I won't be a second... just checking everything. Pen... now where did I...? Oh dear, you'll be able to lend me one, won't you? Keys? - oh, here they are, in my pocket as usual...",
+        "options": [
+          {
+            "text": "Her essay",
+            "imageSeed": "essay-paper"
+          },
+          {
+            "text": "A pen",
+            "imageSeed": "pen"
+          },
+          {
+            "text": "Her keys",
+            "imageSeed": "keys"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She can't find her pen and asks the boy 'you'll be able to lend me one, won't you?'."
+      },
+      {
+        "id": "t1_q3",
+        "question": "3. Which TV programme is on at nine o'clock tonight?",
+        "transcript": "Woman: Because of the ski jumping finals we're late finishing, so there are some changes to this evening's programmes. We won't now show the Nature Programme, about the dolphins found near the Florida coast, at nine o'clock. Instead, Tim Wong's Chinese Kitchen will be at this time, an hour later than advertised. You can see the Nature Programme at its usual time next week.",
+        "options": [
+          {
+            "text": "Ski jumping",
+            "imageSeed": "ski-jumping"
+          },
+          {
+            "text": "Nature Programme (Dolphins)",
+            "imageSeed": "dolphins"
+          },
+          {
+            "text": "Chinese Kitchen (Cooking)",
+            "imageSeed": "cooking-show"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The announcer says 'Instead, Tim Wong's Chinese Kitchen will be at this time [nine o'clock]'."
+      },
+      {
+        "id": "t1_q4",
+        "question": "4. How will the man book tickets for the show?",
+        "transcript": "Woman: Shall we go to the Boat Show? It's on for three weeks - but you need to book if you want to go on the first night because there's a party.\nMan: Really? Let's go. How do you book?\nWoman: On the Internet or by phone... or there's a form to fill in, in this week's TV magazine with a discount on each ticket.\nMan: I like saving money, but the post's always so slow. I prefer to talk to someone when I'm making a booking - just leave it to me.",
+        "options": [
+          {
+            "text": "On the Internet",
+            "imageSeed": "internet-booking"
+          },
+          {
+            "text": "By phone",
+            "imageSeed": "telephone"
+          },
+          {
+            "text": "By post (form)",
+            "imageSeed": "mail-post"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'I prefer to talk to someone when I'm making a booking', which implies booking by phone."
+      },
+      {
+        "id": "t1_q5",
+        "question": "5. What will the man do this winter?",
+        "transcript": "Woman: Will you go on working as a gardener when winter comes, Jim? You'll get very cold and wet working outside.\nMan: Well, last winter I took a job in a supermarket. They're advertising for staff again at the moment, but I prefer being in the fresh air - even when the weather's bad. I'd really like to get a job abroad in the sun, but all the ones I've seen need building skills, which I haven't got. So I'll just stay in my present job for the time being.",
+        "options": [
+          {
+            "text": "Work in a supermarket",
+            "imageSeed": "supermarket-worker"
+          },
+          {
+            "text": "Work as a builder abroad",
+            "imageSeed": "builder"
+          },
+          {
+            "text": "Work as a gardener",
+            "imageSeed": "gardener"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "He says 'I'll just stay in my present job for the time being', and his present job is a gardener."
+      },
+      {
+        "id": "t1_q6",
+        "question": "6. How does the man want the woman to help him?",
+        "transcript": "Man: Sarah, could you do something for me?\nWoman: Well, it depends what it is.\nMan: I want to clean the bedroom windows this afternoon, but I lent the ladder to John... could you give me a lift to his house and then bring me back with the ladder?\nWoman: Of course - no problem.",
+        "options": [
+          {
+            "text": "Clean the windows",
+            "imageSeed": "cleaning-windows"
+          },
+          {
+            "text": "Give him a lift to get the ladder",
+            "imageSeed": "driving-car"
+          },
+          {
+            "text": "Lend him a ladder",
+            "imageSeed": "ladder"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He asks 'could you give me a lift to his house and then bring me back with the ladder?'."
+      },
+      {
+        "id": "t1_q7",
+        "question": "7. Which house did the woman stay in?",
+        "transcript": "Woman 1: I love these photos of your holiday. Is this the house you stayed in? I love the balconies and all those plants growing up the walls. Oh, and there's a lovely big swimming pool.\nWoman 2: Let me see. Oh, you're looking at the wrong photo - that was the house our friends stayed in. Ours was exactly like that one, but we only had the sea to swim in. Here, let me show you a photo of our house. It was just as nice.",
+        "options": [
+          {
+            "text": "House with balconies, plants, and a swimming pool",
+            "imageSeed": "house-pool"
+          },
+          {
+            "text": "House with balconies, plants, and the sea",
+            "imageSeed": "house-sea"
+          },
+          {
+            "text": "House with no balconies",
+            "imageSeed": "simple-house"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'Ours was exactly like that one [with balconies and plants], but we only had the sea to swim in'."
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "title": "Topic 2: Free time, leisure and hobby",
+    "questions": [
+      {
+        "id": "t2_q1",
+        "question": "1. Where are the dictionaries?",
+        "transcript": "Man: As this is your first visit to the library, I'll show you round. As you can see, shelves are clearly labelled according to subject. Most books you may take home with you but some, such as foreign language dictionaries, must stay in the library. These can be found over there behind the computers and it's best if you take them to the desks by the window and study them there. Or you can use these armchairs if you prefer to sit somewhere more comfortable.",
+        "options": [
+          {
+            "text": "Behind the computers",
+            "imageSeed": "computers-library"
+          },
+          {
+            "text": "On the desks by the window",
+            "imageSeed": "desk-window"
+          },
+          {
+            "text": "On the armchairs",
+            "imageSeed": "armchair"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "He says 'These can be found over there behind the computers'."
+      },
+      {
+        "id": "t2_q2",
+        "question": "2. Which evening dress does the woman decide to wear?",
+        "transcript": "Man: Why are you taking so long to decide what to wear tomorrow night? The black dress with the long sleeves will be fine!\nWoman: Mmm... Long sleeves are a bit uncomfortable, but yes, it's a nice dress. Trouble is, I've lent my short-sleeved dress to Angela. That would be perfect, it's a long dress with a wide belt... Anyway, let's see what I've got here... this one, also black, short-sleeved - but it's got white flowers on the sleeves.\nMan: Why don't you phone Angela and get your dress back?",
+        "options": [
+          {
+            "text": "Black dress with long sleeves",
+            "imageSeed": "black-dress-long"
+          },
+          {
+            "text": "Long dress with a wide belt",
+            "imageSeed": "dress-belt"
+          },
+          {
+            "text": "Black dress, short-sleeved with white flowers",
+            "imageSeed": "black-dress-flowers"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She considers the options and ends up looking at the 'black, short-sleeved - but it's got white flowers on the sleeves'."
+      },
+      {
+        "id": "t2_q3",
+        "question": "3. What is the man's job now?",
+        "transcript": "Man: When I was young, I used to paint. I always dreamed of being an artist, painting pictures for a living. But I didn't do very well at school and so I left early to join my dad working in the family photography business. After a few years of that I got bored, and felt I wanted to go back and study. That's when I did my degree and teacher training, and I've taught photography ever since, although I still paint in my spare time.",
+        "options": [
+          {
+            "text": "Artist/Painter",
+            "imageSeed": "painter"
+          },
+          {
+            "text": "Photographer",
+            "imageSeed": "photographer"
+          },
+          {
+            "text": "Photography teacher",
+            "imageSeed": "teacher-class"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "He says 'I've taught photography ever since'."
+      },
+      {
+        "id": "t2_q4",
+        "question": "4. Which calendar will the boy buy?",
+        "transcript": "Boy: Mum asked me to buy her a calendar. Shall I get this one with pictures of mountains, or this one with boats on it?\nGirl: She loves sailing, so get that one. I like that one with wild animals, but I don't suppose Mum would. And you can't get the one with mountains because she had that last year.\nBoy: Yes, I know. I'll get the one you suggested then.",
+        "options": [
+          {
+            "text": "Mountains",
+            "imageSeed": "mountains-calendar"
+          },
+          {
+            "text": "Boats/Sailing",
+            "imageSeed": "boats-calendar"
+          },
+          {
+            "text": "Wild animals",
+            "imageSeed": "animals-calendar"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The girl suggests the one with boats because 'She loves sailing', and the boy agrees 'I'll get the one you suggested then'."
+      },
+      {
+        "id": "t2_q5",
+        "question": "5. What time will the writer arrive at the bookshop?",
+        "transcript": "Man: All fans of Peter Robbins should go to the South Street book store tomorrow afternoon, where Peter will sign copies of his book Love of Life and answer questions. He is expected at a quarter past two and promises to stay until half past three, when he has to leave for another appointment. Get there as soon as you can because, if it's anything like Peter's last visit, queues will start to form at quarter to two or even earlier. Don't miss this opportunity to meet everyone's favourite writer.",
+        "options": [
+          {
+            "text": "1:45 (quarter to two)",
+            "imageSeed": "clock-1-45"
+          },
+          {
+            "text": "2:15 (quarter past two)",
+            "imageSeed": "clock-2-15"
+          },
+          {
+            "text": "3:30 (half past three)",
+            "imageSeed": "clock-3-30"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The announcer says 'He is expected at a quarter past two'."
+      },
+      {
+        "id": "t2_q6",
+        "question": "6. What did the woman leave in the restaurant?",
+        "transcript": "Man: Hello... back again. Did you leave something behind?\nWoman: Yes. I don't know if you remember but when I wanted to pay the bill I couldn't find my purse, so I emptied everything out of my bag to look for it, and that's when I took my keys out. When I got back to the car, I realised they weren't in my bag...\nMan: Which table were you sitting at?",
+        "options": [
+          {
+            "text": "Her purse",
+            "imageSeed": "purse"
+          },
+          {
+            "text": "Her bag",
+            "imageSeed": "handbag"
+          },
+          {
+            "text": "Her keys",
+            "imageSeed": "keys-car"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She says 'that's when I took my keys out. When I got back to the car, I realised they weren't in my bag'."
+      },
+      {
+        "id": "t2_q7",
+        "question": "7. Where is the bicycle?",
+        "transcript": "Boy: I think someone's stolen my bicycle. I left it by that tree on the pavement, but it's not there any more.\nGirl: Perhaps it got in my father's way when he was parking his car.\nBoy: Oh yeah, I think you're right. It's on the other side of the road, by that street light. He probably moved it. I'll remember to leave it well away from the tree in future!\nGirl: Yes, and lock it next time as well.",
+        "options": [
+          {
+            "text": "By the tree on the pavement",
+            "imageSeed": "tree-pavement"
+          },
+          {
+            "text": "By the car",
+            "imageSeed": "parked-car"
+          },
+          {
+            "text": "By the street light on the other side",
+            "imageSeed": "street-light"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The boy spots it and says 'It's on the other side of the road, by that street light'."
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "title": "Topic 3: Sports",
+    "questions": [
+      {
+        "id": "t3_q1",
+        "question": "1. What regular exercise does David do at the moment?",
+        "transcript": "Cathy: You're looking well, David! Have you been to the gym a lot recently or something?\nDavid: Well, I joined a gym earlier this year, but I stopped going - it was just too difficult. And expensive, too! I've done a lot of swimming instead, and I feel much better for it!\nCathy: It shows! I'm thinking of taking up tennis again. Would you be interested in a game one day? You used to be quite good, didn't you?\nDavid: Well, I haven't played for a long time but... why not?",
+        "options": [
+          {
+            "text": "Gym",
+            "imageSeed": "gym-workout"
+          },
+          {
+            "text": "Swimming",
+            "imageSeed": "swimming-pool"
+          },
+          {
+            "text": "Tennis",
+            "imageSeed": "tennis-racket"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "David says 'I've done a lot of swimming instead'."
+      },
+      {
+        "id": "t3_q2",
+        "question": "2. What should Suzie take to Emma's house?",
+        "transcript": "Woman: Suzie? It's Emma. We've got to make some paper flowers so the classroom looks nice for the end-of-term party. Can you come to my house this evening to help me do it? There's some paint left over from last time, but I can't find any brushes. Have you got one? Bring it if you have. And if we have a pair of scissors each, we can work faster, so don't forget yours. We'll need coloured paper, but I'm getting that from college. See you around six.",
+        "options": [
+          {
+            "text": "Paint and paper",
+            "imageSeed": "paint-paper"
+          },
+          {
+            "text": "Brushes and scissors",
+            "imageSeed": "brushes-scissors"
+          },
+          {
+            "text": "Coloured paper and scissors",
+            "imageSeed": "paper-scissors"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "Emma asks Suzie to bring brushes ('Have you got one? Bring it if you have') and scissors ('don't forget yours')."
+      },
+      {
+        "id": "t3_q3",
+        "question": "3. Which kind of T-shirt did the boy choose?",
+        "transcript": "Girl: Look, it's your present. Just choose a T-shirt and then you can have anything you like printed on it. They've got three types - a picture like this one with boats on, or there are some with words, and this type has shapes on it.\nBoy: Well, I really don't like writing - it makes me feel like an advertisement! And those pictures are awful...\nGirl: Right then, I know which one you'll choose...",
+        "options": [
+          {
+            "text": "T-shirt with boats (picture)",
+            "imageSeed": "tshirt-boats"
+          },
+          {
+            "text": "T-shirt with words",
+            "imageSeed": "tshirt-words"
+          },
+          {
+            "text": "T-shirt with shapes",
+            "imageSeed": "tshirt-shapes"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "He rejects writing and pictures, leaving the T-shirt with shapes as the only option."
+      },
+      {
+        "id": "t3_q4",
+        "question": "4. What frightened the man?",
+        "transcript": "Woman: How was your camping holiday in Africa?\nMan: Oh... fantastic... we saw all sorts of wildlife. You know, lots of lions and all that.\nWoman: Wasn't it frightening with all those animals so close to your tent?\nMan: Not really, to be honest, what scared me most were the bats... they flew so close at night... I thought I'd be frightened of all the other things like elephants... but in the end I wasn't because we only saw them during the day and they were mostly quite a long way away.",
+        "options": [
+          {
+            "text": "Lions",
+            "imageSeed": "lion"
+          },
+          {
+            "text": "Bats",
+            "imageSeed": "bats"
+          },
+          {
+            "text": "Elephants",
+            "imageSeed": "elephant"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'what scared me most were the bats'."
+      },
+      {
+        "id": "t3_q5",
+        "question": "5. Where is the man calling from?",
+        "transcript": "Man: Hello, Mary. Could you come and collect me? I went to a client's house by taxi, and I can't get one back.\nWoman: Sure, where are you exactly?\nMan: You know the bridge over the river on the North Road? If you go over that and take the first left, you see a bar on the right. I'll be waiting there. I'm actually in the farmhouse down the road from there at the moment - Mrs Collins has been kind enough to let me use her phone.\nWoman: Fine, see you in the bar soon.",
+        "options": [
+          {
+            "text": "A bar",
+            "imageSeed": "bar-pub"
+          },
+          {
+            "text": "A farmhouse",
+            "imageSeed": "farmhouse"
+          },
+          {
+            "text": "A bridge",
+            "imageSeed": "bridge"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'I'm actually in the farmhouse down the road from there at the moment... to let me use her phone'."
+      },
+      {
+        "id": "t3_q6",
+        "question": "6. How did the woman spend her last holiday?",
+        "transcript": "Man: You're looking well. How was your holiday in the mountains?\nWoman: Not so good. I hurt my foot on the day I arrived, so climbing was just impossible. While everyone else was going off to the mountains, I stayed and read a book by the hotel pool... not my idea of a good holiday...\nMan: Sorry to hear that. Well, at least you had a good rest... Is your foot better now?\nWoman: Not really. I sit and watch television a lot and try to be patient.",
+        "options": [
+          {
+            "text": "Climbing mountains",
+            "imageSeed": "mountain-climbing"
+          },
+          {
+            "text": "Reading a book by the hotel pool",
+            "imageSeed": "reading-pool"
+          },
+          {
+            "text": "Watching television",
+            "imageSeed": "watching-tv"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'I stayed and read a book by the hotel pool'."
+      },
+      {
+        "id": "t3_q7",
+        "question": "7. Where is the girl's purse?",
+        "transcript": "Girl: Mum, I'm just off to the shop. Oh, wait a minute, where's my money?\nWoman: Oh, I found your purse lying on the table earlier, so I put it back in your bag.\nGirl: Well, it's not in there now. Maybe it's fallen on the floor somewhere. Can you help me look under the sofa? That's where I was sitting a minute ago.\nWoman: Just a minute, let me check. Yes, look, it is in here after all. I told you that's where I'd put it. You just didn't look properly!",
+        "options": [
+          {
+            "text": "On the table",
+            "imageSeed": "table"
+          },
+          {
+            "text": "Under the sofa",
+            "imageSeed": "sofa"
+          },
+          {
+            "text": "In her bag",
+            "imageSeed": "handbag-purse"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The mother checks the bag and says 'Yes, look, it is in here after all. I told you that's where I'd put it'."
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "title": "Topic 4: Work and jobs",
+    "questions": [
+      {
+        "id": "t4_q1",
+        "question": "1. What did the thieves steal?",
+        "transcript": "Woman: What exactly is missing, sir?\nMan: I thought the thieves had taken the television set, because it wasn't in its usual place in the dining room. Then I went to check my CD player and CDs - I keep them on an antique chest of drawers. All the CDs were on the floor with the CD player. But the chest had completely disappeared. It wasn't in the garden either, which is where I found the television.\nWoman: Right sir. Well, can you give me a detailed description of it?",
+        "options": [
+          {
+            "text": "Television set",
+            "imageSeed": "television"
+          },
+          {
+            "text": "CD player and CDs",
+            "imageSeed": "cd-player"
+          },
+          {
+            "text": "Antique chest of drawers",
+            "imageSeed": "chest-drawers"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The man says 'But the chest had completely disappeared'."
+      },
+      {
+        "id": "t4_q2",
+        "question": "2. What present will they take?",
+        "transcript": "Woman: We ought to take a present if we're staying for the weekend.\nMan: Let's get something a bit different. People always take flowers and it's rather hot for chocolates. What about something for the children, like a DVD? Or... some unbreakable glasses they can all use outside or on picnics?\nWoman: Good idea. And let's get a jug to go with them. The children have probably got lots of DVDs.",
+        "options": [
+          {
+            "text": "Flowers and chocolates",
+            "imageSeed": "flowers-chocolates"
+          },
+          {
+            "text": "A DVD",
+            "imageSeed": "dvd-movie"
+          },
+          {
+            "text": "Unbreakable glasses and a jug",
+            "imageSeed": "glasses-jug"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "They agree on 'unbreakable glasses' and 'let's get a jug to go with them'."
+      },
+      {
+        "id": "t4_q3",
+        "question": "3. What will the woman eat tonight?",
+        "transcript": "Man: Hotel York.\nWoman: Hello, I'm staying in your hotel tonight, and I'm arriving quite late, about ten thirty. Will there be any food available in the hotel?\nMan: I'm afraid the restaurant closes at ten o'clock, but the bar does burgers and chips until midnight. And there's always the pizza place opposite which stays open late. Or we can bring sandwiches to your room if you prefer.\nWoman: Fine. I won't want to eat burgers or pizza at that time of night.",
+        "options": [
+          {
+            "text": "Burgers and chips",
+            "imageSeed": "burger-chips"
+          },
+          {
+            "text": "Pizza",
+            "imageSeed": "pizza"
+          },
+          {
+            "text": "Sandwiches",
+            "imageSeed": "sandwiches"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She rejects burgers and pizza ('I won't want to eat burgers or pizza'), leaving sandwiches as the choice."
+      },
+      {
+        "id": "t4_q4",
+        "question": "4. How much will the girl's ticket cost?",
+        "transcript": "Woman: I'm travelling from Banbury to Witney tomorrow, and I need to be there about ten in the morning. Can you tell me when the trains leave, and how much a single ticket is?\nMan: The eight thirty-five train gets in at nine forty. That's twelve pounds sixty-five for a single. The train after that leaves at nine ten and arrives at ten fifteen. That costs less because you're travelling after nine. The fare is ten pounds forty-five.\nWoman: I'll take the second train. Just after ten is fine. Thanks.",
+        "options": [
+          {
+            "text": "£12.65",
+            "imageSeed": "money-12"
+          },
+          {
+            "text": "£10.45",
+            "imageSeed": "money-10"
+          },
+          {
+            "text": "£9.40",
+            "imageSeed": "money-9"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She takes the second train, and the man says 'The fare is ten pounds forty-five' for that train."
+      },
+      {
+        "id": "t4_q5",
+        "question": "5. What is the grandmother's job now?",
+        "transcript": "Woman: My grandmother always wanted to be a teacher when she was a little girl, but she had to leave school when she was fourteen and help her mother clean offices and shops. When she was in her thirties she went to college, but she had to work as a waitress in the evenings to pay for her studies. A few years later she finally got the job she'd always wanted and she's done it ever since.",
+        "options": [
+          {
+            "text": "Cleaner",
+            "imageSeed": "cleaner"
+          },
+          {
+            "text": "Waitress",
+            "imageSeed": "waitress"
+          },
+          {
+            "text": "Teacher",
+            "imageSeed": "teacher"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She says 'she finally got the job she'd always wanted and she's done it ever since', and earlier she said her grandmother 'always wanted to be a teacher'."
+      },
+      {
+        "id": "t4_q6",
+        "question": "6. Which button has the boy lost?",
+        "transcript": "Boy: I've lost a button on my favourite shirt. I could see that it was loose when I put it on last night. If it was the one on my pocket you wouldn't notice, but on the collar it's different. It's easy to see that it's missing from there.\nWoman: Why don't you take one off your sleeve and use that. Here, you'll need some scissors. Be careful you don't cut the material.\nBoy: Okay, will you sew it on for me?\nWoman: Do it yourself! It's easy.",
+        "options": [
+          {
+            "text": "Button on the pocket",
+            "imageSeed": "shirt-pocket"
+          },
+          {
+            "text": "Button on the collar",
+            "imageSeed": "shirt-collar"
+          },
+          {
+            "text": "Button on the sleeve",
+            "imageSeed": "shirt-sleeve"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'but on the collar it's different. It's easy to see that it's missing from there'."
+      },
+      {
+        "id": "t4_q7",
+        "question": "7. What will the man do first?",
+        "transcript": "Man: Before we start painting I'll wash the kitchen floor because it's really dirty.\nWoman: It'll be easier if you sweep it before you do that, Nick. I'll carry on cleaning the windows.\nMan: OK, and then we can start painting the walls.",
+        "options": [
+          {
+            "text": "Wash the floor",
+            "imageSeed": "washing-floor"
+          },
+          {
+            "text": "Sweep the floor",
+            "imageSeed": "sweeping-floor"
+          },
+          {
+            "text": "Paint the walls",
+            "imageSeed": "painting-walls"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The woman suggests 'It'll be easier if you sweep it before you do that [wash the floor]', and he agrees 'OK'."
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "title": "Topic 5: House and home",
+    "questions": [
+      {
+        "id": "t5_q1",
+        "question": "1. Which dish did Mark cook in the competition?",
+        "transcript": "Woman: So you've won the teenage chef competition, Mark - congratulations!\nMark: Thanks! In the competition, you choose whether to cook a meat, fish or vegetarian dish; then you're judged on the taste and how attractive it looks. I couldn't decide between fish and vegetables - I've never been brilliant at meat dishes. Then I found the judge was an expert in cooking fish, which worried me, so I went for my other choice - and won!",
+        "options": [
+          {
+            "text": "Meat dish",
+            "imageSeed": "meat-dish"
+          },
+          {
+            "text": "Fish dish",
+            "imageSeed": "fish-dish"
+          },
+          {
+            "text": "Vegetarian dish",
+            "imageSeed": "vegetarian-dish"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "He couldn't decide between fish and vegetables, then avoided fish because the judge was an expert, so he 'went for my other choice' (vegetables)."
+      },
+      {
+        "id": "t5_q2",
+        "question": "2. Where is the girl's book now?",
+        "transcript": "Girl: Excuse me. I think I left my book on this table - have you seen it?\nMan: Oh yes. I took it inside with the empty glass when I cleared the table. I gave it to the manager, who put it with the other lost property. He keeps it all in the drawer of his desk.\nGirl: I see. Where is he now?\nMan: He's on the phone inside the café. Why don't you go inside - he'll be finished in a minute.",
+        "options": [
+          {
+            "text": "On the table",
+            "imageSeed": "cafe-table"
+          },
+          {
+            "text": "In the manager's desk drawer",
+            "imageSeed": "desk-drawer"
+          },
+          {
+            "text": "Inside the café with the man",
+            "imageSeed": "cafe-inside"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The man says the manager 'keeps it all in the drawer of his desk'."
+      },
+      {
+        "id": "t5_q3",
+        "question": "3. Who lives with Josh in his house?",
+        "transcript": "Girl: Does your house seem empty now your sister's left home, Josh?\nJosh: Not really. My grandmother's moved into her room, and she doesn't go out much. It's really nice having her there because my dad never comes home until later, and if my mum's out for the evening, Grandma cooks supper for me.",
+        "options": [
+          {
+            "text": "His sister",
+            "imageSeed": "sister"
+          },
+          {
+            "text": "His grandmother, dad, and mum",
+            "imageSeed": "family-home"
+          },
+          {
+            "text": "Only his grandmother",
+            "imageSeed": "grandmother"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He mentions his grandmother moving in, his dad coming home later, and his mum being out for the evening."
+      },
+      {
+        "id": "t5_q4",
+        "question": "4. What will the girl take with her on holiday?",
+        "transcript": "Boy: Have you packed for your holiday?\nGirl: No, I need to go shopping before I can do that. Last holiday, my suitcase handle got broken, so I need something new to put all my stuff in. But suitcases are so heavy to carry.\nBoy: I always take a backpack - you can carry more that way.\nGirl: Yes, I thought about one of those, but good-quality ones are expensive. I'll get one of those big sports bags. You know, one you can pull along. They don't cost much, so it doesn't matter if it gets torn.",
+        "options": [
+          {
+            "text": "A suitcase",
+            "imageSeed": "suitcase"
+          },
+          {
+            "text": "A backpack",
+            "imageSeed": "backpack"
+          },
+          {
+            "text": "A big sports bag",
+            "imageSeed": "sports-bag"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She says 'I'll get one of those big sports bags'."
+      },
+      {
+        "id": "t5_q5",
+        "question": "5. What time will the train to Manchester leave?",
+        "transcript": "Man: The train arriving at platform six is the 11.45 from Manchester. The train due to arrive at platform four in approximately five minutes is the delayed 11.30 train to Manchester. The train will now depart at 11.50 and travel non-stop. We apologise to passengers for the delay. Refreshments will not be available on this train.",
+        "options": [
+          {
+            "text": "11:30",
+            "imageSeed": "clock-11-30"
+          },
+          {
+            "text": "11:45",
+            "imageSeed": "clock-11-45"
+          },
+          {
+            "text": "11:50",
+            "imageSeed": "clock-11-50"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The announcer says 'The train will now depart at 11.50'."
+      },
+      {
+        "id": "t5_q6",
+        "question": "6. Where will the friends meet?",
+        "transcript": "Kimberley: Hi, it's Kimberley. I got your message and I'd love to go to the movies. There's a film called SpyGame, or a comedy - I don't mind which... Shall we meet outside the cinema?\nGirl: Or, I know, at the burger bar on the corner. We could have a snack before we go in or we could meet at the bus station.\nKimberley: Mum's driving me into town this afternoon, to buy some trainers, so I won't be near the station. But something to eat first is a good idea. Shall we say 6 o'clock?\nGirl: OK.",
+        "options": [
+          {
+            "text": "Outside the cinema",
+            "imageSeed": "cinema"
+          },
+          {
+            "text": "At the burger bar",
+            "imageSeed": "burger-bar"
+          },
+          {
+            "text": "At the bus station",
+            "imageSeed": "bus-station"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The girl suggests the burger bar for a snack, and Kimberley agrees saying 'something to eat first is a good idea'."
+      },
+      {
+        "id": "t5_q7",
+        "question": "7. Which sport will the boy do soon at the centre?",
+        "transcript": "Boy: Have you been to the new water sports centre yet?\nGirl: Oh yes, it's brilliant. There are two indoor pools, one for underwater diving and one for swimming, and you can also have sailing lessons on the lake.\nBoy: That's what I'm doing there next weekend, actually. I was hoping to take waterskiing lessons, but the leaflet says they're not starting those until next year.",
+        "options": [
+          {
+            "text": "Underwater diving",
+            "imageSeed": "diving"
+          },
+          {
+            "text": "Sailing",
+            "imageSeed": "sailing"
+          },
+          {
+            "text": "Waterskiing",
+            "imageSeed": "waterskiing"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The girl mentions sailing lessons, and the boy replies 'That's what I'm doing there next weekend, actually'."
+      }
+    ]
+  },
+  {
+    "topic": 6,
+    "title": "Topic 6: Shopping",
+    "questions": [
+      {
+        "id": "t6_q1",
+        "question": "1. What can't the woman find?",
+        "transcript": "Mum: I'm going to mend and paint the cupboard in your bedroom today.\nDaughter: Great, Mum. Anything I can do to help?\nMum: Yes, can you go to the shop and get me a new hammer - this one's broken. But before you do that, ask your dad what he's done with the paintbrush - I've looked everywhere for it. There weren't any in the garage; all I could find was this knife which I lost months ago!",
+        "options": [
+          {
+            "text": "A hammer",
+            "imageSeed": "hammer"
+          },
+          {
+            "text": "A paintbrush",
+            "imageSeed": "paintbrush"
+          },
+          {
+            "text": "A knife",
+            "imageSeed": "knife"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She asks her daughter to find out 'what he's done with the paintbrush - I've looked everywhere for it'."
+      },
+      {
+        "id": "t6_q2",
+        "question": "2. What is the weather forecast for tomorrow?",
+        "transcript": "Man: And now for those of you planning to go to the rock festival tomorrow, you'll want to know what the weather's going to be like. As we go through today, the heavy rain will gradually disappear by the end of the afternoon. Tomorrow we can expect some sunshine with just a few light showers, and then some very hot and dry weather is likely by the weekend.",
+        "options": [
+          {
+            "text": "Heavy rain",
+            "imageSeed": "heavy-rain"
+          },
+          {
+            "text": "Sunshine with light showers",
+            "imageSeed": "sun-rain"
+          },
+          {
+            "text": "Very hot and dry",
+            "imageSeed": "hot-dry"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The forecast for tomorrow is 'some sunshine with just a few light showers'."
+      },
+      {
+        "id": "t6_q3",
+        "question": "3. What did the boy buy?",
+        "transcript": "Son: I got most of the shopping you asked for, Mum. I got the last of the bread and some orange juice but sorry, there weren't any newspapers left.\nMum: Oh, never mind, I need to remember to go in the morning. But what about the tomatoes for the salad?\nSon: Ah... I forgot. I'll go back for them.\nMum: Oh, don't worry, I'll stop and pick some up when I go out to collect your sister.",
+        "options": [
+          {
+            "text": "Bread and orange juice",
+            "imageSeed": "bread-juice"
+          },
+          {
+            "text": "Newspapers",
+            "imageSeed": "newspapers"
+          },
+          {
+            "text": "Tomatoes",
+            "imageSeed": "tomatoes"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "He says 'I got the last of the bread and some orange juice'."
+      },
+      {
+        "id": "t6_q4",
+        "question": "4. Which present has the girl bought her mother?",
+        "transcript": "Jane: Hi... it's me, Jane... I've got Mum's birthday present. I think she'll like it... Yes, that's right, a gold-coloured one. She's always writing letters, so she'll find it useful... Mmm. I thought about a CD but I'm never really sure what music she likes, and Dad's bought her a new pair of earrings for her birthday anyway. I'm sure she'll like what I've got her.",
+        "options": [
+          {
+            "text": "A gold-coloured pen",
+            "imageSeed": "gold-pen"
+          },
+          {
+            "text": "A CD",
+            "imageSeed": "cd"
+          },
+          {
+            "text": "A pair of earrings",
+            "imageSeed": "earrings"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "She bought 'a gold-coloured one' and says 'She's always writing letters, so she'll find it useful', which implies a pen."
+      },
+      {
+        "id": "t6_q5",
+        "question": "5. Which TV programme will they watch together?",
+        "transcript": "Girl: Hasn't that basketball match finished yet? You know I want to watch the wildlife programme at nine o'clock.\nBoy: It's cancelled, and everything's running late because the rock concert finished later than expected. Sit down and watch this match with me. It's really exciting, and more interesting than looking at animals.\nGirl: Oh, OK then.",
+        "options": [
+          {
+            "text": "Wildlife programme",
+            "imageSeed": "wildlife-tv"
+          },
+          {
+            "text": "Rock concert",
+            "imageSeed": "rock-concert"
+          },
+          {
+            "text": "Basketball match",
+            "imageSeed": "basketball-tv"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The boy asks her to 'Sit down and watch this match with me' (the basketball match), and she agrees 'Oh, OK then'."
+      },
+      {
+        "id": "t6_q6",
+        "question": "6. What time is the swimming lesson today?",
+        "transcript": "Girl: Hi Judy - do you want to play tennis after school - say about 4.30?\nJudy: Mmm - that would be fun but I've got a swimming lesson. It's usually at a quarter past five but it's half an hour earlier this evening, at a quarter to five. It takes me ages to cycle to the swimming pool, so I really don't think I'll have time today - let's try tomorrow.\nGirl: OK!",
+        "options": [
+          {
+            "text": "4:30",
+            "imageSeed": "clock-4-30"
+          },
+          {
+            "text": "4:45 (quarter to five)",
+            "imageSeed": "clock-4-45"
+          },
+          {
+            "text": "5:15 (quarter past five)",
+            "imageSeed": "clock-5-15"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "Judy says 'it's half an hour earlier this evening, at a quarter to five'."
+      },
+      {
+        "id": "t6_q7",
+        "question": "7. Which subject does the boy like best?",
+        "transcript": "Boy: I really like the new IT teacher - our project for this term is to design a new website. I've always wanted to know how to do that. The sports teacher is much more serious but that's still my favourite subject. Last year I used to really like geography, but the teacher we have now gives us so much homework.",
+        "options": [
+          {
+            "text": "IT (Information Technology)",
+            "imageSeed": "computer-class"
+          },
+          {
+            "text": "Sports",
+            "imageSeed": "sports-class"
+          },
+          {
+            "text": "Geography",
+            "imageSeed": "geography-class"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'The sports teacher is much more serious but that's still my favourite subject'."
+      }
+    ]
+  },
+  {
+    "topic": 7,
+    "title": "Topic 7: Food and drink",
+    "questions": [
+      {
+        "id": "t7_q1",
+        "question": "1. Which T-shirt does the boy decide to buy?",
+        "transcript": "Boy: I'd like to buy a black T-shirt with short sleeves, please. Large size.\nWoman: I'm afraid the black ones have long sleeves, but we've got short sleeves in the lighter colours. Do you want a round neck or a V-neck?\nBoy: It must be round neck. Let me think... umm, OK, I'll take one of the short-sleeved ones, the colour's not so important really.",
+        "options": [
+          {
+            "text": "Black T-shirt with long sleeves",
+            "imageSeed": "black-tshirt-long"
+          },
+          {
+            "text": "Lighter colour T-shirt with short sleeves and round neck",
+            "imageSeed": "light-tshirt-short"
+          },
+          {
+            "text": "Lighter colour T-shirt with short sleeves and V-neck",
+            "imageSeed": "vneck-tshirt"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'It must be round neck' and 'I'll take one of the short-sleeved ones, the colour's not so important really' (which are the lighter colours)."
+      },
+      {
+        "id": "t7_q2",
+        "question": "2. Who will be on the stage next?",
+        "transcript": "Man: And that was Shark, with Jo on piano and Rich on guitar. Lots of music to come, including The Three Biscuits with songs from their new CD. But first, here are Subway - you all know the drummer and guitarist, but singing here with them for the first time is Sarah Ireland, the drummer's sister - please give her a big welcome.",
+        "options": [
+          {
+            "text": "Shark",
+            "imageSeed": "shark-band"
+          },
+          {
+            "text": "The Three Biscuits",
+            "imageSeed": "biscuits-band"
+          },
+          {
+            "text": "Subway (with Sarah Ireland)",
+            "imageSeed": "subway-band"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The announcer says 'But first, here are Subway... singing here with them for the first time is Sarah Ireland'."
+      },
+      {
+        "id": "t7_q3",
+        "question": "3. What time will the pie be ready?",
+        "transcript": "Girl: What time is it, Mum? Do you think the apple pie will be ready yet?\nMum: It's 4.35.\nGirl: And the pie went into the oven at a quarter past four?\nMum: That's right. You could check it at five and turn the heat down a bit but don't take it out until twenty past. That's forty-five minutes to go!\nGirl: OK, I'm hungry already.",
+        "options": [
+          {
+            "text": "4:35",
+            "imageSeed": "clock-4-35"
+          },
+          {
+            "text": "5:00",
+            "imageSeed": "clock-5-00"
+          },
+          {
+            "text": "5:20 (twenty past five)",
+            "imageSeed": "clock-5-20"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The mother says 'don't take it out until twenty past' (which means 5:20, as it is currently 4:35)."
+      },
+      {
+        "id": "t7_q4",
+        "question": "4. Which photo does the girl dislike?",
+        "transcript": "Girl: I've got the photos back! Look, this one of us on the beach is just brilliant!\nBoy: Yes... You must get a copy for me to put in my photo album. It was a great day, but that other one's good too!\nGirl: I don't know why you think so, that dress I'm wearing looks awful. I only bought it because it was half-price. The one of us on the boat isn't bad, look.\nBoy: Mm... apart from the fact that we look seasick!",
+        "options": [
+          {
+            "text": "Photo on the beach",
+            "imageSeed": "photo-beach"
+          },
+          {
+            "text": "Photo where she's wearing an awful dress",
+            "imageSeed": "photo-dress"
+          },
+          {
+            "text": "Photo on the boat",
+            "imageSeed": "photo-boat"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'I don't know why you think so, that dress I'm wearing looks awful'."
+      },
+      {
+        "id": "t7_q5",
+        "question": "5. What should the students take on the school trip?",
+        "transcript": "Teacher: Now, you won't need any money for the bus or your entrance ticket to the museum tomorrow, because that's already paid for. But bring some change for when you get thirsty and want to buy a drink. The only food or drink allowed on the bus is fruit. Bring some with you because it's quite a long trip, and you'll get hungry. And you'll need to bring all your coloured pencils for the work I'm going to ask you to do there.",
+        "options": [
+          {
+            "text": "Money for bus/ticket",
+            "imageSeed": "money-ticket"
+          },
+          {
+            "text": "Change, fruit, and coloured pencils",
+            "imageSeed": "fruit-pencils"
+          },
+          {
+            "text": "Sandwiches and drinks",
+            "imageSeed": "sandwiches-drinks"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The teacher tells them to 'bring some change', 'Bring some [fruit] with you', and 'bring all your coloured pencils'."
+      },
+      {
+        "id": "t7_q6",
+        "question": "6. Where do the boys decide to go?",
+        "transcript": "Boy 1: So, we've got three hours. Shall we go skateboarding in the park? What do you think?\nBoy 2: Well, there's the latest space film, which is meant to be good, or there's a new computer-game shop which has just opened.\nBoy 1: Oh, well I haven't got enough money to buy a new game anyway. Let's go and watch the film.\nBoy 2: OK. We can go skateboarding any time.",
+        "options": [
+          {
+            "text": "Skateboarding in the park",
+            "imageSeed": "skateboarding"
+          },
+          {
+            "text": "To watch the space film",
+            "imageSeed": "cinema-space"
+          },
+          {
+            "text": "To the computer-game shop",
+            "imageSeed": "game-shop"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "Boy 1 says 'Let's go and watch the film' and Boy 2 agrees 'OK'."
+      },
+      {
+        "id": "t7_q7",
+        "question": "7. What has the girl lost?",
+        "transcript": "Teacher: Can I help you? You look worried. Is everything all right?\nGirl: Well, I was in the playground about ten minutes ago with my friends and I got a call on my mobile phone - I had to get a pen out of my bag to write something down and I think my purse fell out. I can't find it now. Do you know if anyone has handed it in?\nTeacher: You know you're not supposed to bring phones to school - anyway, let me go and check. What colour is it?",
+        "options": [
+          {
+            "text": "Her mobile phone",
+            "imageSeed": "mobile-phone"
+          },
+          {
+            "text": "A pen",
+            "imageSeed": "pen-lost"
+          },
+          {
+            "text": "Her purse",
+            "imageSeed": "purse-lost"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She says 'I think my purse fell out. I can't find it now'."
+      }
+    ]
+  },
+  {
+    "topic": 8,
+    "title": "Topic 8: Weather",
+    "questions": [
+      {
+        "id": "t8_q1",
+        "question": "1. When will Jack's mum pick him up?",
+        "transcript": "Jack: Mum, I'm ringing to tell you I'm at Tim's house. Football practice finished early, so we walked here together.\nMum: OK. Well, it's half past five now, so I'll come in the car and pick you up. It'll take me about half an hour, so I'll see you at six.\nJack: Oh, there's something good on television then. Can you come and get me after it, at seven?\nMum: I can't, Jack, I've got to pick your dad up from the station then.",
+        "options": [
+          {
+            "text": "5:30",
+            "imageSeed": "clock-5-30"
+          },
+          {
+            "text": "6:00",
+            "imageSeed": "clock-6-00"
+          },
+          {
+            "text": "7:00",
+            "imageSeed": "clock-7-00"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The mum says 'It'll take me about half an hour, so I'll see you at six', and she refuses to change it to 7:00."
+      },
+      {
+        "id": "t8_q2",
+        "question": "2. Which postcard will they send?",
+        "transcript": "Girl: We mustn't forget to send Mum a postcard... how about this one with a picture of the mountain?\nBoy: Well, it's nice but we can't actually see it from where we're staying. What about a view of the lake and the village instead? Or perhaps one of the garden pictures if you think she'd prefer it. Look at the cottage and all the flowers...\nGirl: Mmm... I think your first idea was better... we could put a cross to show where we're staying.",
+        "options": [
+          {
+            "text": "Picture of the mountain",
+            "imageSeed": "mountain-postcard"
+          },
+          {
+            "text": "View of the lake and village",
+            "imageSeed": "lake-village"
+          },
+          {
+            "text": "Garden picture with cottage and flowers",
+            "imageSeed": "garden-cottage"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The girl says 'I think your first idea was better' referring to the boy's first suggestion: 'a view of the lake and the village'."
+      },
+      {
+        "id": "t8_q3",
+        "question": "3. What do they decide to buy?",
+        "transcript": "Mum: Look, Kate, there are some of those biscuits you like!\nKate: Oh, yes. Mm... there aren't many in a packet though, Mum. Why don't we have this cake instead? Remember I've got my friends coming tomorrow.\nMum: Oh, I haven't forgotten. I've already made a cake, and I've bought lots of ice cream.\nKate: Well, I suppose some biscuits would be nice with ice cream. Do we need anything else...?",
+        "options": [
+          {
+            "text": "Cake",
+            "imageSeed": "cake"
+          },
+          {
+            "text": "Ice cream",
+            "imageSeed": "ice-cream"
+          },
+          {
+            "text": "Biscuits",
+            "imageSeed": "biscuits"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The mum already has cake and ice cream. Kate agrees 'I suppose some biscuits would be nice with ice cream'."
+      },
+      {
+        "id": "t8_q4",
+        "question": "4. What has the girl forgotten to bring?",
+        "transcript": "Boy: Finish your drink - we'll be late for class. What are you looking for now? Don't tell me you've forgotten your homework. You said you were working on it really late.\nGirl: Don't worry, it was the first thing I put in my bag - look, here it is. I won't be a second... just checking everything. Pencil case, now where did I...? Oh... you'll be able to lend me a pen, won't you? Phone? Oh, here it is, in my pocket as usual...",
+        "options": [
+          {
+            "text": "Homework",
+            "imageSeed": "homework"
+          },
+          {
+            "text": "Pencil case/pen",
+            "imageSeed": "pencil-case"
+          },
+          {
+            "text": "Phone",
+            "imageSeed": "phone"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She can't find her pencil case and asks 'you'll be able to lend me a pen, won't you?'."
+      },
+      {
+        "id": "t8_q5",
+        "question": "5. How does the man want his son to help him?",
+        "transcript": "Dad: Jamie, could you do something for me?\nJamie: Well, it depends what it is. I'm meeting my mates in town.\nDad: I want to clean the upstairs windows this afternoon, but I lent the ladder to John... Could you come next door with me and help me carry it back? I'll give you a lift into town afterwards if you like.\nJamie: Sure, Dad.",
+        "options": [
+          {
+            "text": "Clean the upstairs windows",
+            "imageSeed": "cleaning-windows"
+          },
+          {
+            "text": "Help carry the ladder back",
+            "imageSeed": "carrying-ladder"
+          },
+          {
+            "text": "Give him a lift into town",
+            "imageSeed": "driving"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The dad asks 'Could you come next door with me and help me carry it [the ladder] back?'."
+      },
+      {
+        "id": "t8_q6",
+        "question": "6. Which TV programme is on at nine o'clock tonight?",
+        "transcript": "Woman: Because of the football finishing late, there are some changes to this evening's programmes. We won't now show the Nature Programme, about the sharks found in the Pacific, at nine o'clock. Instead, the cartoon film the Mighty Heroes will be at this time, an hour later than advertised. You can see the Nature Programme at its usual time next week.",
+        "options": [
+          {
+            "text": "Football",
+            "imageSeed": "football-tv"
+          },
+          {
+            "text": "Nature Programme (Sharks)",
+            "imageSeed": "sharks-tv"
+          },
+          {
+            "text": "Cartoon film (Mighty Heroes)",
+            "imageSeed": "cartoon-tv"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The announcer says 'Instead, the cartoon film the Mighty Heroes will be at this time [nine o'clock]'."
+      },
+      {
+        "id": "t8_q7",
+        "question": "7. What will the boy do first?",
+        "transcript": "Boy: I'm off now, Mum. I'm going to meet Ben at the youth club because he's bought a new wheel for his bike and he wants me to help him put it on... and I've got to go to the library to take my books back sometime today too.\nMum: Well, do that before you start work on the bike because it isn't open this afternoon.\nBoy: OK. And we're going to play table tennis after we've done the bike, so I won't see you until supper this evening. Bye!",
+        "options": [
+          {
+            "text": "Help put a wheel on a bike",
+            "imageSeed": "bike-wheel"
+          },
+          {
+            "text": "Go to the library",
+            "imageSeed": "library"
+          },
+          {
+            "text": "Play table tennis",
+            "imageSeed": "table-tennis"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The mum tells him to go to the library first ('do that before you start work on the bike'), and he agrees 'OK'."
+      }
+    ]
+  },
+  {
+    "topic": 9,
+    "title": "Topic 9: Travel and transport",
+    "questions": [
+      {
+        "id": "t9_q1",
+        "question": "1. What was damaged in the storm?",
+        "transcript": "Man: Was the roof of your house all right after the storm, Anna? I saw a workman there with a ladder today.\nWoman: I'd had the roof repaired recently so that wasn't a problem. The workman was putting some new glass in an upstairs window. I think a branch from a tree broke it when it fell off in the wind. I was quite lucky - it didn't damage my car which was parked right under the tree.",
+        "options": [
+          {
+            "text": "The roof",
+            "imageSeed": "roof-damage"
+          },
+          {
+            "text": "An upstairs window",
+            "imageSeed": "broken-window"
+          },
+          {
+            "text": "Her car",
+            "imageSeed": "car-damage"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'The workman was putting some new glass in an upstairs window. I think a branch from a tree broke it'."
+      },
+      {
+        "id": "t9_q2",
+        "question": "2. What present does the man decide to take?",
+        "transcript": "Man: My boss has invited me to dinner at his house tomorrow night, but I don't know what sort of present I should take.\nWoman: I suppose flowers are best, but it's not a good time of year for them... and people always take chocolates; that's really boring. What about a plant?\nMan: I think I'd be happier with the boring chocolates than with a plant actually, but thanks for the ideas, anyway.",
+        "options": [
+          {
+            "text": "Flowers",
+            "imageSeed": "flowers-gift"
+          },
+          {
+            "text": "Chocolates",
+            "imageSeed": "chocolates-gift"
+          },
+          {
+            "text": "A plant",
+            "imageSeed": "plant-gift"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He says 'I think I'd be happier with the boring chocolates than with a plant actually'."
+      },
+      {
+        "id": "t9_q3",
+        "question": "3. Which is the woman's jacket?",
+        "transcript": "Woman: Excuse me, has anyone found my jacket? I left it on the plane. It's grey, with two buttons down the front and one on each sleeve.\nMan: Anything in the pockets, madam?\nWoman: I don't think so.\nMan: Yes, I've got it here.",
+        "options": [
+          {
+            "text": "Grey jacket, 2 buttons down front, 1 on each sleeve",
+            "imageSeed": "grey-jacket"
+          },
+          {
+            "text": "Jacket with many buttons",
+            "imageSeed": "jacket-buttons"
+          },
+          {
+            "text": "Jacket with no buttons",
+            "imageSeed": "jacket-no-buttons"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "She describes it as 'grey, with two buttons down the front and one on each sleeve'."
+      },
+      {
+        "id": "t9_q4",
+        "question": "4. Which sport is not included in the price of the holiday?",
+        "transcript": "Man: Hello. This is the travel agency returning your call. You left a message about the holiday you've booked, asking which sports are included in the cost. There is an extra charge for windsurfing but if you want to play golf, that's free for all hotel guests and horse-riding is also available at no extra charge, which is good because I think you were especially interested in that. Let me know if I can help you with any other information. Goodbye.",
+        "options": [
+          {
+            "text": "Windsurfing",
+            "imageSeed": "windsurfing"
+          },
+          {
+            "text": "Golf",
+            "imageSeed": "golf"
+          },
+          {
+            "text": "Horse-riding",
+            "imageSeed": "horse-riding"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "The man says 'There is an extra charge for windsurfing'."
+      },
+      {
+        "id": "t9_q5",
+        "question": "5. Which postcard will they send?",
+        "transcript": "Woman: We mustn't forget to send Mum a postcard... how about this one with a picture of a castle?\nMan: Well, it's nice, but it's not where we're actually staying. What about a view of the beach and town instead? Or perhaps one of the garden pictures if you think she'd prefer it. Look at the cottage and all the flowers...\nWoman: Mmm... I think your first idea was better... we could put a cross to show where we're staying.\nMan: Right then, let's do that.",
+        "options": [
+          {
+            "text": "Picture of a castle",
+            "imageSeed": "castle-postcard"
+          },
+          {
+            "text": "View of the beach and town",
+            "imageSeed": "beach-town"
+          },
+          {
+            "text": "Garden picture with cottage and flowers",
+            "imageSeed": "garden-cottage"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The woman says 'I think your first idea was better' referring to the man's first suggestion: 'a view of the beach and town'."
+      },
+      {
+        "id": "t9_q6",
+        "question": "6. Where do they decide to go?",
+        "transcript": "Woman: So, we've got three hours free. Shall we go to an exhibition? What do you think?\nMan: Well, there's an exhibition of photographs at the city museum, or there's a sculpture exhibition at the art gallery, which is meant to be good.\nWoman: Oh, sculpture's boring! Let's go to the museum. I like photos, and we haven't been there since last year when they had that really interesting exhibition of clothes. Do you remember?\nMan: OK. I can go and see the sculptures another day.",
+        "options": [
+          {
+            "text": "Exhibition of photographs at the city museum",
+            "imageSeed": "photo-exhibition"
+          },
+          {
+            "text": "Sculpture exhibition at the art gallery",
+            "imageSeed": "sculpture-exhibition"
+          },
+          {
+            "text": "Exhibition of clothes",
+            "imageSeed": "clothes-exhibition"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "The woman says 'Let's go to the museum. I like photos' and the man agrees 'OK'."
+      },
+      {
+        "id": "t9_q7",
+        "question": "7. What has the boy lost?",
+        "transcript": "Boy: Mum, I'm just off to the shop. Oh, wait a minute, where's my money?\nWoman: Oh, I found your purse lying on the table earlier, so I put it back in your bag.\nBoy: Well, it's not in there now. Maybe it's fallen on the floor somewhere. Can you help me look under the sofa? That's where I was sitting a minute ago.\nWoman: Just a minute, let me check. Yes, look, it is in here after all. I told you that's where I'd put it. You just didn't look properly!",
+        "options": [
+          {
+            "text": "His money/purse",
+            "imageSeed": "purse-money"
+          },
+          {
+            "text": "His bag",
+            "imageSeed": "bag"
+          },
+          {
+            "text": "His keys",
+            "imageSeed": "keys"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "He asks 'where's my money?' and the mother talks about finding his 'purse'."
+      }
+    ]
+  },
+  {
+    "topic": 10,
+    "title": "Topic 10: Health",
+    "questions": [
+      {
+        "id": "t10_q1",
+        "question": "1. Which sport will the woman learn on holiday?",
+        "transcript": "Man: ... So if you're interested in water sports, this hotel has two pools, diving boards, and its own private beach. You can learn to water ski there, and guests can windsurf too - although the hotel advises beginners to take a few lessons before going out on their own.\nWoman: Good. I'm quite a strong swimmer, and I have always wanted to try windsurfing, so that would suit me fine. I tried water skiing once, but I didn't like it.\nMan: Well, I'm sure you'll enjoy your stay there then.\nWoman: Good.",
+        "options": [
+          {
+            "text": "Water skiing",
+            "imageSeed": "water-skiing"
+          },
+          {
+            "text": "Windsurfing",
+            "imageSeed": "windsurfing"
+          },
+          {
+            "text": "Diving",
+            "imageSeed": "diving-board"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'I have always wanted to try windsurfing, so that would suit me fine' and mentions she didn't like water skiing."
+      },
+      {
+        "id": "t10_q2",
+        "question": "2. What does the girl's penfriend look like now?",
+        "transcript": "Woman: Look at these photos of my penfriend and her family. I took them during the trip.\nMan: So is she the one with long hair?\nWoman: Oh, that's her sister. This is her, next to me. She looks a lot like her sister, though, doesn't she? And they used to have hair the same length, but hers has always been curly. It's a shame she had it cut, though - I think it looked better when it was long.",
+        "options": [
+          {
+            "text": "Long straight hair",
+            "imageSeed": "long-straight-hair"
+          },
+          {
+            "text": "Long curly hair",
+            "imageSeed": "long-curly-hair"
+          },
+          {
+            "text": "Short curly hair",
+            "imageSeed": "short-curly-hair"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She says 'hers has always been curly' and 'It's a shame she had it cut, though', meaning she now has short curly hair."
+      },
+      {
+        "id": "t10_q3",
+        "question": "3. Which animals did the children see?",
+        "transcript": "Woman: Well, the zoo was a bit disappointing. The children enjoyed feeding the horses and watching the monkeys and the birds, but they hoped to see lions and tigers, and there weren't any. Someone told us they don't have them there because the security isn't good enough, but I don't know if that's true.",
+        "options": [
+          {
+            "text": "Horses, monkeys, and birds",
+            "imageSeed": "horses-monkeys"
+          },
+          {
+            "text": "Lions and tigers",
+            "imageSeed": "lions-tigers"
+          },
+          {
+            "text": "Only birds",
+            "imageSeed": "birds-zoo"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "She says 'The children enjoyed feeding the horses and watching the monkeys and the birds', and notes there were no lions or tigers."
+      },
+      {
+        "id": "t10_q4",
+        "question": "4. Which TV programme is on first?",
+        "transcript": "Woman: ... and welcome to our Tuesday evening programmes. At 9.00 we'll have the first of our new programmes on sport, and today you can see live the final of the international tennis cup. But before that we have singer, Jane Shelley in concert. She will perform songs from her new CD. This will be followed by today's news from around the world...",
+        "options": [
+          {
+            "text": "Tennis match (sport)",
+            "imageSeed": "tennis-tv"
+          },
+          {
+            "text": "Singer in concert",
+            "imageSeed": "singer-concert"
+          },
+          {
+            "text": "News",
+            "imageSeed": "news-tv"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The announcer says 'At 9.00 we'll have the first of our new programmes on sport... But before that we have singer, Jane Shelley in concert'."
+      },
+      {
+        "id": "t10_q5",
+        "question": "5. What does the boy decide to buy for his grandmother?",
+        "transcript": "Boy: My mum says I've got to buy my granny a present because she always gets me one when she goes on holiday. I thought I'd get her a black T-shirt.\nGirl: Don't be silly, old ladies don't wear T-shirts. Why not get her some of the local perfume. It smells of roses, or one of those little wooden boxes - they're great for keeping earrings and stuff in.\nBoy: That's a good idea. She does a lot of travelling, so she can use it to put her jewellery in.",
+        "options": [
+          {
+            "text": "A black T-shirt",
+            "imageSeed": "black-tshirt"
+          },
+          {
+            "text": "Perfume",
+            "imageSeed": "perfume"
+          },
+          {
+            "text": "A little wooden box",
+            "imageSeed": "wooden-box"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "He agrees with the girl's suggestion of the wooden box, saying 'she can use it to put her jewellery in'."
+      },
+      {
+        "id": "t10_q6",
+        "question": "6. What time is the man's appointment?",
+        "transcript": "Woman: Hello. Appointments.\nMan: Hello. Could I make an appointment to see Dr. Smith, next Tuesday please? Early evening, if possible - anything after 6 o'clock.\nWoman: Well, we open at 6.15 on Tuesday evenings, and there's an appointment at 6.35 or 6.50.\nMan: Thanks. I'll take the earlier one. My name's...",
+        "options": [
+          {
+            "text": "6:15",
+            "imageSeed": "clock-6-15"
+          },
+          {
+            "text": "6:35",
+            "imageSeed": "clock-6-35"
+          },
+          {
+            "text": "6:50",
+            "imageSeed": "clock-6-50"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The options are 6.35 or 6.50, and he says 'I'll take the earlier one' (6.35)."
+      },
+      {
+        "id": "t10_q7",
+        "question": "7. What has the woman lost?",
+        "transcript": "Woman: Excuse me, I was sitting over there ten minutes ago making a call on my mobile phone. I got a pen out of my bag to write something down and I think my purse fell out. I can't find it now. Has anyone handed it to you?",
+        "options": [
+          {
+            "text": "Her mobile phone",
+            "imageSeed": "mobile-phone"
+          },
+          {
+            "text": "A pen",
+            "imageSeed": "pen"
+          },
+          {
+            "text": "Her purse",
+            "imageSeed": "purse"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She says 'I think my purse fell out. I can't find it now'."
+      }
+    ]
+  },
+  {
+    "topic": 11,
+    "title": "Topic 11: Environment",
+    "questions": [
+      {
+        "id": "t11_q1",
+        "question": "1. What is the weather forecast for tomorrow?",
+        "transcript": "Man: And now for the weather. As we go through today, the temperature will slowly rise, and the snow we've had for the last few days will disappear by the end of the afternoon. Tomorrow we can expect some rain, but by the end of the week, some sunny weather is likely.",
+        "options": [
+          {
+            "text": "Snow",
+            "imageSeed": "snow"
+          },
+          {
+            "text": "Rain",
+            "imageSeed": "rain"
+          },
+          {
+            "text": "Sunny",
+            "imageSeed": "sunny"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The announcer says 'Tomorrow we can expect some rain'."
+      },
+      {
+        "id": "t11_q2",
+        "question": "2. What will they buy at the supermarket?",
+        "transcript": "Woman: Look, Kate, there are some of those biscuits you like!\nGirl: Oh, yes. Mmm... they're a bit expensive, though, Mum. Why don't we have this cake instead? Remember we've got guests coming tomorrow.\nWoman: Oh, I haven't forgotten. I've already made a cake, and I've bought lots of ice cream for the children.\nGirl: Well, I suppose the biscuits would be nice with ice cream. Let's see... oh, good. I've got enough money in my purse.",
+        "options": [
+          {
+            "text": "Cake",
+            "imageSeed": "cake"
+          },
+          {
+            "text": "Ice cream",
+            "imageSeed": "ice-cream"
+          },
+          {
+            "text": "Biscuits",
+            "imageSeed": "biscuits"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The mum already has cake and ice cream. The girl agrees to buy the biscuits ('I suppose the biscuits would be nice with ice cream... I've got enough money')."
+      },
+      {
+        "id": "t11_q3",
+        "question": "3. Which T-shirt does the woman buy?",
+        "transcript": "Woman: I'd like to buy a white T-shirt with short sleeves, please. Large size.\nMan: I'm afraid the white ones have long sleeves, but we've got short sleeves in the darker colours. Do you want a round neck or a V-neck?\nWoman: It must be round neck. Let me think... umm, OK, I'll take one of the short-sleeved ones - the colour's not so important really.",
+        "options": [
+          {
+            "text": "White T-shirt with long sleeves",
+            "imageSeed": "white-tshirt-long"
+          },
+          {
+            "text": "Darker colour T-shirt with short sleeves and round neck",
+            "imageSeed": "dark-tshirt-short"
+          },
+          {
+            "text": "Darker colour T-shirt with short sleeves and V-neck",
+            "imageSeed": "dark-tshirt-vneck"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'It must be round neck' and 'I'll take one of the short-sleeved ones' (which are the darker colours)."
+      },
+      {
+        "id": "t11_q4",
+        "question": "4. What will the girl take with her on holiday?",
+        "transcript": "Man: Have you packed for your holiday?\nWoman: No, I need to go shopping before I can do that. Last holiday, my suitcase handle got broken, so I need something that's better quality this time. But suitcases are so heavy to carry.\nMan: I always take a big sports bag - it's light, and not expensive, so it doesn't matter if it gets torn.\nWoman: Yes, I thought about one of those, but you need something stronger when it's going on a plane. I'll get something I can put on my back - you can carry more that way.",
+        "options": [
+          {
+            "text": "A suitcase",
+            "imageSeed": "suitcase"
+          },
+          {
+            "text": "A big sports bag",
+            "imageSeed": "sports-bag"
+          },
+          {
+            "text": "A backpack",
+            "imageSeed": "backpack"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "She rejects the sports bag as not strong enough for a plane and says 'I'll get something I can put on my back' (a backpack)."
+      },
+      {
+        "id": "t11_q5",
+        "question": "5. Which exercise is the teacher describing?",
+        "transcript": "Woman: OK everybody. This next exercise is a bit difficult, but it's really good for your legs. All you do is put your back against the wall... place your feet about half a metre away from the wall... move your back down the wall, so your knees are bent at 90 degrees. Now put your hands out straight in front of you... right... make sure your head is against the wall. Now, see how long you can stay like that! If you do two minutes, you're doing well.",
+        "options": [
+          {
+            "text": "Back against wall, knees bent 90 degrees, hands straight out",
+            "imageSeed": "wall-sit-exercise"
+          },
+          {
+            "text": "Touching toes",
+            "imageSeed": "touching-toes"
+          },
+          {
+            "text": "Push-ups",
+            "imageSeed": "push-ups"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "She describes a wall sit: 'back against the wall... knees are bent at 90 degrees... hands out straight in front of you'."
+      },
+      {
+        "id": "t11_q6",
+        "question": "6. What time will the train to London leave?",
+        "transcript": "Man: The train arriving at platform six is the 4.45 from London. The train due to arrive at platform four in approximately five minutes is the delayed 4.30 train to London. This train will now depart at 4.50 and travel non-stop. We apologise to passengers for the delay. Refreshments will not be available on this train.",
+        "options": [
+          {
+            "text": "4:30",
+            "imageSeed": "clock-4-30"
+          },
+          {
+            "text": "4:45",
+            "imageSeed": "clock-4-45"
+          },
+          {
+            "text": "4:50",
+            "imageSeed": "clock-4-50"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The announcer says 'This train will now depart at 4.50'."
+      },
+      {
+        "id": "t11_q7",
+        "question": "7. Which sport will the boy do soon at the centre?",
+        "transcript": "Boy: Have you been to the new watersports centre yet?\nGirl: Oh yes, it's brilliant. There are two indoor pools, one for diving and one for swimming, and you can also have sailing lessons on the lake.\nBoy: That's what I'm doing there next weekend, actually. I was hoping to take windsurfing lessons, but the leaflet says they're not starting those until next year.",
+        "options": [
+          {
+            "text": "Diving",
+            "imageSeed": "diving"
+          },
+          {
+            "text": "Sailing",
+            "imageSeed": "sailing"
+          },
+          {
+            "text": "Windsurfing",
+            "imageSeed": "windsurfing"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "The girl mentions sailing lessons, and the boy replies 'That's what I'm doing there next weekend, actually'."
+      }
+    ]
+  },
+  {
+    "topic": 12,
+    "title": "Topic 12: Technology",
+    "questions": [
+      {
+        "id": "t12_q1",
+        "question": "1. Which of Miranda's things will Lucy be able to use?",
+        "transcript": "Woman: Lucy's joining the tennis club, so that'll be more equipment I have to buy.\nMan: Oh well, don't waste too much money. We bought Miranda everything, but then she only went once because she didn't like the teacher. Actually, I think we've still got some of it somewhere. There's a box of balls in the cupboard certainly, but she gave her cousin the racket, and she wears the shoes for other things. But I could look in the cupboard and give you what's there.\nWoman: Oh thanks, that'd be great. That would be really helpful.",
+        "options": [
+          {
+            "text": "Tennis balls",
+            "imageSeed": "tennis-balls"
+          },
+          {
+            "text": "Tennis racket",
+            "imageSeed": "tennis-racket"
+          },
+          {
+            "text": "Tennis shoes",
+            "imageSeed": "tennis-shoes"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "The man says 'There's a box of balls in the cupboard certainly', noting the racket was given away and the shoes are used for other things."
+      },
+      {
+        "id": "t12_q2",
+        "question": "2. What can't the woman find?",
+        "transcript": "Woman: I'm going to mend and paint the shelves in your bedroom today.\nMan: Great, Mum. Anything I can do to help?\nWoman: Yes, can you go to the shop and get me a new paint brush - this one's too old. But before you do that, ask your father what he's done with the hammer - I've looked everywhere for it. There was nothing in the toolbox except this pair of scissors which I lost months ago!",
+        "options": [
+          {
+            "text": "A paint brush",
+            "imageSeed": "paintbrush"
+          },
+          {
+            "text": "A hammer",
+            "imageSeed": "hammer"
+          },
+          {
+            "text": "A pair of scissors",
+            "imageSeed": "scissors"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She asks him to find out 'what he's done with the hammer - I've looked everywhere for it'."
+      },
+      {
+        "id": "t12_q3",
+        "question": "3. Which ring has the woman lost?",
+        "transcript": "Woman: I wonder if you can help me? I ate here in this restaurant last night, and I think I left my ring in the bathroom when I washed my hands. Have you seen it? It's got a square bluey-green stone with lots of smaller stones round it. It's quite valuable but that's not the point - it was my grandmother's and I'd hate to lose it.",
+        "options": [
+          {
+            "text": "Ring with a square stone and smaller stones around it",
+            "imageSeed": "square-ring"
+          },
+          {
+            "text": "Ring with a round stone",
+            "imageSeed": "round-ring"
+          },
+          {
+            "text": "Plain gold ring",
+            "imageSeed": "plain-ring"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "She describes it as having 'a square bluey-green stone with lots of smaller stones round it'."
+      },
+      {
+        "id": "t12_q4",
+        "question": "4. What time did the girl arrive?",
+        "transcript": "Man: Sorry I'm late - have you been here long?\nWoman: Well... not really, about five or ten minutes perhaps. I left home at five past six and got here at exactly quarter to seven.\nMan: Well... if we hurry, we'll still make it for the beginning of the film at seven.",
+        "options": [
+          {
+            "text": "6:05 (five past six)",
+            "imageSeed": "clock-6-05"
+          },
+          {
+            "text": "6:45 (quarter to seven)",
+            "imageSeed": "clock-6-45"
+          },
+          {
+            "text": "7:00",
+            "imageSeed": "clock-7-00"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "She says 'I left home at five past six and got here at exactly quarter to seven'."
+      },
+      {
+        "id": "t12_q5",
+        "question": "5. What will be on television at 10 o'clock this evening?",
+        "transcript": "Man: Here is an announcement about a change to our advertised programmes this evening. The football match between Spain and Hungary is now going to finish later than expected. When the match ends at 10.30 our programmes will continue as planned with a visit to an open air rock concert. But 'The Blue World' programme about life under the sea, which was due to begin at 10.00 o'clock this evening will now be shown next week instead.",
+        "options": [
+          {
+            "text": "Football match",
+            "imageSeed": "football-tv"
+          },
+          {
+            "text": "Rock concert",
+            "imageSeed": "rock-concert-tv"
+          },
+          {
+            "text": "The Blue World (under the sea)",
+            "imageSeed": "under-sea-tv"
+          }
+        ],
+        "correctAnswer": 0,
+        "explanation": "The football match is finishing late ('ends at 10.30'), meaning it will still be on at 10 o'clock. 'The Blue World' is postponed."
+      },
+      {
+        "id": "t12_q6",
+        "question": "6. Where will the party be?",
+        "transcript": "Man: What time are we leaving for Maria's party tonight?\nWoman: Not too early. It'll only take ten minutes to get to the nightclub.\nMan: Oh, I thought we were all meeting at the outdoor concert?\nWoman: There's been a change of plan. The two of us are meeting Maria at the club. We've told her the party's there. But the other guests will go to her flat and prepare everything while we keep Maria busy. We'll take her back there after about an hour - she will be surprised!",
+        "options": [
+          {
+            "text": "At the nightclub",
+            "imageSeed": "nightclub"
+          },
+          {
+            "text": "At the outdoor concert",
+            "imageSeed": "outdoor-concert"
+          },
+          {
+            "text": "At Maria's flat",
+            "imageSeed": "flat-party"
+          }
+        ],
+        "correctAnswer": 2,
+        "explanation": "The woman explains the real party is at Maria's flat ('the other guests will go to her flat and prepare everything... We'll take her back there')."
+      },
+      {
+        "id": "t12_q7",
+        "question": "7. What did the man buy?",
+        "transcript": "Woman: Oh, good, you're home! Did you get all the shopping? How about the orange juice?\nMan: Well, actually, at first I thought the shop didn't have any orange juice. I was thinking we'd have to manage without. Then I realised they'd moved it to a different shelf. I hope this is enough.\nWoman: Don't worry, that's plenty. Did you find the grapes?\nMan: Yes, there were lots of grapes. Only they looked a bit sour, so I got strawberries instead. They were a bit expensive, though.",
+        "options": [
+          {
+            "text": "Orange juice and grapes",
+            "imageSeed": "juice-grapes"
+          },
+          {
+            "text": "Orange juice and strawberries",
+            "imageSeed": "juice-strawberries"
+          },
+          {
+            "text": "Only strawberries",
+            "imageSeed": "strawberries"
+          }
+        ],
+        "correctAnswer": 1,
+        "explanation": "He bought orange juice ('I hope this is enough') and strawberries instead of grapes ('so I got strawberries instead')."
+      }
+    ]
+  }
+]

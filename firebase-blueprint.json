@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "Question": {
+      "title": "Question",
+      "description": "A multiple choice question",
+      "type": "object",
+      "properties": {
+        "topic": { "type": "number" },
+        "text": { "type": "string" },
+        "options": { "type": "array", "items": { "type": "string" } },
+        "correctAnswer": { "type": "string" },
+        "explanation": { "type": "string" }
+      },
+      "required": ["topic", "text", "options", "correctAnswer", "explanation"]
+    },
+    "ReadingPart": {
+      "title": "ReadingPart",
+      "description": "A reading exercise part",
+      "type": "object",
+      "properties": {
+        "topic": { "type": "number" },
+        "part": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": { "type": "string" },
+              "options": { "type": "array", "items": { "type": "string" } },
+              "correctAnswer": { "type": "string" },
+              "explanation": { "type": "string" }
+            },
+            "required": ["text", "options", "correctAnswer", "explanation"]
+          }
+        }
+      },
+      "required": ["topic", "part", "title", "content", "questions"]
+    },
+    "UserProgress": {
+      "title": "UserProgress",
+      "description": "Tracks user's score",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "topicId": { "type": "string" },
+        "score": { "type": "number" },
+        "total": { "type": "number" },
+        "completedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "topicId", "score", "total", "completedAt"]
+    }
+  },
+  "firestore": {
+    "questions/{questionId}": { "schema": "Question", "description": "Grammar/Vocab questions" },
+    "reading/{readingId}": { "schema": "ReadingPart", "description": "Reading exercises" },
+    "user_progress/{progressId}": { "schema": "UserProgress", "description": "User scores" }
+  }
+}
