@@ -83,7 +83,7 @@ export default function Dashboard() {
       >
         <div className="bg-white max-w-md mx-auto p-8 rounded-3xl shadow-sm border border-gray-100">
           <BookOpen className="w-16 h-16 mx-auto text-blue-500 mb-6" />
-          <h2 className="text-2xl font-bold text-gray-800 mb-3">Chào mừng đến với hệ thống ôn thi Tiếng Anh</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">Chào mừng mấy con gà đến với ôn thi Tiếng Anh</h2>
           <p className="text-gray-600">Vui lòng đăng nhập để bắt đầu làm bài và lưu kết quả của bạn.</p>
         </div>
       </motion.div>
