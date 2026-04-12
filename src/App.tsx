@@ -29,11 +29,11 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <header className="bg-white shadow-sm border-b border-gray-200">
             <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-              <h1 className="text-xl font-bold text-blue-600">English Exam Prep</h1>
+              <h1 className="text-xl font-bold text-blue-600">5 xị hay 8 xị</h1>
               <Auth />
             </div>
           </header>
@@ -46,12 +46,13 @@ function App() {
               <Route path="/speaking/:topicId" element={<SpeakingPractice />} />
               <Route path="/listening/:topicId" element={<ListeningPractice />} />
               <Route path="/writing/:topicId" element={<WritingPractice />} />
+              <Route path="*" element={<Dashboard />} />
             </Routes>
           </main>
 
           <footer className="bg-white border-t border-gray-200 py-6 mt-auto">
             <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 text-sm">
-              © 2026 English Exam Prep. All rights reserved.
+              © 2026 Kiên. All rights reserved.
             </div>
           </footer>
 
