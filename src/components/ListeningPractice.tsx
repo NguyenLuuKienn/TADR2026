@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { FirebaseError } from 'firebase/app';
 import { db, auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { ArrowLeft, Play, Square, CheckCircle, XCircle, FileText, Edit2 } from 'lucide-react';
@@ -48,7 +49,7 @@ export default function ListeningPractice() {
   const [editingImageIndex, setEditingImageIndex] = useState<number | null>(null);
   const [newImageUrl, setNewImageUrl] = useState('');
   const [savingImageIndex, setSavingImageIndex] = useState<number | null>(null);
-  const [imageSaveMessage, setImageSaveMessage] = useState<string | null>(null);
+  const [imageSaveMessage, setImageSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const synth = window.speechSynthesis;
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -159,7 +160,7 @@ export default function ListeningPractice() {
     if (!topicData || !topicId || !currentQuestion) return;
     const trimmedUrl = newImageUrl.trim();
     if (!trimmedUrl) {
-      setImageSaveMessage('URL ảnh không được để trống.');
+      setImageSaveMessage({ type: 'error', text: 'URL ảnh không được để trống.' });
       return;
     }
     
@@ -180,9 +181,14 @@ export default function ListeningPractice() {
       }
       setEditingImageIndex(null);
       setNewImageUrl('');
-      setImageSaveMessage('Đã lưu ảnh thành công.');
+      setImageSaveMessage({ type: 'success', text: 'Đã lưu ảnh thành công.' });
     } catch (error) {
-      handleFirestoreError(error, 'update' as any, 'listening');
+      let message = 'Lưu ảnh thất bại. Vui lòng thử lại.';
+      if (error instanceof FirebaseError && error.code === 'permission-denied') {
+        message = 'Bạn chưa có quyền cập nhật dữ liệu listening trên Firestore rules.';
+      }
+      console.error('Error updating listening image:', error);
+      setImageSaveMessage({ type: 'error', text: message });
     } finally {
       setSavingImageIndex(null);
     }
@@ -253,8 +259,14 @@ export default function ListeningPractice() {
 
               {/* Options (Images) */}
               {imageSaveMessage && (
-                <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 text-sm font-medium">
-                  {imageSaveMessage}
+                <div
+                  className={`mb-4 p-3 rounded-xl text-sm font-medium ${
+                    imageSaveMessage.type === 'success'
+                      ? 'bg-emerald-50 border border-emerald-100 text-emerald-700'
+                      : 'bg-red-50 border border-red-100 text-red-700'
+                  }`}
+                >
+                  {imageSaveMessage.text}
                 </div>
               )}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
