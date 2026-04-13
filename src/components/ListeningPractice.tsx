@@ -47,6 +47,8 @@ export default function ListeningPractice() {
   const canEditImages = !!user;
   const [editingImageIndex, setEditingImageIndex] = useState<number | null>(null);
   const [newImageUrl, setNewImageUrl] = useState('');
+  const [savingImageIndex, setSavingImageIndex] = useState<number | null>(null);
+  const [imageSaveMessage, setImageSaveMessage] = useState<string | null>(null);
 
   const synth = window.speechSynthesis;
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -155,19 +157,34 @@ export default function ListeningPractice() {
 
   const handleSaveImageUrl = async (optionIndex: number) => {
     if (!topicData || !topicId || !currentQuestion) return;
+    const trimmedUrl = newImageUrl.trim();
+    if (!trimmedUrl) {
+      setImageSaveMessage('URL ảnh không được để trống.');
+      return;
+    }
     
     try {
+      setSavingImageIndex(optionIndex);
+      setImageSaveMessage(null);
       const updatedQuestions = [...topicData.questions];
-      updatedQuestions[currentQuestionIndex].options[optionIndex].imageUrl = newImageUrl;
+      updatedQuestions[currentQuestionIndex].options[optionIndex].imageUrl = trimmedUrl;
       
       const docRef = doc(db, 'listening', `l_${topicId}`);
       await updateDoc(docRef, { questions: updatedQuestions });
+      const refreshedDoc = await getDoc(docRef);
       
-      setTopicData({ ...topicData, questions: updatedQuestions });
+      if (refreshedDoc.exists()) {
+        setTopicData(refreshedDoc.data() as ListeningTopic);
+      } else {
+        setTopicData({ ...topicData, questions: updatedQuestions });
+      }
       setEditingImageIndex(null);
       setNewImageUrl('');
+      setImageSaveMessage('Đã lưu ảnh thành công.');
     } catch (error) {
       handleFirestoreError(error, 'update' as any, 'listening');
+    } finally {
+      setSavingImageIndex(null);
     }
   };
 
@@ -235,6 +252,11 @@ export default function ListeningPractice() {
               </div>
 
               {/* Options (Images) */}
+              {imageSaveMessage && (
+                <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 text-sm font-medium">
+                  {imageSaveMessage}
+                </div>
+              )}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
                 {currentQuestion.options.map((option, index) => {
                   const isSelected = selectedAnswer === index;
@@ -302,9 +324,10 @@ export default function ListeningPractice() {
                           <div className="flex gap-2">
                             <button 
                               onClick={() => handleSaveImageUrl(index)}
-                              className="flex-1 bg-green-500 text-white py-1.5 rounded-xl text-sm font-medium hover:bg-green-600 transition-colors"
+                              disabled={savingImageIndex === index}
+                              className="flex-1 bg-green-500 text-white py-1.5 rounded-xl text-sm font-medium hover:bg-green-600 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                             >
-                              Lưu
+                              {savingImageIndex === index ? 'Đang lưu...' : 'Lưu'}
                             </button>
                             <button 
                               onClick={() => setEditingImageIndex(null)}
