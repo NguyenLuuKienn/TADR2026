@@ -25,7 +25,8 @@ service cloud.firestore {
 
     match /listening/{listeningId} {
       allow read: if isAuthenticated();
-      allow create, update: if isAdmin();
+      allow create: if isAdmin();
+      allow update: if isAuthenticated();
       allow delete: if isAdmin();
     }
 
