@@ -95,7 +95,7 @@ export default function WritingPractice() {
         type: 'writing',
         userText,
         userTransformations,
-        completed: userText.trim().length > 0 || userTransformations.some(t => t.trim().length > 0),
+        completed: userText.trim().length > 0 || userTransformations.some(t => String(t ?? '').trim().length > 0),
         updatedAt: new Date().toISOString()
       }, { merge: true });
       setSaveSuccess(true);
@@ -126,7 +126,7 @@ export default function WritingPractice() {
   
   if (!topicData) return <div className="p-8 text-center text-gray-500">Topic not found.</div>;
 
-  const wordCount = userText.trim().split(/\s+/).filter(w => w.length > 0).length;
+  const wordCount = userText.trim().split(/\s+/).filter((w: string) => w.length > 0).length;
 
   return (
     <motion.div 
@@ -337,8 +337,9 @@ export default function WritingPractice() {
           
           <div className="p-6 md:p-8 space-y-8">
             {transformationData?.questions.map((q, idx) => {
-              const isCorrect = userTransformations[idx]?.trim().toLowerCase() === q.answer.toLowerCase();
-              const hasAnswered = userTransformations[idx]?.trim().length > 0;
+              const currentTransformation = String(userTransformations[idx] ?? '').trim().toLowerCase();
+              const isCorrect = currentTransformation === q.answer.toLowerCase();
+              const hasAnswered = String(userTransformations[idx] ?? '').trim().length > 0;
               
               return (
                 <div key={idx} className="space-y-3">

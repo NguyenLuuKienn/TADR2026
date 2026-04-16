@@ -277,8 +277,9 @@ export default function ListeningPractice() {
     try {
       const progressRef = doc(db, 'user_progress', `${user.uid}_listening_${selectedPart}_${topicId}`);
       const score = currentResults.filter((r, i) => {
-        const correctAns = topicData.questions[i].answer.trim().toLowerCase();
-        return r && correctAns !== '' && currentAnswers[i].trim().toLowerCase() === correctAns;
+        const correctAns = String((topicData as ListeningTopicB).questions[i]?.answer ?? '').trim().toLowerCase();
+        const userAnswer = String(currentAnswers[i] ?? '').trim().toLowerCase();
+        return r && correctAns !== '' && userAnswer === correctAns;
       }).length;
       
       await setDoc(progressRef, {
@@ -616,8 +617,10 @@ export default function ListeningPractice() {
                 
                 {(topicData as ListeningTopicB).questions.map((q, idx) => {
                   const isAnswered = showResults[idx];
-                  const isCorrect = userAnswers[idx].trim().toLowerCase() === q.answer.toLowerCase() && q.answer !== '';
-                  const isMissingAnswer = q.answer === '';
+                  const currentAnswer = String(userAnswers[idx] ?? '').trim().toLowerCase();
+                  const correctAnswer = String(q.answer ?? '').trim().toLowerCase();
+                  const isCorrect = currentAnswer === correctAnswer && correctAnswer !== '';
+                  const isMissingAnswer = correctAnswer === '';
 
                   return (
                     <div key={idx} className="bg-gray-50/50 p-4 rounded-2xl border border-gray-100">
@@ -642,7 +645,7 @@ export default function ListeningPractice() {
                           />
                           <button
                             onClick={() => checkAnswer(idx)}
-                            disabled={!userAnswers[idx].trim()}
+                            disabled={!String(userAnswers[idx] ?? '').trim()}
                             className="px-4 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors whitespace-nowrap"
                           >
                             Kiểm tra
