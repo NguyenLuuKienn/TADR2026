@@ -1,31 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
-import { FirebaseError } from 'firebase/app';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { ArrowLeft, Play, Square, CheckCircle, XCircle, FileText, Edit2 } from 'lucide-react';
+import { ArrowLeft, Play, Square, CheckCircle, XCircle, Edit2, Save, Image as ImageIcon, Music } from 'lucide-react';
 import { handleFirestoreError } from './ErrorBoundary';
 import { motion, AnimatePresence } from 'motion/react';
-
-interface ListeningOption {
-  text: string;
-  imageSeed: string;
-  imageUrl?: string;
-}
+import listeningData from '../data/listening.json';
+import listeningDataB from '../data/listeningb.json';
 
 interface ListeningQuestion {
-  id: string;
-  question: string;
-  transcript: string;
-  options: ListeningOption[];
-  correctAnswer: number;
-  explanation: string;
+  id: number;
+  text: string;
+  answer: string;
 }
 
 interface ListeningTopic {
-  topic: number;
+  topicId: number;
   title: string;
+  imageUrl: string;
+  audioUrl: string;
   questions: ListeningQuestion[];
 }
 
@@ -33,40 +27,91 @@ export default function ListeningPractice() {
   const { topicId } = useParams();
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
+  const [selectedPart, setSelectedPart] = useState<'A' | 'B'>('A');
   
   const [topicData, setTopicData] = useState<ListeningTopic | null>(null);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [score, setScore] = useState(0);
-  const [showTranscript, setShowTranscript] = useState(false);
+  const [userAnswers, setUserAnswers] = useState<string[]>([]);
+  const [showResults, setShowResults] = useState<boolean[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [audioError, setAudioError] = useState(false);
 
-  // Any signed-in user can edit listening images
-  const canEditImages = !!user;
-  const [editingImageIndex, setEditingImageIndex] = useState<number | null>(null);
-  const [newImageUrl, setNewImageUrl] = useState('');
-  const [savingImageIndex, setSavingImageIndex] = useState<number | null>(null);
-  const [imageSaveMessage, setImageSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  // Admin edit state
+  const isAdmin = user?.email === 'jenrrybast20@gmail.com';
+  const [isEditing, setIsEditing] = useState(false);
+  const [editImageUrl, setEditImageUrl] = useState('');
+  const [editAudioUrl, setEditAudioUrl] = useState('');
+  const [editAnswers, setEditAnswers] = useState<string[]>([]);
 
-  const synth = window.speechSynthesis;
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const parseTopicNumber = () => {
+    if (!topicId) return NaN;
+    return Number.parseInt(topicId, 10);
+  };
+
+  const getDatasetByPart = (part: 'A' | 'B') => (part === 'A' ? listeningData : listeningDataB);
 
   useEffect(() => {
     const fetchTopicData = async () => {
       if (!topicId) return;
       try {
-        const docRef = doc(db, 'listening', `l_${topicId}`);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          setTopicData(docSnap.data() as ListeningTopic);
-        } else {
+        const topicNum = parseTopicNumber();
+        const dataset = getDatasetByPart(selectedPart);
+        const baseData = dataset.find(t => t.topicId === topicNum);
+        
+        if (!baseData) {
+          if (selectedPart === 'B') {
+            setSelectedPart('A');
+            return;
+          }
           navigate('/');
+          return;
+        }
+
+        let finalData = { ...baseData };
+
+        // Fetch overrides from Firestore
+        const overrideRef = doc(db, 'listening_overrides', `topic_${topicId}_${selectedPart.toLowerCase()}`);
+        const overrideSnap = await getDoc(overrideRef);
+        
+        if (overrideSnap.exists()) {
+          const overrides = overrideSnap.data();
+          if (overrides.imageUrl) finalData.imageUrl = overrides.imageUrl;
+          if (overrides.audioUrl) finalData.audioUrl = overrides.audioUrl;
+          if (overrides.answers) {
+            finalData.questions = finalData.questions.map((q, idx) => ({
+              ...q,
+              answer: overrides.answers[idx] !== undefined ? overrides.answers[idx] : q.answer
+            }));
+          }
+        }
+
+        setTopicData(finalData);
+        setUserAnswers(new Array(finalData.questions.length).fill(''));
+        setShowResults(new Array(finalData.questions.length).fill(false));
+        
+        setEditImageUrl(finalData.imageUrl);
+        setEditAudioUrl(finalData.audioUrl);
+        setEditAnswers(finalData.questions.map(q => q.answer));
+
+        // Fetch user progress
+        if (user) {
+          const progressRef = doc(db, 'user_progress', `${user.uid}_listening_${selectedPart}_${topicId}`);
+          const progressSnap = await getDoc(progressRef);
+          if (progressSnap.exists()) {
+            const pData = progressSnap.data();
+            if (pData.userAnswers) {
+              setUserAnswers(pData.userAnswers);
+            }
+            if (pData.showResults) {
+              setShowResults(pData.showResults);
+            }
+          }
         }
       } catch (error) {
-        handleFirestoreError(error, 'get' as any, 'listening');
+        console.error("Error fetching listening data:", error);
       } finally {
         setLoading(false);
       }
@@ -75,126 +120,107 @@ export default function ListeningPractice() {
     fetchTopicData();
 
     return () => {
-      if (synth.speaking) {
-        synth.cancel();
+      if (audioRef.current) {
+        audioRef.current.pause();
       }
     };
-  }, [topicId, navigate]);
-
-  const currentQuestion = topicData?.questions[currentQuestionIndex];
+  }, [topicId, navigate, user, selectedPart]);
 
   const handlePlayAudio = () => {
-    if (!currentQuestion) return;
-
-    if (synth.speaking) {
-      synth.cancel();
-      setIsPlaying(false);
+    if (!topicData?.audioUrl) {
+      setAudioError(true);
+      setTimeout(() => setAudioError(false), 3000);
       return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(currentQuestion.transcript);
-    utterance.lang = 'en-US';
-    utterance.rate = 0.9;
-    
-    utterance.onstart = () => setIsPlaying(true);
-    utterance.onend = () => setIsPlaying(false);
-    utterance.onerror = () => setIsPlaying(false);
-
-    utteranceRef.current = utterance;
-    synth.speak(utterance);
-  };
-
-  const handleStopAudio = () => {
-    if (synth.speaking) {
-      synth.cancel();
-      setIsPlaying(false);
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        audioRef.current.play().catch(() => {
+          setAudioError(true);
+          setTimeout(() => setAudioError(false), 3000);
+        });
+        setIsPlaying(true);
+      }
     }
   };
 
-  const handleSelectAnswer = (index: number) => {
-    if (isSubmitted || !currentQuestion) return;
-    setSelectedAnswer(index);
-    setIsSubmitted(true);
-    handleStopAudio();
+  const handleAnswerChange = (index: number, value: string) => {
+    const newAnswers = [...userAnswers];
+    newAnswers[index] = value;
+    setUserAnswers(newAnswers);
     
-    if (index === currentQuestion.correctAnswer) {
-      setScore(prev => prev + 1);
+    // Hide result for this question when user types again
+    if (showResults[index]) {
+      const newResults = [...showResults];
+      newResults[index] = false;
+      setShowResults(newResults);
     }
   };
 
-  const handleNext = () => {
-    if (!topicData) return;
-    
-    if (currentQuestionIndex < topicData.questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
-      setSelectedAnswer(null);
-      setIsSubmitted(false);
-      setShowTranscript(false);
-      handleStopAudio();
-    } else {
-      saveProgress();
-    }
+  const checkAnswer = (index: number) => {
+    const newResults = [...showResults];
+    newResults[index] = true;
+    setShowResults(newResults);
+    saveProgress(userAnswers, newResults);
   };
 
-  const saveProgress = async () => {
+  const saveProgress = async (currentAnswers: string[], currentResults: boolean[]) => {
     if (!user || !topicId || !topicData) return;
     
-    setSaving(true);
     try {
-      const progressRef = doc(db, 'user_progress', `${user.uid}_${topicId}_listening`);
+      const progressRef = doc(db, 'user_progress', `${user.uid}_listening_${selectedPart}_${topicId}`);
+      const score = currentResults.filter((r, i) => {
+        const correctAns = topicData.questions[i].answer.trim().toLowerCase();
+        return r && correctAns !== '' && currentAnswers[i].trim().toLowerCase() === correctAns;
+      }).length;
+      
       await setDoc(progressRef, {
         uid: user.uid,
-        topicId: `${topicId}_listening`,
+        topicId: parseInt(topicId),
+        part: selectedPart,
+        type: 'listening',
+        userAnswers: currentAnswers,
+        showResults: currentResults,
         score: score,
         total: topicData.questions.length,
-        timestamp: new Date().toISOString()
-      });
-      navigate('/');
+        updatedAt: new Date().toISOString()
+      }, { merge: true });
     } catch (error) {
-      handleFirestoreError(error, 'write' as any, 'user_progress');
+      console.error("Error saving progress:", error);
+    }
+  };
+
+  const handleSaveAdminEdits = async () => {
+    if (!topicId || !topicData) return;
+    setSaving(true);
+    try {
+      const overrideRef = doc(db, 'listening_overrides', `topic_${topicId}_${selectedPart.toLowerCase()}`);
+      await setDoc(overrideRef, {
+        imageUrl: editImageUrl,
+        audioUrl: editAudioUrl,
+        answers: editAnswers,
+        part: selectedPart,
+        updatedAt: new Date().toISOString()
+      }, { merge: true });
+
+      setTopicData({
+        ...topicData,
+        imageUrl: editImageUrl,
+        audioUrl: editAudioUrl,
+        questions: topicData.questions.map((q, i) => ({ ...q, answer: editAnswers[i] }))
+      });
+      setIsEditing(false);
+    } catch (error) {
+      console.error("Error saving admin edits:", error);
+    } finally {
       setSaving(false);
     }
   };
 
-  const handleSaveImageUrl = async (optionIndex: number) => {
-    if (!topicData || !topicId || !currentQuestion) return;
-    const trimmedUrl = newImageUrl.trim();
-    if (!trimmedUrl) {
-      setImageSaveMessage({ type: 'error', text: 'URL ảnh không được để trống.' });
-      return;
-    }
-    
-    try {
-      setSavingImageIndex(optionIndex);
-      setImageSaveMessage(null);
-      const updatedQuestions = [...topicData.questions];
-      updatedQuestions[currentQuestionIndex].options[optionIndex].imageUrl = trimmedUrl;
-      
-      const docRef = doc(db, 'listening', `l_${topicId}`);
-      await updateDoc(docRef, { questions: updatedQuestions });
-      const refreshedDoc = await getDoc(docRef);
-      
-      if (refreshedDoc.exists()) {
-        setTopicData(refreshedDoc.data() as ListeningTopic);
-      } else {
-        setTopicData({ ...topicData, questions: updatedQuestions });
-      }
-      setEditingImageIndex(null);
-      setNewImageUrl('');
-      setImageSaveMessage({ type: 'success', text: 'Đã lưu ảnh thành công.' });
-    } catch (error) {
-      let message = 'Lưu ảnh thất bại. Vui lòng thử lại.';
-      if (error instanceof FirebaseError && error.code === 'permission-denied') {
-        message = 'Bạn chưa có quyền cập nhật dữ liệu listening trên Firestore rules.';
-      }
-      console.error('Error updating listening image:', error);
-      setImageSaveMessage({ type: 'error', text: message });
-    } finally {
-      setSavingImageIndex(null);
-    }
-  };
-
-  if (loading || !topicData || !currentQuestion) {
+  if (loading || !topicData) {
     return (
       <div className="flex justify-center items-center h-64">
         <div className="animate-pulse flex flex-col items-center">
@@ -208,231 +234,224 @@ export default function ListeningPractice() {
   return (
     <div className="max-w-5xl mx-auto p-4 md:p-6">
       <div className="mb-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors" onClick={handleStopAudio}>
+        <Link to="/" className="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Quay lại danh sách
         </Link>
-        <span className="bg-white px-4 py-1.5 rounded-full shadow-sm border border-gray-100 text-gray-600 font-medium text-sm">
-          Câu {currentQuestionIndex + 1} / {topicData.questions.length}
-        </span>
+        {isAdmin && (
+          <button
+            onClick={() => setIsEditing(!isEditing)}
+            className="flex items-center px-4 py-2 bg-indigo-100 text-indigo-700 rounded-xl hover:bg-indigo-200 transition-colors font-medium text-sm"
+          >
+            <Edit2 className="w-4 h-4 mr-2" />
+            {isEditing ? 'Hủy chỉnh sửa' : 'Admin: Chỉnh sửa Topic'}
+          </button>
+        )}
       </div>
 
-      <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="mb-6 flex items-center gap-3">
+        <span className="text-sm font-semibold text-gray-700">Phần nghe:</span>
+        <button
+          onClick={() => setSelectedPart('A')}
+          className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors ${
+            selectedPart === 'A'
+              ? 'bg-indigo-600 text-white'
+              : 'bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-50'
+          }`}
+        >
+          Part A
+        </button>
+        <button
+          onClick={() => setSelectedPart('B')}
+          className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors ${
+            selectedPart === 'B'
+              ? 'bg-indigo-600 text-white'
+              : 'bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-50'
+          }`}
+        >
+          Part B
+        </button>
+      </div>
+
+      {isAdmin && isEditing && (
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white p-6 rounded-3xl shadow-sm border border-indigo-200 mb-8 space-y-4"
+        >
+          <h3 className="text-lg font-bold text-indigo-800 mb-4 flex items-center">
+            <Edit2 className="w-5 h-5 mr-2" /> Chỉnh sửa thông tin Topic
+          </h3>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+              <ImageIcon className="w-4 h-4 mr-1" /> URL Ảnh đề bài
+            </label>
+            <input
+              type="text"
+              value={editImageUrl}
+              onChange={(e) => setEditImageUrl(e.target.value)}
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              placeholder="https://..."
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+              <Music className="w-4 h-4 mr-1" /> URL File Audio (mp3, wav...)
+            </label>
+            <input
+              type="text"
+              value={editAudioUrl}
+              onChange={(e) => setEditAudioUrl(e.target.value)}
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              placeholder="https://..."
+            />
+          </div>
+
+          <div className="pt-4 border-t border-gray-100">
+            <h4 className="font-medium text-gray-800 mb-3">Đáp án cho các câu hỏi:</h4>
+            {topicData.questions.map((q, idx) => (
+              <div key={idx} className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full text-sm font-bold text-gray-600 shrink-0">
+                  {idx + 1}
+                </span>
+                <input
+                  type="text"
+                  value={editAnswers[idx] || ''}
+                  onChange={(e) => {
+                    const newAns = [...editAnswers];
+                    newAns[idx] = e.target.value;
+                    setEditAnswers(newAns);
+                  }}
+                  className="flex-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+                  placeholder="Nhập đáp án đúng..."
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-end pt-4">
+            <button
+              onClick={handleSaveAdminEdits}
+              disabled={saving}
+              className="flex items-center px-6 py-2.5 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors"
+            >
+              {saving ? 'Đang lưu...' : <><Save className="w-4 h-4 mr-2" /> Lưu thay đổi</>}
+            </button>
+          </div>
+        </motion.div>
+      )}
+
+      <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden mb-8">
         <div className="bg-indigo-600 p-6 md:p-8 text-white">
           <h2 className="text-2xl md:text-3xl font-bold">{topicData.title}</h2>
-          <p className="text-indigo-100 mt-2 font-medium">Listening Practice</p>
+          <p className="text-indigo-100 mt-2 font-medium">Listening Practice {selectedPart} - Fill in the missing information</p>
         </div>
 
         <div className="p-6 md:p-8">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentQuestionIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="mb-8"
+          {/* Audio Player */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 bg-indigo-50/50 p-6 md:p-8 rounded-3xl border border-indigo-100/50 relative">
+            <audio 
+              ref={audioRef} 
+              src={topicData.audioUrl} 
+              onEnded={() => setIsPlaying(false)}
+              onPause={() => setIsPlaying(false)}
+              onPlay={() => setIsPlaying(true)}
+              className="hidden"
+            />
+            
+            <button
+              onClick={handlePlayAudio}
+              className={`flex items-center justify-center w-16 h-16 text-white rounded-full transition-all shadow-md hover:shadow-lg hover:scale-105 ${isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-indigo-600 hover:bg-indigo-700'}`}
             >
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-relaxed">{currentQuestion.question}</h3>
+              {isPlaying ? <Square className="w-6 h-6" fill="currentColor" /> : <Play className="w-8 h-8 ml-1" fill="currentColor" />}
+            </button>
+            
+            <div className="text-indigo-800 font-medium text-center sm:text-left">
+              {isPlaying ? 'Đang phát âm thanh...' : 'Bấm để nghe đoạn hội thoại'}
+              {audioError && <p className="text-red-500 text-sm mt-1">Chưa có file audio cho bài này.</p>}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* Image Section */}
+            <div>
+              <div className="bg-gray-50 rounded-2xl p-2 border border-gray-200 shadow-inner">
+                <img 
+                  src={topicData.imageUrl} 
+                  alt="Listening Task" 
+                  className="w-full h-auto rounded-xl object-contain max-h-[600px]"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+
+            {/* Questions Section */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-gray-800 border-b pb-4">Điền vào chỗ trống</h3>
               
-              {/* Audio Player Controls */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 bg-indigo-50/50 p-6 md:p-8 rounded-3xl border border-indigo-100/50">
-                {isPlaying ? (
-                  <button
-                    onClick={handleStopAudio}
-                    className="flex items-center justify-center w-16 h-16 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all shadow-md hover:shadow-lg hover:scale-105"
-                  >
-                    <Square className="w-6 h-6" fill="currentColor" />
-                  </button>
-                ) : (
-                  <button
-                    onClick={handlePlayAudio}
-                    className="flex items-center justify-center w-16 h-16 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg hover:scale-105"
-                  >
-                    <Play className="w-8 h-8 ml-1" fill="currentColor" />
-                  </button>
-                )}
-                <div className="text-indigo-800 font-medium text-center sm:text-left">
-                  {isPlaying ? 'Đang phát âm thanh...' : 'Bấm để nghe đoạn hội thoại'}
-                </div>
-              </div>
+              {topicData.questions.map((q, idx) => {
+                const isAnswered = showResults[idx];
+                const isCorrect = userAnswers[idx].trim().toLowerCase() === q.answer.toLowerCase() && q.answer !== '';
+                const isMissingAnswer = q.answer === '';
 
-              {/* Options (Images) */}
-              {imageSaveMessage && (
-                <div
-                  className={`mb-4 p-3 rounded-xl text-sm font-medium ${
-                    imageSaveMessage.type === 'success'
-                      ? 'bg-emerald-50 border border-emerald-100 text-emerald-700'
-                      : 'bg-red-50 border border-red-100 text-red-700'
-                  }`}
-                >
-                  {imageSaveMessage.text}
-                </div>
-              )}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-                {currentQuestion.options.map((option, index) => {
-                  const isSelected = selectedAnswer === index;
-                  const isCorrect = index === currentQuestion.correctAnswer;
-                  
-                  let optionClass = "border-2 rounded-3xl p-4 cursor-pointer transition-all duration-300 flex flex-col items-center text-center h-full relative ";
-                  
-                  if (isSubmitted) {
-                    if (isCorrect) {
-                      optionClass += " border-green-500 bg-green-50 shadow-sm";
-                    } else if (isSelected) {
-                      optionClass += " border-red-500 bg-red-50 shadow-sm";
-                    } else {
-                      optionClass += " border-gray-100 opacity-50";
-                    }
-                  } else {
-                    optionClass += isSelected 
-                      ? " border-indigo-500 bg-indigo-50 shadow-md" 
-                      : " border-gray-100 hover:border-indigo-300 hover:bg-indigo-50/50 hover:shadow-md hover:-translate-y-1";
-                  }
-
-                  const imageSource = option.imageUrl || `https://picsum.photos/seed/${option.imageSeed}/400/300`;
-
-                  return (
-                    <div 
-                      key={index}
-                      className={optionClass}
-                      onClick={() => handleSelectAnswer(index)}
-                    >
-                      <div className="w-full aspect-video bg-gray-100 rounded-2xl mb-4 overflow-hidden relative group">
-                        <img 
-                          src={imageSource} 
-                          alt={option.text}
-                          className="object-contain w-full h-full bg-white p-1"
-                          referrerPolicy="no-referrer"
+                return (
+                  <div key={idx} className="bg-gray-50/50 p-4 rounded-2xl border border-gray-100">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                      <span className="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-800 rounded-full font-bold shrink-0">
+                        {idx + 1}
+                      </span>
+                      
+                      <div className="flex-1 flex items-center gap-2">
+                        <input
+                          type="text"
+                          value={userAnswers[idx]}
+                          onChange={(e) => handleAnswerChange(idx, e.target.value)}
+                          className={`flex-1 p-3 border rounded-xl focus:ring-2 focus:outline-none transition-all ${
+                            isAnswered
+                              ? isCorrect 
+                                ? 'border-green-300 bg-green-50 focus:ring-green-200' 
+                                : 'border-red-300 bg-red-50 focus:ring-red-200'
+                              : 'border-gray-200 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white'
+                          }`}
+                          placeholder="Nhập đáp án..."
                         />
-                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-800 shadow-sm">
-                          {['A', 'B', 'C'][index]}
-                        </div>
-                        
-                        {canEditImages && !isSubmitted && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setEditingImageIndex(index);
-                              setNewImageUrl(option.imageUrl || '');
-                            }}
-                            className="absolute top-3 right-3 bg-blue-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-blue-700"
-                            title="Thay đổi ảnh"
-                          >
-                            <Edit2 className="w-4 h-4" />
-                          </button>
-                        )}
+                        <button
+                          onClick={() => checkAnswer(idx)}
+                          disabled={!userAnswers[idx].trim()}
+                          className="px-4 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors whitespace-nowrap"
+                        >
+                          Kiểm tra
+                        </button>
                       </div>
-                      
-                      {editingImageIndex === index && !isSubmitted ? (
-                        <div className="w-full flex flex-col gap-2 mt-2" onClick={e => e.stopPropagation()}>
-                          <input
-                            type="text"
-                            value={newImageUrl}
-                            onChange={(e) => setNewImageUrl(e.target.value)}
-                            placeholder="Nhập URL ảnh mới..."
-                            className="w-full p-2 text-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                          />
-                          <div className="flex gap-2">
-                            <button 
-                              onClick={() => handleSaveImageUrl(index)}
-                              disabled={savingImageIndex === index}
-                              className="flex-1 bg-green-500 text-white py-1.5 rounded-xl text-sm font-medium hover:bg-green-600 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
-                            >
-                              {savingImageIndex === index ? 'Đang lưu...' : 'Lưu'}
-                            </button>
-                            <button 
-                              onClick={() => setEditingImageIndex(null)}
-                              className="flex-1 bg-gray-200 text-gray-700 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-300 transition-colors"
-                            >
-                              Hủy
-                            </button>
+                    </div>
+
+                    <AnimatePresence>
+                      {isAnswered && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="pl-11 overflow-hidden"
+                        >
+                          <div className={`mt-3 p-3 rounded-xl text-sm ${isCorrect ? 'bg-green-50 text-green-800 border border-green-100' : 'bg-blue-50 text-blue-800 border border-blue-100'}`}>
+                            {isMissingAnswer ? (
+                              <span><span className="font-bold text-orange-600">Lưu ý:</span> Câu này chưa có đáp án trong hệ thống. Vui lòng đợi Admin cập nhật.</span>
+                            ) : isCorrect ? (
+                              <span className="font-bold flex items-center"><CheckCircle className="w-4 h-4 mr-1" /> Chính xác!</span>
+                            ) : (
+                              <span><span className="font-bold">Chưa chính xác.</span> Đáp án đúng là: <span className="font-bold text-lg ml-1">{q.answer}</span></span>
+                            )}
                           </div>
-                        </div>
-                      ) : (
-                        <p className="font-medium text-gray-800 text-lg">{option.text}</p>
+                        </motion.div>
                       )}
-                      
-                      <AnimatePresence>
-                        {isSubmitted && isCorrect && (
-                          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="absolute -top-3 -right-3 bg-white rounded-full shadow-sm">
-                            <CheckCircle className="w-8 h-8 text-green-500" />
-                          </motion.div>
-                        )}
-                        {isSubmitted && isSelected && !isCorrect && (
-                          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="absolute -top-3 -right-3 bg-white rounded-full shadow-sm">
-                            <XCircle className="w-8 h-8 text-red-500" />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Feedback and Next Button */}
-              <AnimatePresence>
-                {isSubmitted && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 20, height: 0 }}
-                    animate={{ opacity: 1, y: 0, height: 'auto' }}
-                    className="space-y-6"
-                  >
-                    <div className={`p-6 rounded-2xl flex items-start ${selectedAnswer === currentQuestion.correctAnswer ? 'bg-green-50/80 text-green-800 border border-green-100' : 'bg-red-50/80 text-red-800 border border-red-100'}`}>
-                      {selectedAnswer === currentQuestion.correctAnswer ? (
-                        <CheckCircle className="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" />
-                      ) : (
-                        <XCircle className="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" />
-                      )}
-                      <div>
-                        <h4 className="font-bold mb-2 text-lg">
-                          {selectedAnswer === currentQuestion.correctAnswer ? 'Chính xác!' : 'Chưa chính xác!'}
-                        </h4>
-                        <p className="leading-relaxed">{currentQuestion.explanation}</p>
-                      </div>
-                    </div>
-
-                    <div className="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-                      <button 
-                        onClick={() => setShowTranscript(!showTranscript)}
-                        className="w-full flex items-center justify-between p-5 bg-gray-50 hover:bg-gray-100 transition-colors font-medium text-gray-700"
-                      >
-                        <span className="flex items-center">
-                          <FileText className="w-5 h-5 mr-3 text-gray-500" />
-                          {showTranscript ? 'Ẩn Transcript' : 'Xem Transcript (Nội dung bài nghe)'}
-                        </span>
-                      </button>
-                      
-                      <AnimatePresence>
-                        {showTranscript && (
-                          <motion.div 
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="bg-white border-t border-gray-100 overflow-hidden"
-                          >
-                            <div className="p-6">
-                              <p className="whitespace-pre-wrap text-gray-700 leading-relaxed text-lg">
-                                {currentQuestion.transcript}
-                              </p>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-
-                    <button
-                      onClick={handleNext}
-                      disabled={saving}
-                      className="w-full py-4 bg-indigo-600 text-white font-bold text-lg rounded-2xl hover:bg-indigo-700 transition-all shadow-sm hover:shadow-md disabled:opacity-50"
-                    >
-                      {saving ? 'Đang lưu...' : (currentQuestionIndex < topicData.questions.length - 1 ? 'Câu tiếp theo' : 'Hoàn thành')}
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          </AnimatePresence>
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>

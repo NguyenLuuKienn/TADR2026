@@ -1,0 +1,134 @@
+[
+  {
+    "topicId": 1,
+    "title": "PLYMOUTH SEA LIFE CENTRE",
+    "imageUrl": "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "Adults £ __________, children £2.00.", "answer": "" },
+      { "id": 2, "text": "Animals are fed every __________ from 9.30 am.", "answer": "" },
+      { "id": 3, "text": "Slide and __________ shows from 10.00 am.", "answer": "" },
+      { "id": 4, "text": "Guided tours available - ask at the __________.", "answer": "" },
+      { "id": 5, "text": "Walk through the big __________ made of glass.", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 2,
+    "title": "These messages were on the answerphone",
+    "imageUrl": "https://images.unsplash.com/photo-1520923642038-b4259acecbd7?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "Sarah Smith rang to say she left her __________ behind yesterday.", "answer": "" },
+      { "id": 2, "text": "Have lots of __________!", "answer": "" },
+      { "id": 3, "text": "Helen phoned to invite you to have __________ on Saturday.", "answer": "" },
+      { "id": 4, "text": "Has friends visiting from __________.", "answer": "" },
+      { "id": 5, "text": "Mary called. Problem at Australian __________. Call at once.", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 3,
+    "title": "HOTELS IN THE NATIONAL PARK",
+    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "The Marston Hotel: Good for people who like __________", "answer": "" },
+      { "id": 2, "text": "If you ask, the hotel will make you a __________", "answer": "" },
+      { "id": 3, "text": "The Bristol Hotel: Price includes __________", "answer": "" },
+      { "id": 4, "text": "The Ferndale Hotel: Good view of __________", "answer": "" },
+      { "id": 5, "text": "Fir trees Hotel: Price of a double room £ __________ a night.", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 4,
+    "title": "SUNNINGTON SPORTS CAMP",
+    "imageUrl": "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "Sign list outside __________ room.", "answer": "" },
+      { "id": 2, "text": "Wear track suit, but also bring __________ And a T-shirt", "answer": "" },
+      { "id": 3, "text": "2 pairs of sports __________", "answer": "" },
+      { "id": 4, "text": "Lunch served in canteen every half-hour between 12.15 and __________", "answer": "" },
+      { "id": 5, "text": "Snack bar sells drinks, chocolate and __________", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 5,
+    "title": "SCIENCE WORLD",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "Electricity workshop: TIME OF DAY __________", "answer": "" },
+      { "id": 2, "text": "Talk about space travel by well-known scientist: From __________", "answer": "" },
+      { "id": 3, "text": "Ticket for Special Events cost extra: £ __________ Adult", "answer": "" },
+      { "id": 4, "text": "Get tickets direct from Science World on 284311, or from the __________", "answer": "" },
+      { "id": 5, "text": "Newton Café next to the __________", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 6,
+    "title": "GLASGOW",
+    "imageUrl": "https://images.unsplash.com/photo-1580137189272-c9379f8864fd?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "City center car park is __________. Leave car at hotel.", "answer": "" },
+      { "id": 2, "text": "Departs from Goege __________ every 30 minutes.", "answer": "" },
+      { "id": 3, "text": "Buy tickets from __________", "answer": "" },
+      { "id": 4, "text": "Welcome Centre for information-free __________ available.", "answer": "" },
+      { "id": 5, "text": "Merchant City area-shops selling __________ and clothes.", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 7,
+    "title": "CAMPING TRIP",
+    "imageUrl": "https://images.unsplash.com/photo-1504280390224-118c728340d8?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "Coach leaves school at __________ on Monday morning.", "answer": "" },
+      { "id": 2, "text": "Bring: * one bag or case * a __________", "answer": "" },
+      { "id": 3, "text": "* warm clothes * __________ things", "answer": "" },
+      { "id": 4, "text": "* Pocket money to spend on souvenirs and __________", "answer": "" },
+      { "id": 5, "text": "Catch a bus outside __________ to Southport.", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 8,
+    "title": "THE GOOD FOOD SHOW",
+    "imageUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "buy Jane Adams' new book about making __________", "answer": "" },
+      { "id": 2, "text": "get advice about buying __________", "answer": "" },
+      { "id": 3, "text": "watch how to cook a lunch just with __________", "answer": "" },
+      { "id": 4, "text": "learn how to make s dessert in less than __________", "answer": "" },
+      { "id": 5, "text": "taste food from many different countries- the food from __________ is specially recommended.", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 9,
+    "title": "HISTORIC PLACES TO VISIT",
+    "imageUrl": "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "For half a million years, people and animals, especially __________, lived here", "answer": "" },
+      { "id": 2, "text": "Special evening tours during the month of __________", "answer": "" },
+      { "id": 3, "text": "Built in the year __________", "answer": "" },
+      { "id": 4, "text": "All visitors want to see Dorothy's __________", "answer": "" },
+      { "id": 5, "text": "Have a ride on an old tram to the __________ village", "answer": "" },
+      { "id": 6, "text": "In the factory, find out how people used to make __________", "answer": "" }
+    ]
+  },
+  {
+    "topicId": 10,
+    "title": "Singing for Beginners",
+    "imageUrl": "https://images.unsplash.com/photo-1516280440502-65f536af1219?auto=format&fit=crop&q=80&w=800",
+    "audioUrl": "",
+    "questions": [
+      { "id": 1, "text": "Lena Phipps, a very good former __________ singer is the tutor", "answer": "" },
+      { "id": 2, "text": "the maximum number of student per course is __________", "answer": "" },
+      { "id": 3, "text": "all classes start with exercises that help students to __________", "answer": "" },
+      { "id": 4, "text": "students learn to sing __________, modern and pop songs", "answer": "" },
+      { "id": 5, "text": "There's a very good lunch, especially __________", "answer": "" },
+      { "id": 6, "text": "date the next course starts: __________, 24th September", "answer": "" }
+    ]
+  }
+]

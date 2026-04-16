@@ -1,0 +1,302 @@
+[
+  {
+    "topicId": 1,
+    "questions": [
+      {
+        "original": "The heat was such that I nearly fainted.",
+        "prefix": "It was",
+        "answer": "so hot that I nearly fainted."
+      },
+      {
+        "original": "I'm going to the theatre tomorrow, and I'm really looking forward to it.",
+        "prefix": "I'm really looking",
+        "answer": "forward to going to the theatre tomorrow."
+      },
+      {
+        "original": "I've never eaten this before.",
+        "prefix": "It's the first",
+        "answer": "time I have ever eaten this."
+      },
+      {
+        "original": "He's getting someone to mend the windows.",
+        "prefix": "He's having",
+        "answer": "the windows mended."
+      },
+      {
+        "original": "It's a pity you didn't tell us about this.",
+        "prefix": "I wish",
+        "answer": "you had told us about this."
+      }
+    ]
+  },
+  {
+    "topicId": 2,
+    "questions": [
+      {
+        "original": "I'm interested in playing cards with my children at the weekend.",
+        "prefix": "I enjoy",
+        "answer": "playing cards with my children at the weekend."
+      },
+      {
+        "original": "I will spend two weeks reading the new book.",
+        "prefix": "It will take",
+        "answer": "me two weeks to read the new book."
+      },
+      {
+        "original": "We couldn't go out because the weather was so bad.",
+        "prefix": "It was such",
+        "answer": "bad weather that we couldn't go out."
+      },
+      {
+        "original": "She said to us 'Don't be late'.",
+        "prefix": "She told",
+        "answer": "us not to be late."
+      },
+      {
+        "original": "I often get up early.",
+        "prefix": "I am used",
+        "answer": "to getting up early."
+      }
+    ]
+  },
+  {
+    "topicId": 3,
+    "questions": [
+      {
+        "original": "Do you want to come to the cinema with us?",
+        "prefix": "Would you like",
+        "answer": "to come to the cinema with us?"
+      },
+      {
+        "original": "It's over 10 years since my father worked for that company.",
+        "prefix": "My father",
+        "answer": "hasn't worked for that company for over 10 years."
+      },
+      {
+        "original": "It would be nice to be able to fly a plane.",
+        "prefix": "I wish",
+        "answer": "I could fly a plane."
+      },
+      {
+        "original": "He is mad about collecting cars.",
+        "prefix": "He",
+        "answer": "is very fond of collecting cars."
+      },
+      {
+        "original": "The weather was too bad for us to drive to your house.",
+        "prefix": "The weather",
+        "answer": "was so bad that we couldn't drive to your house."
+      }
+    ]
+  },
+  {
+    "topicId": 4,
+    "questions": [
+      {
+        "original": "We haven't been to a concert for over a year.",
+        "prefix": "The last time",
+        "answer": "we went to a concert was over a year ago."
+      },
+      {
+        "original": "Her husband will not let her go on business trip with her boss.",
+        "prefix": "Her husband will not allow",
+        "answer": "her to go on a business trip with her boss."
+      },
+      {
+        "original": "People believed that somebody murdered Miss. Stone.",
+        "prefix": "It was",
+        "answer": "believed that somebody murdered Miss. Stone."
+      },
+      {
+        "original": "Shall we go out and buy some sandwiches?",
+        "prefix": "Why",
+        "answer": "don't we go out and buy some sandwiches?"
+      },
+      {
+        "original": "It is important to wear a suit to the conference.",
+        "prefix": "Wearing",
+        "answer": "a suit to the conference is important."
+      }
+    ]
+  },
+  {
+    "topicId": 5,
+    "questions": [
+      {
+        "original": "They have painted the walls green.",
+        "prefix": "The walls",
+        "answer": "have been painted green."
+      },
+      {
+        "original": "The teacher should buy the supplies for this class.",
+        "prefix": "The supplies",
+        "answer": "for this class should be bought by the teacher."
+      },
+      {
+        "original": "In spite of his age, Mr. Benson runs 7 miles before breakfast.",
+        "prefix": "Although",
+        "answer": "he is old, Mr. Benson runs 7 miles before breakfast."
+      },
+      {
+        "original": "It's a pity I didn't take my doctor's advice.",
+        "prefix": "I wish",
+        "answer": "I had taken my doctor's advice."
+      },
+      {
+        "original": "The bread is so stale that we can't eat it.",
+        "prefix": "The bread isn't",
+        "answer": "fresh enough for us to eat."
+      }
+    ]
+  },
+  {
+    "topicId": 6,
+    "questions": [
+      {
+        "original": "He prefers going to the cinema to renting a DVD.",
+        "prefix": "He would rather",
+        "answer": "go to the cinema than rent a DVD."
+      },
+      {
+        "original": "It is very tiring to stand in a long queue at the checkout.",
+        "prefix": "Standing in a long queue",
+        "answer": "at the checkout is very tiring."
+      },
+      {
+        "original": "She said to us, \"Do exercise regularly\".",
+        "prefix": "She told us",
+        "answer": "to do exercise regularly."
+      },
+      {
+        "original": "He didn't hurry, so he missed the train.",
+        "prefix": "If",
+        "answer": "he had hurried, he wouldn't have missed the train."
+      },
+      {
+        "original": "Although he took a taxi, John arrived late for the concert.",
+        "prefix": "In spite",
+        "answer": "of taking a taxi, John arrived late for the concert."
+      }
+    ]
+  },
+  {
+    "topicId": 7,
+    "questions": [
+      {
+        "original": "He can speak English fluently.",
+        "prefix": "How",
+        "answer": "fluently he can speak English!"
+      },
+      {
+        "original": "That was an interesting film.",
+        "prefix": "What",
+        "answer": "an interesting film that was!"
+      },
+      {
+        "original": "Despite the terrible noise, I kept on studying.",
+        "prefix": "Although",
+        "answer": "there was a terrible noise, I kept on studying."
+      },
+      {
+        "original": "The flight was not delayed though it was foggy.",
+        "prefix": "The flight",
+        "answer": "was not delayed in spite of the fog."
+      },
+      {
+        "original": "Last Thursday we pointed a new marketing manager.",
+        "prefix": "A new marketing manager",
+        "answer": "was appointed last Thursday."
+      }
+    ]
+  },
+  {
+    "topicId": 8,
+    "questions": [
+      {
+        "original": "James plays football better than any other boys in the class.",
+        "prefix": "James is",
+        "answer": "the best football player in the class."
+      },
+      {
+        "original": "She is more successful than her three sisters.",
+        "prefix": "She is",
+        "answer": "the most successful of the four sisters."
+      },
+      {
+        "original": "He has never scored so high in a test as he did in this one.",
+        "prefix": "This is",
+        "answer": "the highest score he has ever got in a test."
+      },
+      {
+        "original": "We were told that the show was not very entertaining but it was.",
+        "prefix": "The show was",
+        "answer": "more entertaining than we were told."
+      },
+      {
+        "original": "The shop is not very busy today compared to yesterday.",
+        "prefix": "Yesterday the shop",
+        "answer": "was busier than today."
+      }
+    ]
+  },
+  {
+    "topicId": 9,
+    "questions": [
+      {
+        "original": "How much are these earrings?",
+        "prefix": "What",
+        "answer": "is the price of these earrings?"
+      },
+      {
+        "original": "I went to the zoo last year and that was where I saw a real tiger for the first time.",
+        "prefix": "Before I",
+        "answer": "went to the zoo last year, I had never seen a real tiger."
+      },
+      {
+        "original": "The man was poor so he could not afford accommodation.",
+        "prefix": "If the man",
+        "answer": "hadn't been poor, he could have afforded accommodation."
+      },
+      {
+        "original": "My teacher gave me a lot of homework.",
+        "prefix": "I wish",
+        "answer": "my teacher hadn't given me a lot of homework."
+      },
+      {
+        "original": "He didn't obey with his parents.",
+        "prefix": "I'd rather",
+        "answer": "he had obeyed his parents."
+      }
+    ]
+  },
+  {
+    "topicId": 10,
+    "questions": [
+      {
+        "original": "Sam will be very upset if I don't get back tomorrow.",
+        "prefix": "Unless",
+        "answer": "I get back tomorrow, Sam will be very upset."
+      },
+      {
+        "original": "It is ages Alan visited his parents.",
+        "prefix": "Alan hasn't",
+        "answer": "visited his parents for ages."
+      },
+      {
+        "original": "Mrs. Taylor does not like living in such a small house.",
+        "prefix": "Mrs. Taylor wishes",
+        "answer": "she didn't live in such a small house."
+      },
+      {
+        "original": "The keeper feed the lions at 3 p.m. every day.",
+        "prefix": "The lions",
+        "answer": "are fed at 3 p.m. every day by the keeper."
+      },
+      {
+        "original": "Where is the station car park? Mrs. Smith asked.",
+        "prefix": "Mr. Smith asked me",
+        "answer": "where the station car park was."
+      }
+    ]
+  }
+]
