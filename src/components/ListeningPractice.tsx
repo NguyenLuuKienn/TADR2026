@@ -23,6 +23,25 @@ interface ListeningTopic {
   questions: ListeningQuestion[];
 }
 
+interface ListeningOptionA {
+  text: string;
+}
+
+interface LegacyListeningQuestion {
+  question?: string;
+  answer?: string;
+  options?: ListeningOptionA[];
+  correctAnswer?: number;
+}
+
+interface LegacyListeningTopicA {
+  topic: number;
+  title: string;
+  imageUrl?: string;
+  audioUrl?: string;
+  questions: LegacyListeningQuestion[];
+}
+
 export default function ListeningPractice() {
   const { topicId } = useParams();
   const navigate = useNavigate();
@@ -46,31 +65,48 @@ export default function ListeningPractice() {
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const parseTopicNumber = () => {
-    if (!topicId) return NaN;
-    return Number.parseInt(topicId, 10);
-  };
+  const normalizePartATopic = (topic: LegacyListeningTopicA): ListeningTopic => {
+    const normalizedQuestions: ListeningQuestion[] = topic.questions.map((q, idx) => {
+      const answerFromOption =
+        typeof q.correctAnswer === 'number' && Array.isArray(q.options)
+          ? q.options[q.correctAnswer]?.text ?? ''
+          : '';
 
-  const getDatasetByPart = (part: 'A' | 'B') => (part === 'A' ? listeningData : listeningDataB);
+      return {
+        id: idx + 1,
+        text: q.question ?? `Question ${idx + 1}`,
+        answer: q.answer ?? answerFromOption,
+      };
+    });
+
+    return {
+      topicId: topic.topic,
+      title: topic.title,
+      imageUrl: topic.imageUrl ?? `https://picsum.photos/seed/listening-a-${topic.topic}/1200/800`,
+      audioUrl: topic.audioUrl ?? '',
+      questions: normalizedQuestions,
+    };
+  };
 
   useEffect(() => {
     const fetchTopicData = async () => {
       if (!topicId) return;
       try {
-        const topicNum = parseTopicNumber();
-        const dataset = getDatasetByPart(selectedPart);
-        const baseData = dataset.find(t => t.topicId === topicNum);
+        const topicNum = parseInt(topicId);
+        const baseData =
+          selectedPart === 'A'
+            ? (listeningData as LegacyListeningTopicA[]).find((t) => t.topic === topicNum)
+            : (listeningDataB as ListeningTopic[]).find((t) => t.topicId === topicNum);
         
         if (!baseData) {
-          if (selectedPart === 'B') {
-            setSelectedPart('A');
-            return;
-          }
           navigate('/');
           return;
         }
 
-        let finalData = { ...baseData };
+        let finalData: ListeningTopic =
+          selectedPart === 'A'
+            ? normalizePartATopic(baseData as LegacyListeningTopicA)
+            : ({ ...(baseData as ListeningTopic) });
 
         // Fetch overrides from Firestore
         const overrideRef = doc(db, 'listening_overrides', `topic_${topicId}_${selectedPart.toLowerCase()}`);

@@ -6,6 +6,7 @@ import questionsData from '../data/questions.json';
 import readingData from '../data/reading.json';
 import speakingData from '../data/speaking.json';
 import listeningData from '../data/listening.json';
+import listeningDataB from '../data/listeningb.json';
 import writingData from '../data/writing.json';
 import { handleFirestoreError } from './ErrorBoundary';
 
@@ -45,7 +46,13 @@ export default function AdminSeed() {
       // Seed listening
       for (let i = 0; i < listeningData.length; i++) {
         const l = listeningData[i];
-        await setDoc(doc(db, 'listening', `l_${l.topic}`), l);
+        await setDoc(doc(db, 'listening', `l_a_${l.topic}`), { ...l, part: 'A' });
+        count++;
+      }
+      // Seed listening part B
+      for (let i = 0; i < listeningDataB.length; i++) {
+        const l = listeningDataB[i];
+        await setDoc(doc(db, 'listening', `l_b_${l.topicId}`), { ...l, part: 'B' });
         count++;
       }
       // Seed writing

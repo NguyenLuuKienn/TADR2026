@@ -8,12 +8,32 @@ import { motion, AnimatePresence } from 'motion/react';
 import writingData from '../data/writing.json';
 import sentenceTransformationData from '../data/sentence_transformation.json';
 
+interface WritingTopic {
+  id: string;
+  topicId: string;
+  title: string;
+  prompt: string;
+  notes: string[];
+  sampleResponse: string;
+}
+
+interface TransformationQuestion {
+  original: string;
+  prefix: string;
+  answer: string;
+}
+
+interface TransformationTopic {
+  topicId: number;
+  questions: TransformationQuestion[];
+}
+
 export default function WritingPractice() {
   const { topicId } = useParams();
   const navigate = useNavigate();
   const [user, userLoading] = useAuthState(auth);
-  const [topicData, setTopicData] = useState<any>(null);
-  const [transformationData, setTransformationData] = useState<any>(null);
+  const [topicData, setTopicData] = useState<WritingTopic | null>(null);
+  const [transformationData, setTransformationData] = useState<TransformationTopic | null>(null);
   const [userText, setUserText] = useState('');
   const [userTransformations, setUserTransformations] = useState<string[]>(['', '', '', '', '']);
   const [showSample, setShowSample] = useState(false);
@@ -28,8 +48,8 @@ export default function WritingPractice() {
       if (!topicId || !user) return;
       try {
         const topicNum = parseInt(topicId || '1');
-        const data = writingData.find(t => parseInt(t.topicId) === topicNum);
-        const transData = sentenceTransformationData.find(t => t.topicId === topicNum);
+        const data = (writingData as WritingTopic[]).find((t) => parseInt(t.topicId, 10) === topicNum);
+        const transData = (sentenceTransformationData as TransformationTopic[]).find((t) => t.topicId === topicNum);
         
         if (data) {
           setTopicData(data);
@@ -180,7 +200,7 @@ export default function WritingPractice() {
                       Ghi chú cần có trong bài:
                     </h4>
                     <ul className="space-y-3">
-                      {topicData.notes.map((note: string, idx: number) => (
+                      {topicData.notes.map((note, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className="text-blue-500 mr-3 text-xl leading-none font-bold">•</span>
                           <span className="text-gray-700">{note}</span>
@@ -316,7 +336,7 @@ export default function WritingPractice() {
           </div>
           
           <div className="p-6 md:p-8 space-y-8">
-            {transformationData?.questions.map((q: any, idx: number) => {
+            {transformationData?.questions.map((q, idx) => {
               const isCorrect = userTransformations[idx]?.trim().toLowerCase() === q.answer.toLowerCase();
               const hasAnswered = userTransformations[idx]?.trim().length > 0;
               
