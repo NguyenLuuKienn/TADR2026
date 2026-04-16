@@ -188,7 +188,7 @@ export default function Dashboard() {
                     )}
                   </div>
                   <Link 
-                    to={`/listening/${topic}`}
+                    to={listeningProgress ? `/listening/${topic}?reset=1` : `/listening/${topic}`}
                     className="block w-full text-center py-2.5 bg-white border border-gray-200 text-gray-700 rounded-xl hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all duration-200 font-medium text-sm"
                   >
                     {listeningProgress ? 'Làm lại' : 'Bắt đầu'}

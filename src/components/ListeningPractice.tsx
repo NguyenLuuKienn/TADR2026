@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link, useLocation } from 'react-router-dom';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -49,8 +49,10 @@ interface ListeningTopicB {
 export default function ListeningPractice() {
   const { topicId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [user] = useAuthState(auth);
   const [selectedPart, setSelectedPart] = useState<'A' | 'B'>('A');
+  const shouldReset = new URLSearchParams(location.search).get('reset') === '1';
   
   const [topicData, setTopicData] = useState<ListeningTopicA | ListeningTopicB | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -63,6 +65,10 @@ export default function ListeningPractice() {
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
   const [audioError, setAudioError] = useState(false);
+  const [editingOptionIndex, setEditingOptionIndex] = useState<number | null>(null);
+  const [newOptionImageUrl, setNewOptionImageUrl] = useState('');
+  const [savingOptionImage, setSavingOptionImage] = useState(false);
+  const [optionImageMessage, setOptionImageMessage] = useState<string | null>(null);
 
   // Admin edit state
   const isAdmin = user?.email === 'jenrrybast20@gmail.com';
@@ -141,7 +147,7 @@ export default function ListeningPractice() {
         }
 
         // Fetch user progress
-        if (user) {
+        if (user && !shouldReset) {
           const progressRef = doc(db, 'user_progress', `${user.uid}_listening_${selectedPart}_${topicId}`);
           const progressSnap = await getDoc(progressRef);
           if (progressSnap.exists()) {
@@ -175,7 +181,7 @@ export default function ListeningPractice() {
         audioRef.current.pause();
       }
     };
-  }, [topicId, navigate, user, selectedPart]);
+  }, [topicId, navigate, user, selectedPart, shouldReset]);
 
   const handlePlayAudio = () => {
     if (!topicData?.audioUrl) {
@@ -199,6 +205,7 @@ export default function ListeningPractice() {
   };
 
   const currentPartAQuestion = selectedPart === 'A' && topicData ? (topicData as ListeningTopicA).questions[currentQuestionIndex] : null;
+  const canEditPartAOptionImage = !!user;
 
   const handleAnswerChange = (index: number, value: string) => {
     const newAnswers = [...userAnswers];
@@ -262,6 +269,86 @@ export default function ListeningPractice() {
 
     void savePartAProgress(currentQuestionIndex, selectedAnswer, score, isSubmitted);
     navigate('/');
+  };
+
+  const handleSavePartAOptionImage = async (optionIndex: number) => {
+    if (!topicId || !currentPartAQuestion || selectedPart !== 'A') return;
+
+    const trimmedUrl = newOptionImageUrl.trim();
+    if (!trimmedUrl) {
+      setOptionImageMessage('URL ảnh không được để trống.');
+      return;
+    }
+
+    try {
+      setSavingOptionImage(true);
+      setOptionImageMessage(null);
+      const overrideRef = doc(db, 'listening_overrides', `topic_${topicId}_a`);
+      const overrideSnap = await getDoc(overrideRef);
+
+      const existingData = overrideSnap.exists() ? overrideSnap.data() : {};
+      const questions = Array.isArray(existingData.questions) ? [...existingData.questions] : [];
+
+      while (questions.length <= currentQuestionIndex) {
+        questions.push({});
+      }
+
+      const questionOverride = questions[currentQuestionIndex] ?? {};
+      const options = Array.isArray(questionOverride.options) ? [...questionOverride.options] : [];
+
+      while (options.length <= optionIndex) {
+        options.push({});
+      }
+
+      options[optionIndex] = {
+        ...options[optionIndex],
+        imageUrl: trimmedUrl,
+      };
+
+      questions[currentQuestionIndex] = {
+        ...questionOverride,
+        options,
+      };
+
+      await setDoc(
+        overrideRef,
+        {
+          questions,
+          updatedAt: new Date().toISOString(),
+        },
+        { merge: true },
+      );
+
+      setTopicData((prev) => {
+        if (!prev || selectedPart !== 'A') return prev;
+        const partA = prev as ListeningTopicA;
+        const updatedQuestions = [...partA.questions];
+        const targetQuestion = updatedQuestions[currentQuestionIndex];
+        const updatedOptions = [...targetQuestion.options];
+        updatedOptions[optionIndex] = {
+          ...updatedOptions[optionIndex],
+          imageUrl: trimmedUrl,
+        };
+        updatedQuestions[currentQuestionIndex] = {
+          ...targetQuestion,
+          options: updatedOptions,
+        };
+
+        return {
+          ...partA,
+          questions: updatedQuestions,
+        };
+      });
+
+      setEditingOptionIndex(null);
+      setNewOptionImageUrl('');
+      setOptionImageMessage('Đã lưu ảnh lựa chọn thành công.');
+    } catch (error) {
+      console.error('Error saving Part A option image:', error);
+      setOptionImageMessage('Không lưu được ảnh. Kiểm tra Firestore rules rồi thử lại.');
+    } finally {
+      setSavingOptionImage(false);
+    }
   };
 
   const checkAnswer = (index: number) => {
@@ -485,15 +572,6 @@ export default function ListeningPractice() {
 
           {selectedPart === 'A' ? (
             <div className="space-y-8">
-              <div className="bg-gray-50 rounded-2xl p-2 border border-gray-200 shadow-inner">
-                <img 
-                  src={(topicData as ListeningTopicA).imageUrl || `https://picsum.photos/seed/listening-a-${topicId}/1200/800`} 
-                  alt="Listening Task" 
-                  className="w-full h-auto rounded-xl object-contain max-h-[600px]"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-
               {currentPartAQuestion && (
                 <div className="space-y-6">
                   <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-8">
@@ -503,6 +581,12 @@ export default function ListeningPractice() {
                         Câu {currentQuestionIndex + 1} / {(topicData as ListeningTopicA).questions.length}
                       </span>
                     </div>
+
+                    {optionImageMessage && (
+                      <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 text-sm font-medium">
+                        {optionImageMessage}
+                      </div>
+                    )}
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {currentPartAQuestion.options.map((option, index) => {
@@ -542,9 +626,50 @@ export default function ListeningPractice() {
                               <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-800 shadow-sm">
                                 {['A', 'B', 'C'][index]}
                               </div>
+
+                              {canEditPartAOptionImage && !isSubmitted && (
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setEditingOptionIndex(index);
+                                    setNewOptionImageUrl(option.imageUrl || '');
+                                  }}
+                                  className="absolute top-3 right-3 bg-blue-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-blue-700"
+                                  title="Thay đổi ảnh"
+                                >
+                                  <Edit2 className="w-4 h-4" />
+                                </button>
+                              )}
                             </div>
 
-                            <p className="font-medium text-gray-800 text-lg">{option.text}</p>
+                            {editingOptionIndex === index && !isSubmitted ? (
+                              <div className="w-full flex flex-col gap-2 mt-2" onClick={(e) => e.stopPropagation()}>
+                                <input
+                                  type="text"
+                                  value={newOptionImageUrl}
+                                  onChange={(e) => setNewOptionImageUrl(e.target.value)}
+                                  placeholder="Nhập URL ảnh mới..."
+                                  className="w-full p-2 text-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                />
+                                <div className="flex gap-2">
+                                  <button
+                                    onClick={() => handleSavePartAOptionImage(index)}
+                                    disabled={savingOptionImage}
+                                    className="flex-1 bg-green-500 text-white py-1.5 rounded-xl text-sm font-medium hover:bg-green-600 transition-colors disabled:opacity-60"
+                                  >
+                                    {savingOptionImage ? 'Đang lưu...' : 'Lưu'}
+                                  </button>
+                                  <button
+                                    onClick={() => setEditingOptionIndex(null)}
+                                    className="flex-1 bg-gray-200 text-gray-700 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-300 transition-colors"
+                                  >
+                                    Hủy
+                                  </button>
+                                </div>
+                              </div>
+                            ) : (
+                              <p className="font-medium text-gray-800 text-lg">{option.text}</p>
+                            )}
 
                             <AnimatePresence>
                               {isSubmitted && isCorrect && (
