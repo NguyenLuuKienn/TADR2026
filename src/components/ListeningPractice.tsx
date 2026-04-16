@@ -9,37 +9,41 @@ import { motion, AnimatePresence } from 'motion/react';
 import listeningData from '../data/listening.json';
 import listeningDataB from '../data/listeningb.json';
 
-interface ListeningQuestion {
+interface ListeningOptionA {
+  text: string;
+  imageSeed: string;
+  imageUrl?: string;
+}
+
+interface ListeningQuestionA {
+  id: string;
+  question: string;
+  transcript: string;
+  options: ListeningOptionA[];
+  correctAnswer: number;
+  explanation: string;
+}
+
+interface ListeningTopicA {
+  topic: number;
+  title: string;
+  imageUrl?: string;
+  audioUrl?: string;
+  questions: ListeningQuestionA[];
+}
+
+interface ListeningQuestionB {
   id: number;
   text: string;
   answer: string;
 }
 
-interface ListeningTopic {
+interface ListeningTopicB {
   topicId: number;
   title: string;
   imageUrl: string;
   audioUrl: string;
-  questions: ListeningQuestion[];
-}
-
-interface ListeningOptionA {
-  text: string;
-}
-
-interface LegacyListeningQuestion {
-  question?: string;
-  answer?: string;
-  options?: ListeningOptionA[];
-  correctAnswer?: number;
-}
-
-interface LegacyListeningTopicA {
-  topic: number;
-  title: string;
-  imageUrl?: string;
-  audioUrl?: string;
-  questions: LegacyListeningQuestion[];
+  questions: ListeningQuestionB[];
 }
 
 export default function ListeningPractice() {
@@ -48,7 +52,11 @@ export default function ListeningPractice() {
   const [user] = useAuthState(auth);
   const [selectedPart, setSelectedPart] = useState<'A' | 'B'>('A');
   
-  const [topicData, setTopicData] = useState<ListeningTopic | null>(null);
+  const [topicData, setTopicData] = useState<ListeningTopicA | ListeningTopicB | null>(null);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [score, setScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState<string[]>([]);
   const [showResults, setShowResults] = useState<boolean[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -65,27 +73,13 @@ export default function ListeningPractice() {
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const normalizePartATopic = (topic: LegacyListeningTopicA): ListeningTopic => {
-    const normalizedQuestions: ListeningQuestion[] = topic.questions.map((q, idx) => {
-      const answerFromOption =
-        typeof q.correctAnswer === 'number' && Array.isArray(q.options)
-          ? q.options[q.correctAnswer]?.text ?? ''
-          : '';
-
-      return {
-        id: idx + 1,
-        text: q.question ?? `Question ${idx + 1}`,
-        answer: q.answer ?? answerFromOption,
-      };
-    });
-
-    return {
-      topicId: topic.topic,
-      title: topic.title,
-      imageUrl: topic.imageUrl ?? `https://picsum.photos/seed/listening-a-${topic.topic}/1200/800`,
-      audioUrl: topic.audioUrl ?? '',
-      questions: normalizedQuestions,
-    };
+  const resetPartState = () => {
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setIsSubmitted(false);
+    setScore(0);
+    setUserAnswers([]);
+    setShowResults([]);
   };
 
   useEffect(() => {
@@ -95,18 +89,15 @@ export default function ListeningPractice() {
         const topicNum = parseInt(topicId);
         const baseData =
           selectedPart === 'A'
-            ? (listeningData as LegacyListeningTopicA[]).find((t) => t.topic === topicNum)
-            : (listeningDataB as ListeningTopic[]).find((t) => t.topicId === topicNum);
+            ? (listeningData as ListeningTopicA[]).find((t) => t.topic === topicNum)
+            : (listeningDataB as ListeningTopicB[]).find((t) => t.topicId === topicNum);
         
         if (!baseData) {
           navigate('/');
           return;
         }
 
-        let finalData: ListeningTopic =
-          selectedPart === 'A'
-            ? normalizePartATopic(baseData as LegacyListeningTopicA)
-            : ({ ...(baseData as ListeningTopic) });
+        let finalData: ListeningTopicA | ListeningTopicB = { ...baseData };
 
         // Fetch overrides from Firestore. If rules are not deployed yet, keep fallback local data.
         try {
@@ -115,9 +106,18 @@ export default function ListeningPractice() {
 
           if (overrideSnap.exists()) {
             const overrides = overrideSnap.data();
-            if (overrides.imageUrl) finalData.imageUrl = overrides.imageUrl;
-            if (overrides.audioUrl) finalData.audioUrl = overrides.audioUrl;
-            if (overrides.answers) {
+            if ('imageUrl' in overrides && overrides.imageUrl) finalData.imageUrl = overrides.imageUrl;
+            if ('audioUrl' in overrides && overrides.audioUrl) finalData.audioUrl = overrides.audioUrl;
+
+            if (selectedPart === 'A' && 'questions' in overrides && Array.isArray(overrides.questions)) {
+              finalData.questions = finalData.questions.map((q, idx) => ({
+                ...q,
+                options: overrides.questions[idx]?.options ?? q.options,
+                correctAnswer: overrides.questions[idx]?.correctAnswer ?? q.correctAnswer,
+              }));
+            }
+
+            if (selectedPart === 'B' && 'answers' in overrides && Array.isArray(overrides.answers)) {
               finalData.questions = finalData.questions.map((q, idx) => ({
                 ...q,
                 answer: overrides.answers[idx] !== undefined ? overrides.answers[idx] : q.answer
@@ -129,12 +129,16 @@ export default function ListeningPractice() {
         }
 
         setTopicData(finalData);
-        setUserAnswers(new Array(finalData.questions.length).fill(''));
-        setShowResults(new Array(finalData.questions.length).fill(false));
-        
-        setEditImageUrl(finalData.imageUrl);
-        setEditAudioUrl(finalData.audioUrl);
-        setEditAnswers(finalData.questions.map(q => q.answer));
+        resetPartState();
+
+        if (selectedPart === 'B') {
+          const partBTopic = finalData as ListeningTopicB;
+          setUserAnswers(new Array(partBTopic.questions.length).fill(''));
+          setShowResults(new Array(partBTopic.questions.length).fill(false));
+          setEditImageUrl(partBTopic.imageUrl);
+          setEditAudioUrl(partBTopic.audioUrl);
+          setEditAnswers(partBTopic.questions.map(q => q.answer));
+        }
 
         // Fetch user progress
         if (user) {
@@ -142,11 +146,18 @@ export default function ListeningPractice() {
           const progressSnap = await getDoc(progressRef);
           if (progressSnap.exists()) {
             const pData = progressSnap.data();
-            if (pData.userAnswers) {
-              setUserAnswers(pData.userAnswers);
-            }
-            if (pData.showResults) {
-              setShowResults(pData.showResults);
+            if (selectedPart === 'A') {
+              setCurrentQuestionIndex(pData.currentQuestionIndex ?? 0);
+              setSelectedAnswer(typeof pData.selectedAnswer === 'number' ? pData.selectedAnswer : null);
+              setIsSubmitted(Boolean(pData.isSubmitted));
+              setScore(pData.score ?? 0);
+            } else {
+              if (pData.userAnswers) {
+                setUserAnswers(pData.userAnswers);
+              }
+              if (pData.showResults) {
+                setShowResults(pData.showResults);
+              }
             }
           }
         }
@@ -187,6 +198,8 @@ export default function ListeningPractice() {
     }
   };
 
+  const currentPartAQuestion = selectedPart === 'A' && topicData ? (topicData as ListeningTopicA).questions[currentQuestionIndex] : null;
+
   const handleAnswerChange = (index: number, value: string) => {
     const newAnswers = [...userAnswers];
     newAnswers[index] = value;
@@ -198,6 +211,57 @@ export default function ListeningPractice() {
       newResults[index] = false;
       setShowResults(newResults);
     }
+  };
+
+  const savePartAProgress = async (currentIndex: number, chosenAnswer: number | null, currentScore: number, submitted: boolean) => {
+    if (!user || !topicId || !topicData) return;
+
+    try {
+      const progressRef = doc(db, 'user_progress', `${user.uid}_listening_A_${topicId}`);
+      await setDoc(progressRef, {
+        uid: user.uid,
+        topicId: parseInt(topicId),
+        part: 'A',
+        currentQuestionIndex: currentIndex,
+        selectedAnswer: chosenAnswer,
+        isSubmitted: submitted,
+        score: currentScore,
+        total: (topicData as ListeningTopicA).questions.length,
+        updatedAt: new Date().toISOString()
+      }, { merge: true });
+    } catch (error) {
+      console.error('Error saving listening part A progress:', error);
+    }
+  };
+
+  const handleSelectAnswer = (index: number) => {
+    if (!currentPartAQuestion || isSubmitted) return;
+
+    const correct = index === currentPartAQuestion.correctAnswer;
+    setSelectedAnswer(index);
+    setIsSubmitted(true);
+    if (correct) {
+      setScore(prev => prev + 1);
+    }
+
+    void savePartAProgress(currentQuestionIndex, index, correct ? score + 1 : score, true);
+  };
+
+  const handleNextPartA = () => {
+    if (!topicData) return;
+    const partATopic = topicData as ListeningTopicA;
+
+    if (currentQuestionIndex < partATopic.questions.length - 1) {
+      const nextIndex = currentQuestionIndex + 1;
+      setCurrentQuestionIndex(nextIndex);
+      setSelectedAnswer(null);
+      setIsSubmitted(false);
+      void savePartAProgress(nextIndex, null, score, false);
+      return;
+    }
+
+    void savePartAProgress(currentQuestionIndex, selectedAnswer, score, isSubmitted);
+    navigate('/');
   };
 
   const checkAnswer = (index: number) => {
@@ -313,7 +377,7 @@ export default function ListeningPractice() {
         </button>
       </div>
 
-      {isAdmin && isEditing && (
+      {isAdmin && isEditing && selectedPart === 'B' && (
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -386,7 +450,11 @@ export default function ListeningPractice() {
       <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden mb-8">
         <div className="bg-indigo-600 p-6 md:p-8 text-white">
           <h2 className="text-2xl md:text-3xl font-bold">{topicData.title}</h2>
-          <p className="text-indigo-100 mt-2 font-medium">Listening Practice {selectedPart} - Fill in the missing information</p>
+          <p className="text-indigo-100 mt-2 font-medium">
+            {selectedPart === 'A'
+              ? 'Listening Practice Part A - Choose the correct picture'
+              : 'Listening Practice Part B - Fill in the missing information'}
+          </p>
         </div>
 
         <div className="p-6 md:p-8">
@@ -414,84 +482,200 @@ export default function ListeningPractice() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* Image Section */}
-            <div>
+          {selectedPart === 'A' ? (
+            <div className="space-y-8">
               <div className="bg-gray-50 rounded-2xl p-2 border border-gray-200 shadow-inner">
                 <img 
-                  src={topicData.imageUrl} 
+                  src={(topicData as ListeningTopicA).imageUrl || `https://picsum.photos/seed/listening-a-${topicId}/1200/800`} 
                   alt="Listening Task" 
                   className="w-full h-auto rounded-xl object-contain max-h-[600px]"
                   referrerPolicy="no-referrer"
                 />
               </div>
-            </div>
 
-            {/* Questions Section */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-bold text-gray-800 border-b pb-4">Điền vào chỗ trống</h3>
-              
-              {topicData.questions.map((q, idx) => {
-                const isAnswered = showResults[idx];
-                const isCorrect = userAnswers[idx].trim().toLowerCase() === q.answer.toLowerCase() && q.answer !== '';
-                const isMissingAnswer = q.answer === '';
-
-                return (
-                  <div key={idx} className="bg-gray-50/50 p-4 rounded-2xl border border-gray-100">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                      <span className="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-800 rounded-full font-bold shrink-0">
-                        {idx + 1}
+              {currentPartAQuestion && (
+                <div className="space-y-6">
+                  <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-800">{currentPartAQuestion.question}</h3>
+                      <span className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold">
+                        Câu {currentQuestionIndex + 1} / {(topicData as ListeningTopicA).questions.length}
                       </span>
-                      
-                      <div className="flex-1 flex items-center gap-2">
-                        <input
-                          type="text"
-                          value={userAnswers[idx]}
-                          onChange={(e) => handleAnswerChange(idx, e.target.value)}
-                          className={`flex-1 p-3 border rounded-xl focus:ring-2 focus:outline-none transition-all ${
-                            isAnswered
-                              ? isCorrect 
-                                ? 'border-green-300 bg-green-50 focus:ring-green-200' 
-                                : 'border-red-300 bg-red-50 focus:ring-red-200'
-                              : 'border-gray-200 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white'
-                          }`}
-                          placeholder="Nhập đáp án..."
-                        />
-                        <button
-                          onClick={() => checkAnswer(idx)}
-                          disabled={!userAnswers[idx].trim()}
-                          className="px-4 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors whitespace-nowrap"
-                        >
-                          Kiểm tra
-                        </button>
-                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                      {currentPartAQuestion.options.map((option, index) => {
+                        const isSelected = selectedAnswer === index;
+                        const isCorrect = index === currentPartAQuestion.correctAnswer;
+
+                        let optionClass = 'border-2 rounded-3xl p-4 cursor-pointer transition-all duration-300 flex flex-col items-center text-center h-full relative ';
+                        if (isSubmitted) {
+                          if (isCorrect) {
+                            optionClass += ' border-green-500 bg-green-50 shadow-sm';
+                          } else if (isSelected) {
+                            optionClass += ' border-red-500 bg-red-50 shadow-sm';
+                          } else {
+                            optionClass += ' border-gray-100 opacity-50';
+                          }
+                        } else {
+                          optionClass += isSelected
+                            ? ' border-indigo-500 bg-indigo-50 shadow-md'
+                            : ' border-gray-100 hover:border-indigo-300 hover:bg-indigo-50/50 hover:shadow-md hover:-translate-y-1';
+                        }
+
+                        const imageSource = option.imageUrl || `https://picsum.photos/seed/${option.imageSeed}/400/300`;
+
+                        return (
+                          <div
+                            key={index}
+                            className={optionClass}
+                            onClick={() => handleSelectAnswer(index)}
+                          >
+                            <div className="w-full aspect-video bg-gray-100 rounded-2xl mb-4 overflow-hidden relative group">
+                              <img 
+                                src={imageSource} 
+                                alt={option.text}
+                                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-800 shadow-sm">
+                                {['A', 'B', 'C'][index]}
+                              </div>
+                            </div>
+
+                            <p className="font-medium text-gray-800 text-lg">{option.text}</p>
+
+                            <AnimatePresence>
+                              {isSubmitted && isCorrect && (
+                                <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="absolute -top-3 -right-3 bg-white rounded-full shadow-sm">
+                                  <CheckCircle className="w-8 h-8 text-green-500" />
+                                </motion.div>
+                              )}
+                              {isSubmitted && isSelected && !isCorrect && (
+                                <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="absolute -top-3 -right-3 bg-white rounded-full shadow-sm">
+                                  <XCircle className="w-8 h-8 text-red-500" />
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        );
+                      })}
                     </div>
 
                     <AnimatePresence>
-                      {isAnswered && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="pl-11 overflow-hidden"
+                      {isSubmitted && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: 20, height: 0 }}
+                          animate={{ opacity: 1, y: 0, height: 'auto' }}
+                          className="space-y-6 mt-8"
                         >
-                          <div className={`mt-3 p-3 rounded-xl text-sm ${isCorrect ? 'bg-green-50 text-green-800 border border-green-100' : 'bg-blue-50 text-blue-800 border border-blue-100'}`}>
-                            {isMissingAnswer ? (
-                              <span><span className="font-bold text-orange-600">Lưu ý:</span> Câu này chưa có đáp án trong hệ thống. Vui lòng đợi Admin cập nhật.</span>
-                            ) : isCorrect ? (
-                              <span className="font-bold flex items-center"><CheckCircle className="w-4 h-4 mr-1" /> Chính xác!</span>
+                          <div className={`p-6 rounded-2xl flex items-start ${selectedAnswer === currentPartAQuestion.correctAnswer ? 'bg-green-50/80 text-green-800 border border-green-100' : 'bg-red-50/80 text-red-800 border border-red-100'}`}>
+                            {selectedAnswer === currentPartAQuestion.correctAnswer ? (
+                              <CheckCircle className="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" />
                             ) : (
-                              <span><span className="font-bold">Chưa chính xác.</span> Đáp án đúng là: <span className="font-bold text-lg ml-1">{q.answer}</span></span>
+                              <XCircle className="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" />
                             )}
+                            <div>
+                              <h4 className="font-bold mb-2 text-lg">
+                                {selectedAnswer === currentPartAQuestion.correctAnswer ? 'Chính xác!' : 'Chưa chính xác!'}
+                              </h4>
+                              <p className="leading-relaxed">{currentPartAQuestion.explanation}</p>
+                            </div>
                           </div>
+
+                          <button
+                            onClick={handleNextPartA}
+                            className="w-full py-4 bg-indigo-600 text-white font-bold text-lg rounded-2xl hover:bg-indigo-700 transition-all shadow-sm hover:shadow-md"
+                          >
+                            {currentQuestionIndex < (topicData as ListeningTopicA).questions.length - 1 ? 'Câu tiếp theo' : 'Hoàn thành'}
+                          </button>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </div>
-                );
-              })}
+                </div>
+              )}
             </div>
-          </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              {/* Image Section */}
+              <div>
+                <div className="bg-gray-50 rounded-2xl p-2 border border-gray-200 shadow-inner">
+                  <img 
+                    src={(topicData as ListeningTopicB).imageUrl} 
+                    alt="Listening Task" 
+                    className="w-full h-auto rounded-xl object-contain max-h-[600px]"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+
+              {/* Questions Section */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-bold text-gray-800 border-b pb-4">Điền vào chỗ trống</h3>
+                
+                {(topicData as ListeningTopicB).questions.map((q, idx) => {
+                  const isAnswered = showResults[idx];
+                  const isCorrect = userAnswers[idx].trim().toLowerCase() === q.answer.toLowerCase() && q.answer !== '';
+                  const isMissingAnswer = q.answer === '';
+
+                  return (
+                    <div key={idx} className="bg-gray-50/50 p-4 rounded-2xl border border-gray-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <span className="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-800 rounded-full font-bold shrink-0">
+                          {idx + 1}
+                        </span>
+                        
+                        <div className="flex-1 flex items-center gap-2">
+                          <input
+                            type="text"
+                            value={userAnswers[idx]}
+                            onChange={(e) => handleAnswerChange(idx, e.target.value)}
+                            className={`flex-1 p-3 border rounded-xl focus:ring-2 focus:outline-none transition-all ${
+                              isAnswered
+                                ? isCorrect 
+                                  ? 'border-green-300 bg-green-50 focus:ring-green-200' 
+                                  : 'border-red-300 bg-red-50 focus:ring-red-200'
+                                : 'border-gray-200 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white'
+                            }`}
+                            placeholder="Nhập đáp án..."
+                          />
+                          <button
+                            onClick={() => checkAnswer(idx)}
+                            disabled={!userAnswers[idx].trim()}
+                            className="px-4 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors whitespace-nowrap"
+                          >
+                            Kiểm tra
+                          </button>
+                        </div>
+                      </div>
+
+                      <AnimatePresence>
+                        {isAnswered && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="pl-11 overflow-hidden"
+                          >
+                            <div className={`mt-3 p-3 rounded-xl text-sm ${isCorrect ? 'bg-green-50 text-green-800 border border-green-100' : 'bg-blue-50 text-blue-800 border border-blue-100'}`}>
+                              {isMissingAnswer ? (
+                                <span><span className="font-bold text-orange-600">Lưu ý:</span> Câu này chưa có đáp án trong hệ thống. Vui lòng đợi Admin cập nhật.</span>
+                              ) : isCorrect ? (
+                                <span className="font-bold flex items-center"><CheckCircle className="w-4 h-4 mr-1" /> Chính xác!</span>
+                              ) : (
+                                <span><span className="font-bold">Chưa chính xác.</span> Đáp án đúng là: <span className="font-bold text-lg ml-1">{q.answer}</span></span>
+                              )}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
