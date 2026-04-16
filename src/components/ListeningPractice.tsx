@@ -108,20 +108,24 @@ export default function ListeningPractice() {
             ? normalizePartATopic(baseData as LegacyListeningTopicA)
             : ({ ...(baseData as ListeningTopic) });
 
-        // Fetch overrides from Firestore
-        const overrideRef = doc(db, 'listening_overrides', `topic_${topicId}_${selectedPart.toLowerCase()}`);
-        const overrideSnap = await getDoc(overrideRef);
-        
-        if (overrideSnap.exists()) {
-          const overrides = overrideSnap.data();
-          if (overrides.imageUrl) finalData.imageUrl = overrides.imageUrl;
-          if (overrides.audioUrl) finalData.audioUrl = overrides.audioUrl;
-          if (overrides.answers) {
-            finalData.questions = finalData.questions.map((q, idx) => ({
-              ...q,
-              answer: overrides.answers[idx] !== undefined ? overrides.answers[idx] : q.answer
-            }));
+        // Fetch overrides from Firestore. If rules are not deployed yet, keep fallback local data.
+        try {
+          const overrideRef = doc(db, 'listening_overrides', `topic_${topicId}_${selectedPart.toLowerCase()}`);
+          const overrideSnap = await getDoc(overrideRef);
+
+          if (overrideSnap.exists()) {
+            const overrides = overrideSnap.data();
+            if (overrides.imageUrl) finalData.imageUrl = overrides.imageUrl;
+            if (overrides.audioUrl) finalData.audioUrl = overrides.audioUrl;
+            if (overrides.answers) {
+              finalData.questions = finalData.questions.map((q, idx) => ({
+                ...q,
+                answer: overrides.answers[idx] !== undefined ? overrides.answers[idx] : q.answer
+              }));
+            }
           }
+        } catch (error) {
+          console.warn('Cannot read listening_overrides, fallback to local listening data.', error);
         }
 
         setTopicData(finalData);

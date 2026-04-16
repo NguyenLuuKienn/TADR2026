@@ -30,6 +30,11 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
+    match /listening_overrides/{overrideId} {
+      allow read, create, update: if isAuthenticated();
+      allow delete: if isAdmin();
+    }
+
     match /writing/{writingId} {
       allow read: if isAuthenticated();
       allow create, update: if isAdmin();
