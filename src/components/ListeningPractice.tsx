@@ -620,7 +620,7 @@ export default function ListeningPractice() {
                               <img 
                                 src={imageSource} 
                                 alt={option.text}
-                                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                                className="object-contain w-full h-full bg-white"
                                 referrerPolicy="no-referrer"
                               />
                               <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-800 shadow-sm">

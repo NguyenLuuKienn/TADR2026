@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { BookOpen, CheckCircle, BookText, PenTool, Headphones, Mic } from 'lucide-react';
+import { BookOpen, CheckCircle, BookText, PenTool, Headphones, Mic, Briefcase, GraduationCap, Sparkles } from 'lucide-react';
 import { handleFirestoreError } from './ErrorBoundary';
 import { motion } from 'motion/react';
 
@@ -99,6 +99,50 @@ export default function Dashboard() {
       >
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">Danh sách chủ đề ôn tập</h1>
         <p className="text-gray-500 mt-2">Chọn một chủ đề để bắt đầu luyện tập các kỹ năng.</p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-8 md:mb-10"
+      >
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 p-6 md:p-8 text-white shadow-xl">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(129,140,248,0.22),transparent_32%)]" />
+          <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white/90 backdrop-blur-sm">
+                <Sparkles className="h-4 w-4" />
+                Giới thiệu bản thân
+              </div>
+              <h2 className="mt-4 text-2xl md:text-3xl font-bold leading-tight">Chào cô, em là Kiên</h2>
+              <p className="mt-4 text-white/85 leading-relaxed text-base md:text-lg">
+                Em năm nay 24 tuổi, đang làm việc tại công ty công nghệ IMT Solutions và cũng là sinh viên năm cuối
+                của Trường Đại học Xây dựng Miền Trung.
+              </p>
+            </div>
+
+            <div className="grid gap-3 min-w-[240px] rounded-2xl bg-white/10 p-4 backdrop-blur-sm border border-white/10">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
+                  <Briefcase className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/60">Công việc</div>
+                  <div className="font-semibold">IMT Solutions</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
+                  <GraduationCap className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/60">Học tập</div>
+                  <div className="font-semibold">Sinh viên năm cuối</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </motion.div>
       
       <motion.div 
