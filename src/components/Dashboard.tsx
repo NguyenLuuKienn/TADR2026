@@ -112,12 +112,12 @@ export default function Dashboard() {
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white/90 backdrop-blur-sm">
                 <Sparkles className="h-4 w-4" />
-                Giới thiệu bản thân
+                Self-introduction
               </div>
-              <h2 className="mt-4 text-2xl md:text-3xl font-bold leading-tight">Chào cô, em là Kiên</h2>
+              <h2 className="mt-4 text-2xl md:text-3xl font-bold leading-tight">Hello teacher, I am Kien</h2>
               <p className="mt-4 text-white/85 leading-relaxed text-base md:text-lg">
-                Em năm nay 24 tuổi, đang làm việc tại công ty công nghệ IMT Solutions và cũng là sinh viên năm cuối
-                của Trường Đại học Xây dựng Miền Trung.
+                I am 24 years old. I am working at a technology company called IMT Solutions, and I am also a
+                final-year student at Mien Trung University of Civil Engineering.
               </p>
             </div>
 
@@ -127,7 +127,7 @@ export default function Dashboard() {
                   <Briefcase className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-white/60">Công việc</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/60">Work</div>
                   <div className="font-semibold">IMT Solutions</div>
                 </div>
               </div>
@@ -136,8 +136,8 @@ export default function Dashboard() {
                   <GraduationCap className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-white/60">Học tập</div>
-                  <div className="font-semibold">Sinh viên năm cuối</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-white/60">Study</div>
+                  <div className="font-semibold">Final-year student</div>
                 </div>
               </div>
             </div>
