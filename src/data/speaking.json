@@ -23,7 +23,7 @@
       "- What time do you finish your work/study?",
       "- And say what you often do at the weekend."
     ],
-    "sampleAnswer": "On weekdays, I usually get up at 6:00 AM. After having breakfast, I go to school at 7:00 AM by motorbike. My classes start at 7:30 and I finish my study at 11:30 AM. In the afternoon, I do my homework and help my parents with housework. At the weekend, I have more free time, so I often hang out with my friends, go to the cinema, or just stay at home to relax and listen to music."
+    "sampleAnswer": "On weekdays, I get up at 6:00 a.m. I brush my teeth, wash my face and have breakfast.\n\nI go to school at 7:00 a.m. I go by motorbike because it is fast and convenient. My classes start at 7:00 a.m and finish at 11:30 a.m. At noon, I have lunch and take a short rest.\n\nIn the afternoon, I continue studying and finish my classes at around 5:00 p.m. After that, I go home, have dinner, and relax. In the evening, I often do my homework, play games, or watch TV. I usually go to bed at about 11:00 p.m.\n\nAt the weekend, I don’t go to school. I often sleep more, visit my friends, or go out with my family. Sometimes I watch movies or go shopping."
   },
   {
     "topic": 3,
@@ -34,7 +34,7 @@
       "- How can sport improve your mental health?",
       "- How can sport improve your social life?"
     ],
-    "sampleAnswer": "Playing sports brings many great benefits. Firstly, it improves physical health by making our bodies stronger, keeping us fit, and preventing diseases like heart attacks. Secondly, it is good for mental health. Playing sports helps reduce stress and makes us feel happier and more relaxed after a hard-working day. Finally, it improves our social life because we can meet new people, make new friends, and learn how to work well in a team."
+    "sampleAnswer": "I usually play football with my friends three times a week after school. Sometimes, I play pickeball at the weekend.\n\nI play sports because it helps me stay healthy and relax after studying. It is also a fun way to spend time with my friends.\n\nPlaying sports improves my physical health in many ways. It helps me become stronger and keeps me fit.\n\nSports are also good for my mental health. When I feel stressed or tired, playing sports helps me relax and feel happier.\n\nIn addition, sports improve my social life. I can meet new people and make more friends."
   },
   {
     "topic": 4,
@@ -46,7 +46,7 @@
       "- What do you do to get that job?",
       "- And say what difficulties you meet about your plans."
     ],
-    "sampleAnswer": "In the future, I plan to become a professional civil engineer. I choose this job because I love designing and building houses, and it also offers a good salary. To get this job, I am studying very hard at my university and trying to improve my English and computer skills. However, I face some difficulties. The biggest challenge is that the study program is very difficult, and I need to spend a lot of money on extra courses."
+    "sampleAnswer": "After I finish university, I plan to become an IT technician. I want to work with computers and technology.\n\nI choose this job because I'm very interested in computers. I love solving problems with technology and learning new things about how they work.\n\nTo get this job, I need to study very hard at university. Maybe I will also try to do an internship to get some real work experience.\n\nOf course, I think there will be some difficulties. The biggest challenge might be finding a good job right after graduation because many students want to work in IT."
   },
   {
     "topic": 5,
@@ -57,7 +57,7 @@
       "- What does it look like?",
       "- What changes do you want to make in it?"
     ],
-    "sampleAnswer": "My house is a two-story house with five rooms: a living room, a kitchen, a bathroom and two bedrooms.\n\nMy favourite room is my bedroom because it's my own private space. After a long day, I can relax and feel comfortable there.\n\nMy bedroom is not very big, but it's very cozy. It has light blue walls. There's a comfortable bed, a small desk for my books and laptop, and a big window.\n\nIf I could make some changes, I would like to add more plants to make it even fresher. So, that's my bedroom- my favorite place in the house!"
+    "sampleAnswer": "My house is a two-story house with five rooms: a living room, a kitchen, a bathroom and two bedrooms.\n\nMy favourite room is my bedroom because it's my own private space. After a long day, I can relax and feel comfortable there.\n\nMy bedroom is not very big, but it's very cozy. It has light blue walls. There's a comfortable bed, a small desk for my books and laptop, and a big window.\n\nIf I could make some changes, I would like to add more plants to make it even fresher. So, that's my bedroom - my favorite place in the house!"
   },
   {
     "topic": 6,
@@ -68,7 +68,7 @@
       "- What about the quality of the goods?",
       "- How is the atmosphere?"
     ],
-    "sampleAnswer": "Doing shopping in supermarkets or shopping malls has many advantages. Firstly, the prices are very stable and clearly labeled, so you don't have to bargain like in traditional markets. Secondly, the quality of the goods is guaranteed. You can easily find fresh food and safe products with clear origins. Finally, the atmosphere is great. It is clean, spacious, and has air-conditioning, which makes shopping a very relaxing and comfortable experience."
+    "sampleAnswer": "I often go to Coomark supermarket at least once a week to buy food and other things for my family.\n\nBecause it sells everything I want and it is clean, cool and beautiful.\n\nFirst, I think the prices are very stable. You can always see the prices clearly, and they don’t change much.\n\nSecond, the quality of products is usually high. They sell fresh food and good items, so you can trust that what you buy is safe for you and your family.\n\nThird, the atmosphere is always nice. It’s clean, cool with air conditioning, and bright. There are also many cafés or places to eat, and sometimes even a cinema."
   },
   {
     "topic": 7,
@@ -80,7 +80,7 @@
       "- Can you cook it well?",
       "- How is it best served?"
     ],
-    "sampleAnswer": "My favourite traditional food in Vietnam is Pho. It is a famous noodle soup. To make it, people need to cook beef or chicken bones for many hours to make a sweet and clear broth. Then, they put rice noodles, sliced meat, and fresh herbs into a bowl and pour the hot broth over it. I cannot cook it very well because making the broth is quite difficult and takes a lot of time. Pho is best served hot with some lemon juice, chili, and fresh vegetables."
+    "sampleAnswer": "My favourite food is Phở, which is a traditional Vietnamese noodle soup.\n\nI like it because it has a rich and delicious broth, and the combination of soft noodles, tender beef or chicken, and fresh herbs makes it very tasty.\n\nI can cook phở at home, but it takes a lot of time to prepare the broth properly. So, I usually buy it from local restaurants because they make it more professionally and it tastes better.\n\nI eat phở about two or three times a week, especially for breakfast. It gives me enough energy to start my day."
   },
   {
     "topic": 8,
@@ -92,7 +92,7 @@
       "- Why do you like it?",
       "- And say what you like doing in this season."
     ],
-    "sampleAnswer": "In my region, there are four seasons: spring, summer, autumn, and winter. My favourite season is autumn, which comes from August to October. I love autumn because the weather is perfect. It is not too hot like summer and not too cold like winter; it is cool and breezy. In this season, I really like walking around the city to enjoy the beautiful yellow leaves and taking photos with my friends."
+    "sampleAnswer": "I live in Central Vietnam; there are four seasons in a year: spring, summer, autumn and winter.\n\nMy favourite season is autumn which lasts from July to September according to the lunar calendar.\n\nI love autumn because of its perfect weather. Vietnam is very hot in summer, rainy in spring and dry in winter, but autumn is cool and beautiful sunshine.\n\nI often like to spend time hanging out with my friends on the street while taking photos. Sometimes I go camping at Tuy Hoa beach with my friends."
   },
   {
     "topic": 9,
