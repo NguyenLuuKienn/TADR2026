@@ -1,0 +1,385 @@
+{
+  "id": "tenses_rewrite",
+  "title": "Tenses Rewrite",
+  "description": "Sentence transformation exercises for English tenses.",
+  "topics": [
+    {
+      "topicId": 1,
+      "topicName": "Present Perfect vs Simple Past",
+      "questions": [
+        {
+          "original": "The last time she had a swim was ten years ago.",
+          "prefix": "She hasn't",
+          "answer": "She hasn't had a swim for ten years."
+        },
+        {
+          "original": "I have never met such a famous person before.",
+          "prefix": "It is",
+          "answer": "It is the first time I have met such a famous person."
+        },
+        {
+          "original": "I last saw him when I was a student.",
+          "prefix": "I haven't",
+          "answer": "I haven't seen him since I was a student."
+        },
+        {
+          "original": "I haven't come there for two years.",
+          "prefix": "I last",
+          "answer": "I last came there two years ago."
+        },
+        {
+          "original": "I have studied English for seven years.",
+          "prefix": "I started",
+          "answer": "I started studying English seven years ago."
+        },
+        {
+          "original": "I last met him in September.",
+          "prefix": "I haven't",
+          "answer": "I haven't met him since September."
+        },
+        {
+          "original": "She hasn't written to him since last summer.",
+          "prefix": "She last",
+          "answer": "She last wrote to him last summer."
+        },
+        {
+          "original": "He hasn't come back to his home village for over 20 years now.",
+          "prefix": "It's",
+          "answer": "It's over 20 years since he came back to his home village."
+        },
+        {
+          "original": "The last time we met each other was ten years ago.",
+          "prefix": "We haven't",
+          "answer": "We haven't met each other for ten years."
+        },
+        {
+          "original": "Have you ever played a computer game before?",
+          "prefix": "Is this",
+          "answer": "Is this the first time you have played a computer game?"
+        }
+      ]
+    },
+    {
+      "topicId": 2,
+      "topicName": "Passive Voice",
+      "questions": [
+        {
+          "original": "People speak English here.",
+          "prefix": "",
+          "answer": "English is spoken here."
+        },
+        {
+          "original": "Nguyen Du wrote Kieu's story.",
+          "prefix": "",
+          "answer": "Kieu's story was written by Nguyen Du."
+        },
+        {
+          "original": "Someone was cleaning the classroom when I came.",
+          "prefix": "",
+          "answer": "The classroom was being cleaned when I came."
+        },
+        {
+          "original": "She will send him a gift on his birthday.",
+          "prefix": "",
+          "answer": "He will be sent a gift on his birthday."
+        },
+        {
+          "original": "People believe that 13 is an unhappy number.",
+          "prefix": "",
+          "answer": "It is believed that 13 is an unhappy number."
+        },
+        {
+          "original": "This factory is producing more and more pollution.",
+          "prefix": "",
+          "answer": "More and more pollution is being produced by this factory."
+        },
+        {
+          "original": "No one has signed the cheque.",
+          "prefix": "",
+          "answer": "The cheque hasn't been signed."
+        },
+        {
+          "original": "The manager had his secretary prepare the report.",
+          "prefix": "",
+          "answer": "The manager had the report prepared by his secretary."
+        },
+        {
+          "original": "I am going to get Harry to repair my car.",
+          "prefix": "",
+          "answer": "I am going to get my car repaired by Harry."
+        },
+        {
+          "original": "They used to make little boys climb the chimneys to clean them.",
+          "prefix": "",
+          "answer": "Little boys used to be made to climb the chimneys to clean them."
+        }
+      ]
+    },
+    {
+      "topicId": 3,
+      "topicName": "Because / Despite / Though",
+      "questions": [
+        {
+          "original": "He left school because his life was hard.",
+          "prefix": "Because of",
+          "answer": "Because of his hard life, he left school."
+        },
+        {
+          "original": "John succeeded in his exam because of his hard and methodical work.",
+          "prefix": "Because",
+          "answer": "Because John worked hard and methodically, he succeeded in his exam."
+        },
+        {
+          "original": "We didn't want to go out because of the heavy rain.",
+          "prefix": "Because",
+          "answer": "Because it was raining heavily, we didn't want to go out."
+        },
+        {
+          "original": "Although he had much experience in machinery, he didn't succeed in repairing this machine.",
+          "prefix": "Despite",
+          "answer": "Despite his much experience in machinery, he didn't succeed in repairing this machine."
+        },
+        {
+          "original": "In spite of the darkness, they continued to work.",
+          "prefix": "Though",
+          "answer": "Though it was dark, they continued to work."
+        },
+        {
+          "original": "We postponed our trip because the driving conditions were bad.",
+          "prefix": "Because of",
+          "answer": "Because of the bad driving conditions, we postponed our trip."
+        },
+        {
+          "original": "The water in most rivers is unsafe to drink because it is polluted.",
+          "prefix": "Because of",
+          "answer": "Because of pollution, the water in most rivers is unsafe to drink."
+        },
+        {
+          "original": "We all have received the best of everything because of our generous parents.",
+          "prefix": "Because",
+          "answer": "Because our parents are generous, we have all received the best of everything."
+        }
+      ]
+    },
+    {
+      "topicId": 4,
+      "topicName": "So / Such / Too",
+      "questions": [
+        {
+          "original": "The weather was so bad that all the flights had to be cancelled.",
+          "prefix": "It was such",
+          "answer": "It was such bad weather that all the flights had to be cancelled."
+        },
+        {
+          "original": "The test wasn't easy enough for them to do.",
+          "prefix": "The test was too",
+          "answer": "The test was too difficult for them to do."
+        },
+        {
+          "original": "The play we saw yesterday was so long that we couldn't finish it in an hour.",
+          "prefix": "We saw such",
+          "answer": "We saw such a long play yesterday that we couldn't finish it in an hour."
+        },
+        {
+          "original": "These goods are so expensive that they can't be sold quickly.",
+          "prefix": "These goods are too",
+          "answer": "These goods are too expensive to be sold quickly."
+        },
+        {
+          "original": "He studied too badly to pass his exam.",
+          "prefix": "He didn't study",
+          "answer": "He didn't study enough to pass his exam."
+        },
+        {
+          "original": "My friend is very strong. He can lift up the table by himself.",
+          "prefix": "My friend is so",
+          "answer": "My friend is so strong that he can lift up the table by himself."
+        },
+        {
+          "original": "I ate a lot of sandwiches. I felt uneasy.",
+          "prefix": "I ate so many",
+          "answer": "I ate so many sandwiches that I felt uneasy."
+        },
+        {
+          "original": "Tom is still too young to join the police.",
+          "prefix": "Tom isn't",
+          "answer": "Tom isn't old enough to join the police."
+        }
+      ]
+    },
+    {
+      "topicId": 5,
+      "topicName": "Phrase of Purpose",
+      "questions": [
+        {
+          "original": "We lower the volume of the radio. We don't want to bother our neighbors.",
+          "prefix": "",
+          "answer": "We lower the volume of the radio so that we don't bother our neighbors."
+        },
+        {
+          "original": "Please shut the door. I don't want the dog to go out of the house.",
+          "prefix": "",
+          "answer": "Please shut the door so that the dog doesn't go out of the house."
+        },
+        {
+          "original": "He climbed the tree in order to get a better view.",
+          "prefix": "",
+          "answer": "He climbed the tree so that he could get a better view."
+        },
+        {
+          "original": "I am going to be very careful so that I won't have an accident.",
+          "prefix": "",
+          "answer": "I am going to be very careful to avoid having an accident."
+        },
+        {
+          "original": "I wore boots because I didn't want my feet to get wet.",
+          "prefix": "",
+          "answer": "I wore boots so as not to get my feet wet."
+        }
+      ]
+    },
+    {
+      "topicId": 6,
+      "topicName": "Conditional Sentences",
+      "questions": [
+        {
+          "original": "Hurry up or we will be late for the last bus.",
+          "prefix": "If",
+          "answer": "If you don't hurry up, we will be late for the last bus."
+        },
+        {
+          "original": "I regret that you didn't give me a chance to tell you the truth.",
+          "prefix": "I wish",
+          "answer": "I wish you had given me a chance to tell you the truth."
+        },
+        {
+          "original": "It was very cold yesterday, so we couldn't go swimming.",
+          "prefix": "If",
+          "answer": "If it hadn't been very cold yesterday, we could have gone swimming."
+        },
+        {
+          "original": "You talk more than you work. The teacher wishes",
+          "prefix": "The teacher wishes",
+          "answer": "The teacher wishes you would work more than you talk."
+        },
+        {
+          "original": "He had a flu because he went out in the rain last night.",
+          "prefix": "If",
+          "answer": "If he hadn't gone out in the rain last night, he wouldn't have had a flu."
+        },
+        {
+          "original": "Ellen didn't have much money in the bank, so she was very worried.",
+          "prefix": "If",
+          "answer": "If Ellen had had much money in the bank, she wouldn't have been very worried."
+        },
+        {
+          "original": "Stop talking or you won't understand the lesson.",
+          "prefix": "Unless",
+          "answer": "Unless you stop talking, you won't understand the lesson."
+        },
+        {
+          "original": "Why don't you study hard?",
+          "prefix": "If",
+          "answer": "If you studied hard, you would succeed."
+        },
+        {
+          "original": "I'd like to buy this book but I don't have money to buy it.",
+          "prefix": "If only",
+          "answer": "If only I had money to buy this book."
+        },
+        {
+          "original": "She can't buy the dictionary because she doesn't have enough money.",
+          "prefix": "If",
+          "answer": "If she had enough money, she could buy the dictionary."
+        }
+      ]
+    },
+    {
+      "topicId": 7,
+      "topicName": "Relative Clauses",
+      "questions": [
+        {
+          "original": "This is Rex hotel and it is the biggest hotel in the city.",
+          "prefix": "",
+          "answer": "This is the biggest hotel in the city, which is Rex hotel."
+        },
+        {
+          "original": "The dog was very frightened. The boys threw stones at it.",
+          "prefix": "",
+          "answer": "The dog, which the boys threw stones at, was very frightened."
+        },
+        {
+          "original": "There wasn't any directory in the telephone box. I was phoning from this box.",
+          "prefix": "",
+          "answer": "The telephone box that I was phoning from didn't have any directory."
+        },
+        {
+          "original": "Her father died last year. She looked after him for over twenty years.",
+          "prefix": "",
+          "answer": "Her father, whom she looked after for over twenty years, died last year."
+        },
+        {
+          "original": "Do you remember the day? We first met on that day.",
+          "prefix": "",
+          "answer": "Do you remember the day when we first met?"
+        }
+      ]
+    },
+    {
+      "topicId": 8,
+      "topicName": "Reported Speech",
+      "questions": [
+        {
+          "original": "John said to his mother \"I don't know how to do this exercise\".",
+          "prefix": "",
+          "answer": "John told his mother that he didn't know how to do that exercise."
+        },
+        {
+          "original": "\"Push as hard as you can\" She said to me.",
+          "prefix": "",
+          "answer": "She told me to push as hard as I could."
+        },
+        {
+          "original": "\"Don't wait for me if I am late\" He said to her.",
+          "prefix": "",
+          "answer": "He told her not to wait for him if he was late."
+        },
+        {
+          "original": "\"Where are you from, Nam?\" said Mai.",
+          "prefix": "",
+          "answer": "Mai asked Nam where he was from."
+        },
+        {
+          "original": "Mary said \"I cannot go to the cinema with you, John\".",
+          "prefix": "",
+          "answer": "Mary told John that she couldn't go to the cinema with him."
+        },
+        {
+          "original": "Tom asked Mary \"Did you phone me last night?\".",
+          "prefix": "",
+          "answer": "Tom asked Mary if she had phoned him the night before."
+        },
+        {
+          "original": "He asked me \"Why didn't you go to school yesterday?\".",
+          "prefix": "",
+          "answer": "He asked me why I hadn't gone to school the day before."
+        },
+        {
+          "original": "\"Why don't you stop smoking?\" the doctor said to him.",
+          "prefix": "",
+          "answer": "The doctor advised him to stop smoking."
+        },
+        {
+          "original": "\"How many students are there in your class?\"",
+          "prefix": "",
+          "answer": "The man asked me how many students there were in my class."
+        },
+        {
+          "original": "\"Have you seen John recently?\" said Ann.",
+          "prefix": "",
+          "answer": "Ann asked me if I had seen John recently."
+        }
+      ]
+    }
+  ]
+}
