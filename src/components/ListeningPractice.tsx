@@ -116,11 +116,22 @@ export default function ListeningPractice() {
             if ('audioUrl' in overrides && overrides.audioUrl) finalData.audioUrl = overrides.audioUrl;
 
             if (selectedPart === 'A' && 'questions' in overrides && Array.isArray(overrides.questions)) {
-              finalData.questions = finalData.questions.map((q, idx) => ({
-                ...q,
-                options: overrides.questions[idx]?.options ?? q.options,
-                correctAnswer: overrides.questions[idx]?.correctAnswer ?? q.correctAnswer,
-              }));
+              finalData.questions = finalData.questions.map((q, idx) => {
+                const qOverride = overrides.questions[idx];
+                if (!qOverride) return q;
+                
+                // Merge options one by one to preserve other options' data
+                const mergedOptions = q.options.map((opt, optIdx) => ({
+                  ...opt,
+                  ...(qOverride.options?.[optIdx] || {})
+                }));
+                
+                return {
+                  ...q,
+                  options: mergedOptions,
+                  correctAnswer: qOverride.correctAnswer ?? q.correctAnswer,
+                };
+              });
             }
 
             if (selectedPart === 'B' && 'answers' in overrides && Array.isArray(overrides.answers)) {
