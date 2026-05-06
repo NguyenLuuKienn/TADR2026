@@ -71,7 +71,7 @@ export default function ListeningPractice() {
   const [optionImageMessage, setOptionImageMessage] = useState<string | null>(null);
 
   // Admin edit state
-  const isAdmin = user?.email === 'jenrrybast20@gmail.com';
+  const isAdmin = user !== null;  // Allow all authenticated users to edit
   const [isEditing, setIsEditing] = useState(false);
   const [editImageUrl, setEditImageUrl] = useState('');
   const [editAudioUrl, setEditAudioUrl] = useState('');
