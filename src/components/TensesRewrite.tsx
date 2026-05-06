@@ -224,12 +224,11 @@ export default function TensesRewrite() {
                         </p>
                         {!isCorrect && (
                           <p className="text-sm text-red-800">
-                            <strong>Đáp án đúng:</strong> {currentQuestion.prefix}
-                            {currentQuestion.prefix && ' '}<span className="font-mono">{currentQuestion.answer}</span>
+                            <strong>Đáp án đúng:</strong> <span className="font-mono">{currentQuestion.answer}</span>
                           </p>
                         )}
                         <p className="text-sm text-gray-600 mt-2">
-                          <strong>Câu hoàn chỉnh:</strong> {currentQuestion.prefix} {currentQuestion.answer}
+                          <strong>Câu hoàn chỉnh:</strong> {currentQuestion.answer}
                         </p>
                       </div>
                     </div>
