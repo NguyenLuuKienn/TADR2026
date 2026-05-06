@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+/* Force light mode - prevent dark mode from affecting the app */
+@media (prefers-color-scheme: dark) {
+  html, body, * {
+    color-scheme: light !important;
+    background-color: var(--color-bg, #ffffff) !important;
+    color: var(--color-text, #000000) !important;
+  }
+}
+
+html, body {
+  color-scheme: light;
+  background-color: #ffffff;
+}
+
+/* Override any dark mode styles from Tailwind or other sources */
+.dark {
+  display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  /* Ensure inputs and form elements stay light */
+  input, textarea, select {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #cccccc !important;
+  }
+}
