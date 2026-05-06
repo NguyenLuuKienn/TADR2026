@@ -152,20 +152,37 @@ export default function Dashboard() {
         className="mb-8 md:mb-10"
       >
         <h2 className="text-xl font-bold text-gray-800 mb-4">Luyện tập ngữ pháp</h2>
-        <Link
-          to="/tenses-rewrite"
-          className="block bg-white rounded-3xl shadow-sm border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-bold text-amber-800 mb-2">Viết lại câu</h3>
-              <p className="text-gray-600 text-sm">
-                Hoàn thành 66 câu viết lại từ 8 chủ đề ngữ pháp khác nhau
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Link
+            to="/tenses-quiz"
+            className="block bg-white rounded-3xl shadow-sm border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-orange-800 mb-2">Trắc nghiệm Tenses</h3>
+                <p className="text-gray-600 text-sm">
+                  177 câu hỏi trắc nghiệm từ 15 chủ đề ngữ pháp
+                </p>
+              </div>
+              <div className="text-4xl">❓</div>
             </div>
-            <div className="text-4xl">✍️</div>
-          </div>
-        </Link>
+          </Link>
+
+          <Link
+            to="/tenses-rewrite"
+            className="block bg-white rounded-3xl shadow-sm border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-amber-800 mb-2">Viết lại câu</h3>
+                <p className="text-gray-600 text-sm">
+                  66 câu viết lại từ 8 chủ đề ngữ pháp khác nhau
+                </p>
+              </div>
+              <div className="text-4xl">✍️</div>
+            </div>
+          </Link>
+        </div>
       </motion.div>
       
       <motion.div 
