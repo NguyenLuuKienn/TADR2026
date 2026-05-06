@@ -9,6 +9,7 @@ import ReadingQuiz from './components/ReadingQuiz';
 import SpeakingPractice from './components/SpeakingPractice';
 import ListeningPractice from './components/ListeningPractice';
 import WritingPractice from './components/WritingPractice';
+import TensesRewrite from './components/TensesRewrite';
 import AdminSeed from './components/AdminSeed';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -46,6 +47,7 @@ function App() {
               <Route path="/speaking/:topicId" element={<SpeakingPractice />} />
               <Route path="/listening/:topicId" element={<ListeningPractice />} />
               <Route path="/writing/:topicId" element={<WritingPractice />} />
+              <Route path="/tenses-rewrite" element={<TensesRewrite />} />
               <Route path="*" element={<Dashboard />} />
             </Routes>
           </main>

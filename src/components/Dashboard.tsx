@@ -144,6 +144,29 @@ export default function Dashboard() {
           </div>
         </div>
       </motion.div>
+
+      {/* Grammar Exercises Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-8 md:mb-10"
+      >
+        <h2 className="text-xl font-bold text-gray-800 mb-4">Luyện tập ngữ pháp</h2>
+        <Link
+          to="/tenses-rewrite"
+          className="block bg-white rounded-3xl shadow-sm border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+        >
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-lg font-bold text-amber-800 mb-2">Viết lại câu</h3>
+              <p className="text-gray-600 text-sm">
+                Hoàn thành 66 câu viết lại từ 8 chủ đề ngữ pháp khác nhau
+              </p>
+            </div>
+            <div className="text-4xl">✍️</div>
+          </div>
+        </Link>
+      </motion.div>
       
       <motion.div 
         variants={containerVariants}
