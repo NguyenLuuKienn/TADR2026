@@ -161,7 +161,7 @@ export default function Dashboard() {
               <div>
                 <h3 className="text-lg font-bold text-orange-800 mb-2">Trắc nghiệm Tenses</h3>
                 <p className="text-gray-600 text-sm">
-                  177 câu hỏi trắc nghiệm từ 15 chủ đề ngữ pháp
+                  137 câu hỏi được chia thành 6 phần nhỏ để làm dễ hơn trên điện thoại
                 </p>
               </div>
               <div className="text-4xl">❓</div>

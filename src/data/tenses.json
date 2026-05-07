@@ -1,7 +1,7 @@
 {
   "id": "tenses",
   "title": "Tenses",
-  "description": "40 multiple-choice questions about English tenses and related grammar topics.",
+  "description": "137 multiple-choice questions about English tenses and related grammar topics, split into 6 parts in the quiz UI.",
   "questions": [
     {"topic":5,"text":"This word ... wrongly.","options":["A. spells","B. is spelt","C. is spelling","D. is spell"],"correctAnswer":"B","explanation":"Câu bị động với trạng từ 'wrongly' dùng 'is spelt'."},
     {"topic":5,"text":"The story I've just read ... Jack London.","options":["A. was written","B. was written by","C. was written from","D. wrote by"],"correctAnswer":"B","explanation":"Bị động đúng dạng là 'was written by'."},
