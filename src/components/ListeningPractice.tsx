@@ -236,9 +236,10 @@ export default function ListeningPractice() {
 
     try {
       const progressRef = doc(db, 'user_progress', `${user.uid}_listening_A_${topicId}`);
+      // Use same topicId string format as other skills so Dashboard can find it (e.g. '3_listening')
       await setDoc(progressRef, {
         uid: user.uid,
-        topicId: parseInt(topicId),
+        topicId: `${topicId}_listening`,
         part: 'A',
         currentQuestionIndex: currentIndex,
         selectedAnswer: chosenAnswer,
@@ -247,6 +248,14 @@ export default function ListeningPractice() {
         total: (topicData as ListeningTopicA).questions.length,
         updatedAt: new Date().toISOString()
       }, { merge: true });
+
+      // Also write a lightweight local marker so unauthenticated or offline users see retry locally
+      try {
+        const localKey = `user_progress_local_${user.uid}_listening_A_${topicId}`;
+        localStorage.setItem(localKey, JSON.stringify({ topicId: `${topicId}_listening`, score: currentScore, total: (topicData as ListeningTopicA).questions.length, updatedAt: new Date().toISOString() }));
+      } catch (e) {
+        // ignore localStorage errors
+      }
     } catch (error) {
       console.error('Error saving listening part A progress:', error);
     }
@@ -382,7 +391,7 @@ export default function ListeningPractice() {
       
       await setDoc(progressRef, {
         uid: user.uid,
-        topicId: parseInt(topicId),
+        topicId: `${topicId}_listening`,
         part: selectedPart,
         type: 'listening',
         userAnswers: currentAnswers,
@@ -391,6 +400,14 @@ export default function ListeningPractice() {
         total: topicData.questions.length,
         updatedAt: new Date().toISOString()
       }, { merge: true });
+
+      // also save local marker
+      try {
+        const localKey = `user_progress_local_${user.uid}_listening_${selectedPart}_${topicId}`;
+        localStorage.setItem(localKey, JSON.stringify({ topicId: `${topicId}_listening`, score, total: topicData.questions.length, updatedAt: new Date().toISOString() }));
+      } catch (e) {
+        // ignore localStorage errors
+      }
     } catch (error) {
       console.error("Error saving progress:", error);
     }

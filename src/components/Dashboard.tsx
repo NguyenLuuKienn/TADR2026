@@ -51,7 +51,29 @@ export default function Dashboard() {
           const data = doc.data() as Progress;
           progressData[data.topicId] = data;
         });
-        
+        // If Firestore didn't return listening progress for some topics (e.g., offline or rules prevented write),
+        // try reading a localStorage fallback saved by the app so users still see 'Làm lại'.
+        try {
+          topics.forEach((t) => {
+            const listenKeyA = `user_progress_local_${user.uid}_listening_A_${t}`;
+            const listenKeyB = `user_progress_local_${user.uid}_listening_B_${t}`;
+            if (!progressData[`${t}_listening`]) {
+              const rawA = localStorage.getItem(listenKeyA);
+              const rawB = localStorage.getItem(listenKeyB);
+              const parsed = rawA ? JSON.parse(rawA) : rawB ? JSON.parse(rawB) : null;
+              if (parsed) {
+                progressData[parsed.topicId || `${t}_listening`] = {
+                  topicId: parsed.topicId || `${t}_listening`,
+                  score: parsed.score || 0,
+                  total: parsed.total || 0
+                } as Progress;
+              }
+            }
+          });
+        } catch (e) {
+          // ignore localStorage errors
+        }
+
         setProgress(progressData);
       } catch (error) {
         handleFirestoreError(error, 'get' as any, 'user_progress');
