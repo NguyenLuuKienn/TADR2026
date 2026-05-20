@@ -63,7 +63,7 @@
             "imageSeed": "cooking-show"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "The announcer says 'Instead, Tim Wong's Chinese Kitchen will be at this time [nine o'clock]'."
       },
       {
@@ -84,7 +84,7 @@
             "imageSeed": "mail-post"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "He says 'I prefer to talk to someone when I'm making a booking', which implies booking by phone."
       },
       {
@@ -279,7 +279,7 @@
             "imageSeed": "keys-car"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "She says 'that's when I took my keys out. When I got back to the car, I realised they weren't in my bag'."
       },
       {
@@ -633,7 +633,7 @@
             "imageSeed": "vegetarian-dish"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "He couldn't decide between fish and vegetables, then avoided fish because the judge was an expert, so he 'went for my other choice' (vegetables)."
       },
       {
@@ -939,7 +939,7 @@
             "imageSeed": "vneck-tshirt"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "He says 'It must be round neck' and 'I'll take one of the short-sleeved ones, the colour's not so important really' (which are the lighter colours)."
       },
       {
@@ -1398,7 +1398,7 @@
             "imageSeed": "diving-board"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "She says 'I have always wanted to try windsurfing, so that would suit me fine' and mentions she didn't like water skiing."
       },
       {
@@ -1419,7 +1419,7 @@
             "imageSeed": "short-curly-hair"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "She says 'hers has always been curly' and 'It's a shame she had it cut, though', meaning she now has short curly hair."
       },
       {
