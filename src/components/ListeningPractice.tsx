@@ -695,9 +695,7 @@ export default function ListeningPractice() {
                                   </button>
                                 </div>
                               </div>
-                            ) : (
-                              <p className="font-medium text-gray-800 text-lg">{option.text}</p>
-                            )}
+                            ) : null}
 
                             <AnimatePresence>
                               {isSubmitted && isCorrect && (

@@ -63,7 +63,7 @@
             "imageSeed": "cooking-show"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The announcer says 'Instead, Tim Wong's Chinese Kitchen will be at this time [nine o'clock]'."
       },
       {
@@ -84,7 +84,7 @@
             "imageSeed": "mail-post"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "He says 'I prefer to talk to someone when I'm making a booking', which implies booking by phone."
       },
       {
@@ -237,7 +237,7 @@
             "imageSeed": "animals-calendar"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The girl suggests the one with boats because 'She loves sailing', and the boy agrees 'I'll get the one you suggested then'."
       },
       {
@@ -300,7 +300,7 @@
             "imageSeed": "street-light"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "The boy spots it and says 'It's on the other side of the road, by that street light'."
       }
     ]
@@ -327,7 +327,7 @@
             "imageSeed": "tennis-racket"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "David says 'I've done a lot of swimming instead'."
       },
       {
@@ -348,7 +348,7 @@
             "imageSeed": "paper-scissors"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "Emma asks Suzie to bring brushes ('Have you got one? Bring it if you have') and scissors ('don't forget yours')."
       },
       {
@@ -369,7 +369,7 @@
             "imageSeed": "tshirt-shapes"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "He rejects writing and pictures, leaving the T-shirt with shapes as the only option."
       },
       {
@@ -411,7 +411,7 @@
             "imageSeed": "bridge"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "He says 'I'm actually in the farmhouse down the road from there at the moment... to let me use her phone'."
       },
       {
@@ -654,7 +654,7 @@
             "imageSeed": "cafe-inside"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "The man says the manager 'keeps it all in the drawer of his desk'."
       },
       {
@@ -1023,7 +1023,7 @@
             "imageSeed": "sandwiches-drinks"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The teacher tells them to 'bring some change', 'Bring some [fruit] with you', and 'bring all your coloured pencils'."
       },
       {
@@ -1044,7 +1044,7 @@
             "imageSeed": "game-shop"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Boy 1 says 'Let's go and watch the film' and Boy 2 agrees 'OK'."
       },
       {
@@ -1065,7 +1065,7 @@
             "imageSeed": "purse-lost"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "She says 'I think my purse fell out. I can't find it now'."
       }
     ]
@@ -1440,7 +1440,7 @@
             "imageSeed": "birds-zoo"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "She says 'The children enjoyed feeding the horses and watching the monkeys and the birds', and notes there were no lions or tigers."
       },
       {
@@ -1482,7 +1482,7 @@
             "imageSeed": "wooden-box"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "He agrees with the girl's suggestion of the wooden box, saying 'she can use it to put her jewellery in'."
       },
       {
@@ -1524,7 +1524,7 @@
             "imageSeed": "purse"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "She says 'I think my purse fell out. I can't find it now'."
       }
     ]
