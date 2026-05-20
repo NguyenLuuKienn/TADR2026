@@ -35,7 +35,7 @@ function App() {
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <header className="bg-white shadow-sm border-b border-gray-200">
             <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-              <h1 className="text-xl font-bold text-blue-600">5 xị hay 8 xị</h1>
+              <h1 className="text-xl font-bold text-blue-600">Không ai tắm 2 lần trên 1 dòng sông</h1>
               <Auth />
             </div>
           </header>
