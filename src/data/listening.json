@@ -84,7 +84,7 @@
             "imageSeed": "mail-post"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "He says 'I prefer to talk to someone when I'm making a booking', which implies booking by phone."
       },
       {
@@ -174,7 +174,7 @@
             "imageSeed": "armchair"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "He says 'These can be found over there behind the computers'."
       },
       {
@@ -195,7 +195,7 @@
             "imageSeed": "black-dress-flowers"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "She considers the options and ends up looking at the 'black, short-sleeved - but it's got white flowers on the sleeves'."
       },
       {
@@ -216,7 +216,7 @@
             "imageSeed": "teacher-class"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "He says 'I've taught photography ever since'."
       },
       {
@@ -327,7 +327,7 @@
             "imageSeed": "tennis-racket"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "David says 'I've done a lot of swimming instead'."
       },
       {
@@ -369,7 +369,7 @@
             "imageSeed": "tshirt-shapes"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "He rejects writing and pictures, leaving the T-shirt with shapes as the only option."
       },
       {
@@ -390,7 +390,7 @@
             "imageSeed": "elephant"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "He says 'what scared me most were the bats'."
       },
       {
@@ -480,7 +480,7 @@
             "imageSeed": "chest-drawers"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "The man says 'But the chest had completely disappeared'."
       },
       {
@@ -501,7 +501,7 @@
             "imageSeed": "glasses-jug"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "They agree on 'unbreakable glasses' and 'let's get a jug to go with them'."
       },
       {
@@ -564,7 +564,7 @@
             "imageSeed": "teacher"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "She says 'she finally got the job she'd always wanted and she's done it ever since', and earlier she said her grandmother 'always wanted to be a teacher'."
       },
       {
@@ -585,7 +585,7 @@
             "imageSeed": "shirt-sleeve"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "He says 'but on the collar it's different. It's easy to see that it's missing from there'."
       },
       {
@@ -606,7 +606,7 @@
             "imageSeed": "painting-walls"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "The woman suggests 'It'll be easier if you sweep it before you do that [wash the floor]', and he agrees 'OK'."
       }
     ]
@@ -633,7 +633,7 @@
             "imageSeed": "vegetarian-dish"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "He couldn't decide between fish and vegetables, then avoided fish because the judge was an expert, so he 'went for my other choice' (vegetables)."
       },
       {
@@ -654,7 +654,7 @@
             "imageSeed": "cafe-inside"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The man says the manager 'keeps it all in the drawer of his desk'."
       },
       {
@@ -675,7 +675,7 @@
             "imageSeed": "grandmother"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "He mentions his grandmother moving in, his dad coming home later, and his mum being out for the evening."
       },
       {
@@ -696,7 +696,7 @@
             "imageSeed": "sports-bag"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "She says 'I'll get one of those big sports bags'."
       },
       {
@@ -738,7 +738,7 @@
             "imageSeed": "bus-station"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "The girl suggests the burger bar for a snack, and Kimberley agrees saying 'something to eat first is a good idea'."
       },
       {
@@ -759,7 +759,7 @@
             "imageSeed": "waterskiing"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The girl mentions sailing lessons, and the boy replies 'That's what I'm doing there next weekend, actually'."
       }
     ]
@@ -807,7 +807,7 @@
             "imageSeed": "hot-dry"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The forecast for tomorrow is 'some sunshine with just a few light showers'."
       },
       {
@@ -849,7 +849,7 @@
             "imageSeed": "earrings"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "She bought 'a gold-coloured one' and says 'She's always writing letters, so she'll find it useful', which implies a pen."
       },
       {
@@ -870,7 +870,7 @@
             "imageSeed": "basketball-tv"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "The boy asks her to 'Sit down and watch this match with me' (the basketball match), and she agrees 'Oh, OK then'."
       },
       {
@@ -912,7 +912,7 @@
             "imageSeed": "geography-class"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "He says 'The sports teacher is much more serious but that's still my favourite subject'."
       }
     ]
@@ -1113,7 +1113,7 @@
             "imageSeed": "garden-cottage"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "The girl says 'I think your first idea was better' referring to the boy's first suggestion: 'a view of the lake and the village'."
       },
       {
@@ -1134,7 +1134,7 @@
             "imageSeed": "biscuits"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "The mum already has cake and ice cream. Kate agrees 'I suppose some biscuits would be nice with ice cream'."
       },
       {
@@ -1176,7 +1176,7 @@
             "imageSeed": "driving"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "The dad asks 'Could you come next door with me and help me carry it [the ladder] back?'."
       },
       {
@@ -1218,7 +1218,7 @@
             "imageSeed": "table-tennis"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "The mum tells him to go to the library first ('do that before you start work on the bike'), and he agrees 'OK'."
       }
     ]
@@ -1287,7 +1287,7 @@
             "imageSeed": "jacket-no-buttons"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "She describes it as 'grey, with two buttons down the front and one on each sleeve'."
       },
       {
@@ -1308,7 +1308,7 @@
             "imageSeed": "horse-riding"
           }
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "The man says 'There is an extra charge for windsurfing'."
       },
       {
@@ -1329,7 +1329,7 @@
             "imageSeed": "garden-cottage"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "The woman says 'I think your first idea was better' referring to the man's first suggestion: 'a view of the beach and town'."
       },
       {
