@@ -30,19 +30,19 @@
         "transcript": "Boy: Drink up your coffee - we'll be late for class. What are you looking for now? Don't tell me you've left your essay at home. You said you were working on it till midnight.\nGirl: Don't worry, it was the first thing I put in my bag - look, here it is. I won't be a second... just checking everything. Pen... now where did I...? Oh dear, you'll be able to lend me one, won't you? Keys? - oh, here they are, in my pocket as usual...",
         "options": [
           {
-            "text": "Her essay",
-            "imageSeed": "essay-paper"
-          },
-          {
             "text": "A pen",
             "imageSeed": "pen"
           },
           {
             "text": "Her keys",
             "imageSeed": "keys"
+          },
+          {
+            "text": "Her essay",
+            "imageSeed": "essay-paper"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "She can't find her pen and asks the boy 'you'll be able to lend me one, won't you?'."
       },
       {
@@ -93,19 +93,19 @@
         "transcript": "Woman: Will you go on working as a gardener when winter comes, Jim? You'll get very cold and wet working outside.\nMan: Well, last winter I took a job in a supermarket. They're advertising for staff again at the moment, but I prefer being in the fresh air - even when the weather's bad. I'd really like to get a job abroad in the sun, but all the ones I've seen need building skills, which I haven't got. So I'll just stay in my present job for the time being.",
         "options": [
           {
+            "text": "Work as a gardener",
+            "imageSeed": "gardener"
+          },
+          {
             "text": "Work in a supermarket",
             "imageSeed": "supermarket-worker"
           },
           {
             "text": "Work as a builder abroad",
             "imageSeed": "builder"
-          },
-          {
-            "text": "Work as a gardener",
-            "imageSeed": "gardener"
           }
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "He says 'I'll just stay in my present job for the time being', and his present job is a gardener."
       },
       {
@@ -147,7 +147,7 @@
             "imageSeed": "simple-house"
           }
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "She says 'Ours was exactly like that one [with balconies and plants], but we only had the sea to swim in'."
       }
     ]
