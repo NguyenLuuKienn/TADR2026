@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { ArrowLeft, Mic, Eye, EyeOff, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Mic, Eye, EyeOff, CheckCircle, Pencil, Save, X, RotateCcw } from 'lucide-react';
 import { handleFirestoreError } from './ErrorBoundary';
 import speakingData from '../data/speaking.json';
 import { motion, AnimatePresence } from 'motion/react';
@@ -22,6 +22,9 @@ export default function SpeakingPractice() {
   
   const [topicData, setTopicData] = useState<SpeakingTopic | null>(null);
   const [showSample, setShowSample] = useState(false);
+  const [customSampleAnswer, setCustomSampleAnswer] = useState('');
+  const [sampleDraft, setSampleDraft] = useState('');
+  const [isEditingSample, setIsEditingSample] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [saving, setSaving] = useState(false);
 
@@ -31,10 +34,55 @@ export default function SpeakingPractice() {
     
     if (data) {
       setTopicData(data);
+      const storageKey = `speaking_sample_${topicNum}`;
+      const savedSample = localStorage.getItem(storageKey) || '';
+      setCustomSampleAnswer(savedSample);
+      setSampleDraft(savedSample || data.sampleAnswer);
+      setIsEditingSample(false);
     } else {
       navigate('/');
     }
   }, [topicId, navigate]);
+
+  const sampleStorageKey = topicData ? `speaking_sample_${topicData.topic}` : '';
+  const displaySampleAnswer = customSampleAnswer || topicData?.sampleAnswer || '';
+
+  const startEditingSample = () => {
+    setSampleDraft(displaySampleAnswer);
+    setShowSample(true);
+    setIsEditingSample(true);
+  };
+
+  const saveSampleAnswer = () => {
+    if (!sampleStorageKey) return;
+
+    const nextSampleAnswer = sampleDraft.trim();
+    setCustomSampleAnswer(nextSampleAnswer);
+
+    if (nextSampleAnswer) {
+      localStorage.setItem(sampleStorageKey, nextSampleAnswer);
+    } else {
+      localStorage.removeItem(sampleStorageKey);
+    }
+
+    setShowSample(true);
+    setIsEditingSample(false);
+  };
+
+  const cancelEditingSample = () => {
+    setSampleDraft(displaySampleAnswer);
+    setIsEditingSample(false);
+  };
+
+  const resetSampleAnswer = () => {
+    if (!sampleStorageKey || !topicData) return;
+
+    localStorage.removeItem(sampleStorageKey);
+    setCustomSampleAnswer('');
+    setSampleDraft(topicData.sampleAnswer);
+    setShowSample(true);
+    setIsEditingSample(false);
+  };
 
   useEffect(() => {
     const checkProgress = async () => {
@@ -152,22 +200,31 @@ export default function SpeakingPractice() {
                 <span className="bg-purple-100 text-purple-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
                 Bài mẫu tham khảo
               </h3>
-              <button
-                onClick={() => setShowSample(!showSample)}
-                className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors font-medium w-fit"
-              >
-                {showSample ? (
-                  <>
-                    <EyeOff className="w-4 h-4 mr-2" />
-                    Ẩn bài mẫu
-                  </>
-                ) : (
-                  <>
-                    <Eye className="w-4 h-4 mr-2" />
-                    Xem bài mẫu
-                  </>
-                )}
-              </button>
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={startEditingSample}
+                  className="flex items-center px-4 py-2 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded-xl transition-colors font-medium w-fit"
+                >
+                  <Pencil className="w-4 h-4 mr-2" />
+                  Sửa bài mẫu
+                </button>
+                <button
+                  onClick={() => setShowSample(!showSample)}
+                  className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors font-medium w-fit"
+                >
+                  {showSample ? (
+                    <>
+                      <EyeOff className="w-4 h-4 mr-2" />
+                      Ẩn bài mẫu
+                    </>
+                  ) : (
+                    <>
+                      <Eye className="w-4 h-4 mr-2" />
+                      Xem bài mẫu
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
 
             <AnimatePresence>
@@ -179,9 +236,45 @@ export default function SpeakingPractice() {
                   className="overflow-hidden"
                 >
                   <div className="bg-gray-50 p-6 md:p-8 rounded-3xl border border-gray-200">
-                    <p className="whitespace-pre-wrap text-gray-700 leading-relaxed text-lg">
-                      {topicData.sampleAnswer}
-                    </p>
+                    {isEditingSample ? (
+                      <div className="space-y-4">
+                        <textarea
+                          value={sampleDraft}
+                          onChange={(event) => setSampleDraft(event.target.value)}
+                          className="w-full min-h-[260px] p-4 rounded-2xl border border-purple-200 bg-white text-gray-800 leading-relaxed text-lg focus:outline-none focus:ring-2 focus:ring-purple-500 resize-y"
+                          placeholder="Nhập bài mẫu của bạn..."
+                        />
+                        <div className="flex flex-wrap gap-2">
+                          <button
+                            onClick={saveSampleAnswer}
+                            className="flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl transition-colors font-medium"
+                          >
+                            <Save className="w-4 h-4 mr-2" />
+                            Lưu bài mẫu
+                          </button>
+                          <button
+                            onClick={cancelEditingSample}
+                            className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors font-medium"
+                          >
+                            <X className="w-4 h-4 mr-2" />
+                            Hủy
+                          </button>
+                          {customSampleAnswer && (
+                            <button
+                              onClick={resetSampleAnswer}
+                              className="flex items-center px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 rounded-xl transition-colors font-medium"
+                            >
+                              <RotateCcw className="w-4 h-4 mr-2" />
+                              Mặc định
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    ) : (
+                      <p className="whitespace-pre-wrap text-gray-700 leading-relaxed text-lg">
+                        {displaySampleAnswer}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               )}
