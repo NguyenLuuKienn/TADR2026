@@ -7,6 +7,7 @@ import { ArrowLeft, Mic, Eye, EyeOff, CheckCircle, Pencil, Save, X, RotateCcw } 
 import { handleFirestoreError } from './ErrorBoundary';
 import speakingData from '../data/speaking.json';
 import { motion, AnimatePresence } from 'motion/react';
+import { logActivity } from '../lib/activity';
 
 interface SpeakingTopic {
   topic: number;
@@ -27,6 +28,17 @@ export default function SpeakingPractice() {
   const [isEditingSample, setIsEditingSample] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    if (!user || !topicId) return;
+
+    logActivity(user, {
+      type: 'view_speaking',
+      label: `Mở Speaking topic ${topicId}`,
+      section: 'speaking',
+      topicId,
+    });
+  }, [user, topicId]);
 
   useEffect(() => {
     const topicNum = parseInt(topicId || '1');
@@ -116,6 +128,12 @@ export default function SpeakingPractice() {
         timestamp: new Date().toISOString()
       });
       setIsCompleted(true);
+      await logActivity(user, {
+        type: 'complete_speaking',
+        label: `Hoàn thành Speaking topic ${topicId}`,
+        section: 'speaking',
+        topicId,
+      });
     } catch (error) {
       handleFirestoreError(error, 'write' as any, 'user_progress');
     } finally {

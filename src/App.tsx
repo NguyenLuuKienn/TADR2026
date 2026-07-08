@@ -12,6 +12,7 @@ import WritingPractice from './components/WritingPractice';
 import TensesQuiz from './components/TensesQuiz';
 import TensesRewrite from './components/TensesRewrite';
 import AdminSeed from './components/AdminSeed';
+import AdminActivity from './components/AdminActivity';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
               <Route path="/writing/:topicId" element={<WritingPractice />} />
               <Route path="/tenses-quiz" element={<TensesQuiz />} />
               <Route path="/tenses-rewrite" element={<TensesRewrite />} />
+              <Route path="/admin/activity" element={<AdminActivity />} />
               <Route path="*" element={<Dashboard />} />
             </Routes>
           </main>

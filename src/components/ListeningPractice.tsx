@@ -8,6 +8,7 @@ import { handleFirestoreError } from './ErrorBoundary';
 import { motion, AnimatePresence } from 'motion/react';
 import listeningData from '../data/listening.json';
 import listeningDataB from '../data/listeningb.json';
+import { logActivity } from '../lib/activity';
 
 interface ListeningOptionA {
   text: string;
@@ -78,6 +79,18 @@ export default function ListeningPractice() {
   const [editAnswers, setEditAnswers] = useState<string[]>([]);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    if (!user || !topicId) return;
+
+    logActivity(user, {
+      type: 'view_listening',
+      label: `Mở Listening ${selectedPart} topic ${topicId}`,
+      section: 'listening',
+      topicId,
+      metadata: { part: selectedPart },
+    });
+  }, [user, topicId, selectedPart]);
 
   const resetPartState = () => {
     setCurrentQuestionIndex(0);
@@ -288,6 +301,15 @@ export default function ListeningPractice() {
     }
 
     void savePartAProgress(currentQuestionIndex, selectedAnswer, score, isSubmitted);
+    void logActivity(user, {
+      type: 'complete_listening',
+      label: `Hoàn thành Listening A topic ${topicId}`,
+      section: 'listening',
+      topicId,
+      score,
+      total: partATopic.questions.length,
+      metadata: { part: 'A' },
+    });
     navigate('/');
   };
 
@@ -407,6 +429,18 @@ export default function ListeningPractice() {
         localStorage.setItem(localKey, JSON.stringify({ topicId: `${topicId}_listening`, score, total: topicData.questions.length, updatedAt: new Date().toISOString() }));
       } catch (e) {
         // ignore localStorage errors
+      }
+
+      if (currentResults.length > 0 && currentResults.every(Boolean)) {
+        await logActivity(user, {
+          type: 'complete_listening',
+          label: `Hoàn thành Listening ${selectedPart} topic ${topicId}`,
+          section: 'listening',
+          topicId,
+          score,
+          total: topicData.questions.length,
+          metadata: { part: selectedPart },
+        });
       }
     } catch (error) {
       console.error("Error saving progress:", error);

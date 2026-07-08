@@ -6,6 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react';
 import { handleFirestoreError } from './ErrorBoundary';
 import { motion, AnimatePresence } from 'motion/react';
+import { logActivity } from '../lib/activity';
 
 interface ReadingQuestion {
   text: string;
@@ -25,6 +26,17 @@ export default function ReadingQuiz() {
   
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  useEffect(() => {
+    if (!user || !topicId) return;
+
+    logActivity(user, {
+      type: 'view_reading',
+      label: `Mở Reading topic ${topicId}`,
+      section: 'reading',
+      topicId,
+    });
+  }, [user, topicId]);
 
   useEffect(() => {
     const fetchReading = async () => {
@@ -114,6 +126,15 @@ export default function ReadingQuiz() {
       if (!progressDoc.exists() || progressDoc.data().score < currentScore) {
         await setDoc(progressRef, newProgress);
       }
+
+      await logActivity(user, {
+        type: 'complete_reading',
+        label: `Hoàn thành Reading topic ${topicId}`,
+        section: 'reading',
+        topicId,
+        score: currentScore,
+        total: totalQuestions,
+      });
     } catch (error) {
       handleFirestoreError(error, 'write' as any, 'user_progress');
     }

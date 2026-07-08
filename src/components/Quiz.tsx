@@ -6,6 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react';
 import { handleFirestoreError } from './ErrorBoundary';
 import { motion, AnimatePresence } from 'motion/react';
+import { logActivity } from '../lib/activity';
 
 interface Question {
   id: string;
@@ -24,6 +25,17 @@ export default function Quiz() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    if (!user || !topicId) return;
+
+    logActivity(user, {
+      type: 'view_quiz',
+      label: `Mở trắc nghiệm topic ${topicId}`,
+      section: 'quiz',
+      topicId,
+    });
+  }, [user, topicId]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -82,6 +94,15 @@ export default function Quiz() {
       if (!progressDoc.exists() || progressDoc.data().score < currentScore) {
         await setDoc(progressRef, newProgress);
       }
+
+      await logActivity(user, {
+        type: 'complete_quiz',
+        label: `Hoàn thành trắc nghiệm topic ${topicId}`,
+        section: 'quiz',
+        topicId,
+        score: currentScore,
+        total: questions.length,
+      });
     } catch (error) {
       handleFirestoreError(error, 'write' as any, 'user_progress');
     }

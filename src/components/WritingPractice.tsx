@@ -7,6 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { motion, AnimatePresence } from 'motion/react';
 import writingData from '../data/writing.json';
 import sentenceTransformationData from '../data/sentence_transformation.json';
+import { logActivity } from '../lib/activity';
 
 interface WritingTopic {
   id: string;
@@ -42,6 +43,17 @@ export default function WritingPractice() {
   const [saving, setSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [activeTab, setActiveTab] = useState<'letter' | 'transformation'>('letter');
+
+  useEffect(() => {
+    if (!user || !topicId) return;
+
+    logActivity(user, {
+      type: 'view_writing',
+      label: `Mở Writing topic ${topicId}`,
+      section: 'writing',
+      topicId,
+    });
+  }, [user, topicId]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -98,6 +110,16 @@ export default function WritingPractice() {
         completed: userText.trim().length > 0 || userTransformations.some(t => String(t ?? '').trim().length > 0),
         updatedAt: new Date().toISOString()
       }, { merge: true });
+      await logActivity(user, {
+        type: 'save_writing',
+        label: `Lưu Writing topic ${topicId}`,
+        section: 'writing',
+        topicId,
+        metadata: {
+          activeTab,
+          wordCount: userText.trim().split(/\s+/).filter((word) => word.length > 0).length,
+        },
+      });
       setSaveSuccess(true);
       setTimeout(() => setSaveSuccess(false), 3000);
     } catch (error) {

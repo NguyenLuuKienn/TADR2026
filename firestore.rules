@@ -46,5 +46,17 @@ service cloud.firestore {
       allow update: if isAuthenticated() && resource.data.uid == request.auth.uid && request.resource.data.uid == request.auth.uid;
       allow delete: if isAuthenticated() && resource.data.uid == request.auth.uid;
     }
+
+    match /activity_logs/{logId} {
+      allow read: if isAdmin();
+      allow create: if isAuthenticated() && request.resource.data.uid == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    match /user_status/{statusId} {
+      allow read: if isAdmin();
+      allow create, update: if isAuthenticated() && statusId == request.auth.uid && request.resource.data.uid == request.auth.uid;
+      allow delete: if false;
+    }
   }
 }

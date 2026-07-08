@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { BookOpen, CheckCircle, BookText, PenTool, Headphones, Mic, Briefcase, GraduationCap, Sparkles } from 'lucide-react';
+import { BookOpen, CheckCircle, BookText, PenTool, Headphones, Mic, Briefcase, GraduationCap, Sparkles, Activity } from 'lucide-react';
 import { handleFirestoreError } from './ErrorBoundary';
 import { motion } from 'motion/react';
+import { isActivityAdmin, logActivity } from '../lib/activity';
 
 interface Progress {
   topicId: string;
@@ -34,6 +35,16 @@ export default function Dashboard() {
   const [fetching, setFetching] = useState(true);
 
   const topics = Array.from({ length: 12 }, (_, i) => i + 1);
+
+  useEffect(() => {
+    if (!user) return;
+
+    logActivity(user, {
+      type: 'view_dashboard',
+      label: 'Mở Dashboard',
+      section: 'dashboard',
+    });
+  }, [user]);
 
   useEffect(() => {
     const fetchProgress = async () => {
@@ -121,6 +132,15 @@ export default function Dashboard() {
       >
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">Danh sách chủ đề ôn tập</h1>
         <p className="text-gray-500 mt-2">Chọn một chủ đề để bắt đầu luyện tập các kỹ năng.</p>
+        {isActivityAdmin(user.email) && (
+          <Link
+            to="/admin/activity"
+            className="mt-4 inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors"
+          >
+            <Activity className="w-4 h-4" />
+            Trạng thái & lịch sử
+          </Link>
+        )}
       </motion.div>
 
       <motion.div
